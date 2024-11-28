@@ -16,14 +16,15 @@ def translate_words_with_google(input_file, output_file):
             # Google Translate API ile çeviri
             print(f"Çeviriliyor: {word}...")
             translated = translator.translate(word, src='en', dest='tr')
-            # Kelimenin Türkçe çevirisini ve anlamını alt kategori olarak ekliyoruz
+            # Kelimenin Türkçe çevirisini ve ezberlenip ezberlenmediğini ekliyoruz
             translations[word] = {
                 "translation": translated.text,
+                "memorized": False  # Bu kısmı False olarak başlatıyoruz, çünkü kelimenin ezberlenip ezberlenmediği manuel olarak değiştirilebilir.
             }
 
         except Exception as e:
             print(f"Hata oluştu: {word}, {e}")
-            translations[word] = {"translation": None}
+            translations[word] = {"translation": None, "memorized": False}
 
     # Çevirileri yeni bir JSON dosyasına yaz
     with open(output_file, 'w', encoding='utf-8') as json_file:
