@@ -1,9 +1,9 @@
 import json
-import requests
+from googletrans import Translator
 
-def translate_words_with_deepl(input_file, output_file, deepl_api_key):
-    # DeepL API URL'si
-    deepl_api_url = "https://api-free.deepl.com/v2/translate"
+def translate_words_with_google(input_file, output_file):
+    # Google Translate Translator nesnesi oluştur
+    translator = Translator()
 
     # İngilizce kelimeleri yükle
     with open(input_file, 'r', encoding='utf-8') as file:
@@ -13,25 +13,10 @@ def translate_words_with_deepl(input_file, output_file, deepl_api_key):
 
     for word in english_words:
         try:
-            # DeepL API'ye çeviri isteği gönder
+            # Google Translate API ile çeviri
             print(f"Çeviriliyor: {word}...")
-            response = requests.post(
-                deepl_api_url,
-                data={
-                    'auth_key': deepl_api_key,
-                    'text': word,
-                    'source_lang': 'EN',
-                    'target_lang': 'TR'
-                }
-            )
-
-            # API'den dönen cevabı kontrol et
-            if response.status_code == 200:
-                translated_text = response.json()['translations'][0]['text']
-                translations[word] = translated_text
-            else:
-                print(f"Hata oluştu: {word}, Kod: {response.status_code}")
-                translations[word] = None  # Hatalı kelimeleri işaretle
+            translated = translator.translate(word, src='en', dest='tr')
+            translations[word] = translated.text
 
         except Exception as e:
             print(f"Hata oluştu: {word}, {e}")
@@ -47,8 +32,6 @@ def translate_words_with_deepl(input_file, output_file, deepl_api_key):
 input_file = 'unique_words.json'
 # Çıkış dosyasının yolu
 output_file = 'translated_words.json'
-# DeepL API anahtarınız
-deepl_api_key = '0751882d-2723-4609-a248-ce74b344e2df:fx'  # Buraya kendi API anahtarınızı girin
 
 # Fonksiyonu çalıştır
-translate_words_with_deepl(input_file, output_file, deepl_api_key)
+translate_words_with_google(input_file, output_file)
