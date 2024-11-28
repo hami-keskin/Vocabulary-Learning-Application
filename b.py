@@ -1,6 +1,7 @@
 import json
 from googletrans import Translator
 
+
 def translate_words_with_google(input_file, output_file):
     # Google Translate Translator nesnesi oluştur
     translator = Translator()
@@ -16,21 +17,25 @@ def translate_words_with_google(input_file, output_file):
             # Google Translate API ile çeviri
             print(f"Çeviriliyor: {word}...")
             translated = translator.translate(word, src='en', dest='tr')
-            # Kelimenin Türkçe çevirisini ve ezberlenip ezberlenmediğini ekliyoruz
+
+            # Kelimenin Türkçe çevirisini, ezberlenip ezberlenmediğini ve tekrar çalışılması gerektiğini ekliyoruz
             translations[word] = {
                 "translation": translated.text,
-                "memorized": False  # Bu kısmı False olarak başlatıyoruz, çünkü kelimenin ezberlenip ezberlenmediği manuel olarak değiştirilebilir.
+                "memorized": False,
+                # Başlangıçta False, çünkü kelimenin ezberlenip ezberlenmediği manuel olarak değiştirilebilir.
+                "retry": False  # Kelime ezberlenmediyse tekrar çalışılacak.
             }
 
         except Exception as e:
             print(f"Hata oluştu: {word}, {e}")
-            translations[word] = {"translation": None, "memorized": False}
+            translations[word] = {"translation": None, "memorized": False, "retry": False}
 
     # Çevirileri yeni bir JSON dosyasına yaz
     with open(output_file, 'w', encoding='utf-8') as json_file:
         json.dump(translations, json_file, ensure_ascii=False, indent=4)
 
     print(f"Çeviriler başarıyla '{output_file}' dosyasına kaydedildi.")
+
 
 # Giriş dosyasının yolu
 input_file = 'unique_words.json'
