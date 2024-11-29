@@ -24,6 +24,10 @@ def parse_date(date_str):
 def format_date(date_obj):
     return date_obj.strftime("%Y-%m-%d")
 
+# Bugünün tarihini al
+def get_today():
+    return format_date(datetime.now())
+
 # Tema ayarları (Dark Mode)
 def apply_dark_mode(widget):
     widget.configure(bg="#1e1e1e")
@@ -55,7 +59,7 @@ def learn_new_words_gui():
     def add_to_retry():
         selected_word["retry"] = True
         selected_word["correct_streak"] = 0
-        selected_word["date"] = format_date(datetime.now())
+        selected_word["date"] = get_today()  # Bugünün tarihini ekle
         messagebox.showinfo("Başarı", f"{word} tekrar listesine eklendi!")
 
     word_list = list(unmemorized.keys())
@@ -75,8 +79,13 @@ def learn_new_words_gui():
 # Kelime tekrar ekranı
 def review_words_gui():
     retry_words = {word: data for word, data in words.items() if not data["memorized"] and data["retry"]}
+
+    # Bugün çalışılmış kelimeleri filtreleyelim
+    today = get_today()
+    retry_words = {word: data for word, data in retry_words.items() if data["date"] != today}
+
     if not retry_words:
-        messagebox.showinfo("Bilgi", "Tekrar edilecek kelime yok!")
+        messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
         return
 
     sorted_words = sorted(retry_words.items(), key=lambda x: parse_date(x[1]["date"]))
