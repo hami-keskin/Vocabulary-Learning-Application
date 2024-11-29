@@ -3,6 +3,7 @@ from tkinter import messagebox
 from datetime import datetime
 import json
 import random
+import pyttsx3
 
 # JSON dosyasını yükleme ve kaydetme
 def load_words(file_path):
@@ -62,7 +63,20 @@ def center_frame():
     frame.place(relx=0.5, rely=0.5, anchor="center")
     return frame
 
-# Yeni kelime öğrenme ekranı
+# Sesli okuma motoru başlat
+speech_engine = pyttsx3.init()
+
+def speak(text):
+    """Metni sesli okuma"""
+    speech_engine.say(text)
+    speech_engine.runAndWait()
+
+# Sesli okuma fonksiyonunu gecikmeli hale getirelim
+def speak_with_delay(text, delay=1):
+    """Metni gecikmeli olarak sesli okuma"""
+    root.after(delay, lambda: speak(text))
+
+# Yeni kelime öğrenme ekranı (güncellenmiş)
 def learn_new_words_gui():
     unmemorized = {word: data for word, data in words.items() if not data["memorized"] and not data["retry"]}
     if not unmemorized:
@@ -72,6 +86,7 @@ def learn_new_words_gui():
     def update_word_labels():
         word_label.config(text=current_word)
         translation_label.config(text=current_data['translation'])
+        speak_with_delay(current_word, delay=1000)  # Kelimeyi gecikmeli olarak sesli oku
 
     def mark_memorized():
         current_data["memorized"] = True
@@ -95,12 +110,13 @@ def learn_new_words_gui():
     current_word, current_data = unmemorized.popitem()
     word_label = create_label(frame, current_word, font=("Arial", 24))
     translation_label = create_label(frame, current_data['translation'], font=("Arial", 20))
+    speak_with_delay(current_word, delay=1000)  # İlk kelimeyi gecikmeli olarak sesli oku
     create_button(frame, "Biliyorum", mark_memorized)
     create_button(frame, "Tekrar Et", add_to_retry)
     create_button(frame, "Sonraki Kelime", next_word)
     create_button(frame, "Geri Dön", main_menu)
 
-# Kelime tekrar ekranı
+# Kelime tekrar ekranı (güncellenmiş)
 def review_words_gui():
     retry_words = {
         word: data for word, data in words.items() if not data["memorized"] and data["retry"] and data["date"] != get_today()
@@ -109,7 +125,6 @@ def review_words_gui():
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
         return
 
-    # Kelimeleri tarihe göre sıralama
     sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
     retry_words = {word: data for word, data in sorted_retry_words}
 
@@ -127,6 +142,7 @@ def review_words_gui():
             current_word, current_data = retry_words.popitem()
             current_translation = current_data["translation"]
             word_label.config(text=current_word)
+            speak_with_delay(current_word, delay=1000)  # Kelimeyi gecikmeli olarak sesli oku
             update_choices()
         else:
             messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
@@ -148,6 +164,7 @@ def review_words_gui():
     current_word, current_data = retry_words.popitem()
     current_translation = current_data["translation"]
     word_label = create_label(frame, current_word, font=("Arial", 24))
+    speak_with_delay(current_word, delay=1000)  # İlk kelimeyi gecikmeli olarak sesli oku
     choice_buttons = []
     update_choices()
 
