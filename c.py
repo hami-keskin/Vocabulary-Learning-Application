@@ -18,6 +18,15 @@ def save_words(file_path, words):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(words, file, ensure_ascii=False, indent=4)
 
+def parse_date(date_str):
+    return datetime.strptime(date_str, "%Y-%m-%d")
+
+def format_date(date_obj):
+    return date_obj.strftime("%Y-%m-%d")
+
+def get_today():
+    return format_date(datetime.now())
+
 # Tema ayarları
 def apply_dark_mode(widget):
     widget.configure(bg="#1e1e1e")
@@ -93,7 +102,7 @@ def learn_new_words_gui():
         next_word()
 
     def add_to_retry():
-        current_data.update({"retry": True, "correct_streak": 0, "date": 0})
+        current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
         next_word()
 
     def next_word():
@@ -164,18 +173,22 @@ def simple_dialog(title, prompt):
 def review_words_gui():
     retry_words = {
         word: data for word, data in words.items()
-        if not data.get("known", False) and not data["memorized"] and data["retry"] and data["date"] == 0
+        if not data.get("known", False) and not data["memorized"] and data["retry"]
     }
     if not retry_words:
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
         return
 
+    sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
+    retry_words = {word: data for word, data in sorted_retry_words}
+
     def check_answer(selected):
         nonlocal current_word, current_translation
-        if selected == current_translation:
 
+        if selected == current_translation:
+            retry_words[current_word]["correct_streak"] += 1
             if retry_words[current_word]["correct_streak"] < 7:
-                retry_words[current_word]["correct_streak"] += 1
+                retry_words[current_word]["date"] += 1
 
             if retry_words[current_word]["correct_streak"] >= 7:
                 retry_words[current_word]["date"] += 7
@@ -183,6 +196,7 @@ def review_words_gui():
             if retry_words[current_word]["correct_streak"] >= 21:
                 retry_words[current_word]["memorized"] = True
                 retry_words[current_word]["retry"] = False
+
         else:
             retry_words[current_word]["correct_streak"] = 0
             messagebox.showerror("Yanlış!", f"Doğru cevap: {current_translation}")
