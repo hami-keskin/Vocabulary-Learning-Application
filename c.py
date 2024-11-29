@@ -172,8 +172,8 @@ def simple_dialog(title, prompt):
 # Kelime tekrar ekranı (güncellenmiş)
 def review_words_gui():
     retry_words = {
-        word: data for word, data in words.items() if
-        not data["known"] and not data["memorized"] and data["retry"] and data["date"] != get_today()
+        word: data for word, data in words.items()
+        if not data.get("known", False) and not data["memorized"] and data["retry"] and data["date"] != get_today()
     }
     if not retry_words:
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
@@ -225,17 +225,16 @@ def review_words_gui():
 # İstatistikler ekranı (güncellenmiş, günlük analiz kaldırıldı)
 def show_statistics_gui():
     total = len(words)
-    memorized = sum(1 for data in words.values() if data["memorized"])
+    known = sum(1 for data in words.values() if data.get("known", False))
+    memorized = sum(1 for data in words.values() if data["memorized"] and not data.get("known", False))
     retry = sum(1 for data in words.values() if data["retry"])
-    known = sum(1 for data in words.values() if data.get("known", False))  # "Bilinen" kelimeler
-    unmemorized = total - memorized - retry - known
+    unmemorized = total - memorized - known - retry
 
-    # İstatistik metni
     stats = (
         f"Toplam Kelime: {total}\n"
+        f"Bilinen Kelimeler: {known} ({known / total:.1%})\n"
         f"Ezberlenen Kelimeler: {memorized} ({memorized / total:.1%})\n"
         f"Tekrar Edilecek Kelimeler: {retry}\n"
-        f"Bilinen Kelimeler: {known} ({known / total:.1%})\n"
         f"Öğrenilmeyi Bekleyen Kelimeler: {unmemorized}\n"
     )
 
