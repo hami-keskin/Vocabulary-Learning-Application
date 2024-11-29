@@ -109,6 +109,10 @@ def review_words_gui():
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
         return
 
+    # Kelimeleri tarihe göre sıralama
+    sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
+    retry_words = {word: data for word, data in sorted_retry_words}
+
     def check_answer(selected):
         if selected == current_translation:
             retry_words[current_word]["correct_streak"] += 1
