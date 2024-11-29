@@ -171,9 +171,10 @@ def simple_dialog(title, prompt):
 
 # Kelime tekrar ekranı (güncellenmiş)
 def review_words_gui():
+    today = get_today()
     retry_words = {
         word: data for word, data in words.items()
-        if not data.get("known", False) and not data["memorized"] and data["retry"]
+        if not data.get("known", False) and not data["memorized"] and data["retry"] and parse_date(data["date"]) <= parse_date(today)
     }
     if not retry_words:
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
