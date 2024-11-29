@@ -14,24 +14,19 @@ def load_words(file_path):
     except FileNotFoundError:
         return {}
 
-
 def save_words(file_path, words):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(words, file, ensure_ascii=False, indent=4)
-
 
 # Tarih yardımcı fonksiyonları
 def parse_date(date_str):
     return datetime.strptime(date_str, "%Y-%m-%d")
 
-
 def format_date(date_obj):
     return date_obj.strftime("%Y-%m-%d")
 
-
 def get_today():
     return format_date(datetime.now())
-
 
 # Tema ayarları
 def apply_dark_mode(widget):
@@ -47,25 +42,21 @@ def apply_dark_mode(widget):
         widget.option_add("*Button.ActiveBackground", "#3a3a3a")
         widget.option_add("*Button.ActiveForeground", "#ffffff")
 
-
 # Yardımcı widget oluşturucular
 def create_label(parent, text, font=("Arial", 16), pady=20):
     label = tk.Label(parent, text=text, font=font, bg="#1e1e1e", fg="#ffffff")
     label.pack(pady=pady)
     return label
 
-
 def create_button(parent, text, command, pady=10, width=20):
     button = tk.Button(parent, text=text, command=command, pady=pady, width=width)
     button.pack()
     return button
 
-
 # Pencereyi temizleme
 def clear_window():
     for widget in root.winfo_children():
         widget.destroy()
-
 
 # Öğeleri ortalamak için bir çerçeve
 def center_frame():
@@ -73,22 +64,18 @@ def center_frame():
     frame.place(relx=0.5, rely=0.5, anchor="center")
     return frame
 
-
 # Sesli okuma motoru başlat
 speech_engine = pyttsx3.init()
-
 
 def speak(text):
     """Metni sesli okuma"""
     speech_engine.say(text)
     speech_engine.runAndWait()
 
-
 # Sesli okuma fonksiyonunu gecikmeli hale getirelim
 def speak_with_delay(text, delay=1):
     """Metni gecikmeli olarak sesli okuma"""
     root.after(delay, lambda: speak(text))
-
 
 # Kelimeyi kopyalamak için fonksiyon
 def copy_to_clipboard(text):
@@ -155,8 +142,9 @@ def learn_new_words_gui():
 
     button_copy = create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
 
-    create_button(frame, "Geri Dön", main_menu)
+    button_sesli_okuma = create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))
 
+    create_button(frame, "Geri Dön", main_menu)
 
 # Basit bir girdi penceresi
 def simple_dialog(title, prompt):
@@ -176,7 +164,6 @@ def simple_dialog(title, prompt):
     entry.focus_set()
     top.wait_window(top)
     return result[0]
-
 
 # Kelime tekrar ekranı (güncellenmiş)
 def review_words_gui():
@@ -231,7 +218,6 @@ def review_words_gui():
     choice_buttons = []
     update_choices()
 
-
 # İstatistikler ekranı
 def show_statistics_gui():
     total = len(words)
@@ -240,13 +226,11 @@ def show_statistics_gui():
     stats = f"Toplam Kelime: {total}\nEzberlenen Kelimeler: {memorized}\nTekrar Edilecek Kelimeler: {retry}"
     messagebox.showinfo("İstatistikler", stats)
 
-
 # Çıkış işlemi
 def exit_program():
     save_words(file_path, words)
     if messagebox.askyesno("Çıkış", "Programdan çıkmak istediğinizden emin misiniz?"):
         root.destroy()
-
 
 # Ana menü
 def main_menu():
@@ -257,7 +241,6 @@ def main_menu():
     create_button(frame, "İstatistikleri Göster", show_statistics_gui)
     create_button(frame, "Kaydet", lambda: save_words(file_path, words))
     create_button(frame, "Çık", exit_program)
-
 
 # Uygulama başlangıcı
 file_path = 'translated_words.json'
