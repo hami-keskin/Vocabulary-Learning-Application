@@ -4,9 +4,8 @@ from datetime import datetime, timedelta
 import json
 import random
 import pyttsx3
-import pyperclip  # Panoya kopyalama için
+import pyperclip
 
-# JSON dosyasını yükleme ve kaydetme
 def load_words(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
