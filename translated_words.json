@@ -5303,35 +5303,36 @@
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "work": {
         "translation": "iş",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "works": {
         "translation": "eserler",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "world": {
         "translation": "dünya",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "worry": {
         "translation": "endişelenmek",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "worse": {
         "translation": "daha kötüsü",
