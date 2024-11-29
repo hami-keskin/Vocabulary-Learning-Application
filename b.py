@@ -17,8 +17,13 @@ def translate_words_with_google(input_file, output_file):
     try:
         with open(output_file, 'r', encoding='utf-8') as json_file:
             existing_data = json.load(json_file)
-    except FileNotFoundError:
-        # Eğer dosya yoksa, boş bir sözlük başlat
+            # Eğer dosya boşsa, boş bir sözlük başlat
+            if not existing_data:
+                print(f"'{output_file}' dosyası boş, yeni verilerle başlatılıyor.")
+                existing_data = {}
+    except (FileNotFoundError, json.decoder.JSONDecodeError):
+        # Eğer dosya yoksa ya da geçersizse, boş bir sözlük başlat
+        print(f"'{output_file}' dosyası bulunamadı veya geçersiz, yeni verilerle başlatılıyor.")
         existing_data = {}
 
     # Mevcut çevirilerle, yeni kelimeleri güncelleme
