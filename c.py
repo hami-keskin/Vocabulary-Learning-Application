@@ -199,6 +199,15 @@ root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
 apply_dark_mode(root)
 
+# Tam ekran modunu etkinleştir
+root.attributes("-fullscreen", True)
+
+# Tam ekran modundan çıkmak için 'Escape' tuşunu kullan
+def exit_fullscreen(event=None):
+    root.attributes("-fullscreen", False)
+
+root.bind("<Escape>", exit_fullscreen)
+
 # Ana menüye başla
 main_menu()
 
