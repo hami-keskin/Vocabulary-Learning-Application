@@ -4649,20 +4649,22 @@
         "date": "2024-11-29"
     },
     "undergoing": {
-        "translation": "alacak",
+        "translation": "Geçmekte olan",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "universe": {
         "translation": "evren",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "university": {
         "translation": "üniversite",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
