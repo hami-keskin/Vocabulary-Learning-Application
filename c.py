@@ -181,7 +181,6 @@ def review_words_gui():
 
     sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
     retry_words = {word: data for word, data in sorted_retry_words}
-    # Convert to list for easier management
     word_list = list(retry_words.items())
     current_index = 0
 
@@ -190,11 +189,9 @@ def review_words_gui():
         current_word, current_data = word_list[current_index]
 
         if selected == current_data["translation"]:
-            # Update streak in the main words dictionary
             words[current_word]["correct_streak"] += 1
             streak = words[current_word]["correct_streak"]
 
-            # Update review date based on streak
             if streak < 7:
                 words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=1))
             elif streak < 21:
@@ -216,7 +213,7 @@ def review_words_gui():
 
         if current_index >= len(word_list):
             messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
-            save_words(file_path, words)  # Save progress
+            save_words(file_path, words)
             main_menu()
             return
 
@@ -226,41 +223,43 @@ def review_words_gui():
         update_choices(current_data["translation"])
 
     def update_choices(current_translation):
-        # Get all unique translations except the current one
         all_translations = [data["translation"] for data in words.values()]
         other_translations = list(set(t for t in all_translations if t != current_translation))
 
-        # Select 3 random wrong answers
         wrong_choices = random.sample(other_translations, min(3, len(other_translations)))
         choices = wrong_choices + [current_translation]
         random.shuffle(choices)
 
-        # Update buttons
         for btn in choice_buttons:
             btn.destroy()
         choice_buttons.clear()
 
         for choice in choices:
-            btn = create_button(frame, choice, lambda c=choice: check_answer(c))
+            btn = create_button(main_frame, choice, lambda c=choice: check_answer(c))
             choice_buttons.append(btn)
 
-    # Setup UI
+    # Clear and setup main window
     clear_window()
-    frame = center_frame()
 
-    # Initialize with first word
+    # Create main content frame (centered)
+    main_frame = tk.Frame(root, bg="#1e1e1e")
+    main_frame.place(relx=0.5, rely=0.4, anchor="center")  # Moved up to make room for bottom buttons
+
+    # Create bottom frame for additional controls
+    bottom_frame = tk.Frame(root, bg="#1e1e1e")
+    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")  # Positioned at bottom
+
+    # Initialize with first word in main frame
     current_word, current_data = word_list[current_index]
-    word_label = create_label(frame, current_word, font=("Arial", 24))
+    word_label = create_label(main_frame, current_word, font=("Arial", 24))
     speak_with_delay(current_word, delay=1000)
 
     choice_buttons = []
     update_choices(current_data["translation"])
 
-    # Add additional controls
-    create_button(frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
-    create_button(frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu()])
-
-
+    # Add additional controls to bottom frame
+    create_button(bottom_frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
+    create_button(bottom_frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu()])
 # İstatistikler ekranı (güncellenmiş, günlük analiz kaldırıldı)
 def show_statistics_gui():
     total = len(words)
