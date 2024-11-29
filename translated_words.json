@@ -5030,210 +5030,240 @@
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "waitress": {
         "translation": "Garson",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "walking": {
         "translation": "yürüme",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "wall": {
         "translation": "duvar",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "want": {
         "translation": "istek",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "wanted": {
         "translation": "aranan",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "warm": {
         "translation": "ılık",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "was": {
         "translation": "olmuş",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "wasn": {
         "translation": "olmamıştı",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "watch": {
         "translation": "kol saati",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "watched": {
         "translation": "izlemiş",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "watching": {
         "translation": "izleme",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "water": {
         "translation": "su",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "wave": {
         "translation": "dalga",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "way": {
         "translation": "yol",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "we": {
         "translation": "Biz",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "weird": {
         "translation": "garip",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "welcome": {
         "translation": "Hoş geldin",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "well": {
         "translation": "Peki",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "went": {
         "translation": "gitmiş",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "were": {
         "translation": "vardı",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "what": {
         "translation": "Ne",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "when": {
         "translation": "Ne zaman",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "where": {
         "translation": "Neresi",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "which": {
         "translation": "Hangi",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "who": {
         "translation": "DSÖ",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "whole": {
         "translation": "tüm",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "why": {
         "translation": "Neden",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "wide": {
         "translation": "geniş",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "widen": {
         "translation": "genişletmek",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "will": {
         "translation": "irade",
