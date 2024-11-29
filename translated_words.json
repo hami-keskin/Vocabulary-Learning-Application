@@ -2843,19 +2843,19 @@
     },
     "money": {
         "translation": "para",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "moon": {
         "translation": "ay",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "more": {
         "translation": "Daha",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -2869,12 +2869,13 @@
     "motives": {
         "translation": "güdüler",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "move": {
         "translation": "taşınmak",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -2894,13 +2895,13 @@
     },
     "moving": {
         "translation": "hareketli",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "much": {
         "translation": "fazla",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -2914,18 +2915,19 @@
     "must": {
         "translation": "mutlak",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "my": {
         "translation": "Benim",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "myspace": {
         "translation": "myspace",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -2938,7 +2940,7 @@
     },
     "naked": {
         "translation": "çıplak",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -2951,67 +2953,67 @@
     },
     "natural": {
         "translation": "doğal",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "nature": {
         "translation": "doğa",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "nebraska": {
         "translation": "Nebraska",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "need": {
         "translation": "ihtiyaç",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "negative": {
         "translation": "negatif",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "neighbor": {
         "translation": "komşu",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "neighbors": {
         "translation": "komşular",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "neither": {
         "translation": "hiç biri",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "nerd": {
         "translation": "inek öğrenci",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "net": {
         "translation": "açık",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "never": {
         "translation": "Asla",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -3024,57 +3026,58 @@
     },
     "next": {
         "translation": "Sonraki",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "nice": {
         "translation": "Güzel",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "night": {
         "translation": "gece",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "no": {
         "translation": "HAYIR",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "nobel": {
         "translation": "Nobel",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "nor": {
         "translation": "ne",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "north": {
         "translation": "kuzey",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "not": {
         "translation": "Olumsuz",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "observed": {
         "translation": "gözlemlenen",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "occasional": {
         "translation": "ara sıra",
@@ -3086,12 +3089,13 @@
     "odds": {
         "translation": "ihtimal",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "of": {
         "translation": "ile ilgili",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },

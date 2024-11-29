@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 import random
 import pyttsx3
-
+import pyperclip  # Panoya kopyalama için
 
 # JSON dosyasını yükleme ve kaydetme
 def load_words(file_path):
@@ -90,6 +90,10 @@ def speak_with_delay(text, delay=1):
     root.after(delay, lambda: speak(text))
 
 
+# Kelimeyi kopyalamak için fonksiyon
+def copy_to_clipboard(text):
+    pyperclip.copy(text)  # Metni panoya kopyala
+
 # Yeni kelime öğrenme ekranı (güncellenmiş)
 def learn_new_words_gui():
     unmemorized = {word: data for word, data in words.items() if not data["memorized"] and not data["retry"]}
@@ -148,6 +152,8 @@ def learn_new_words_gui():
 
     button_correct = create_button(frame, "Çeviriyi Düzelt", correct_translation)
     button_correct.config(command=lambda: [correct_translation(), disable_button_for_delay(button_correct)])
+
+    button_copy = create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
 
     create_button(frame, "Geri Dön", main_menu)
 
