@@ -181,61 +181,84 @@ def review_words_gui():
 
     sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
     retry_words = {word: data for word, data in sorted_retry_words}
+    # Convert to list for easier management
+    word_list = list(retry_words.items())
+    current_index = 0
 
     def check_answer(selected):
-        nonlocal current_word, current_translation
+        nonlocal current_index
+        current_word, current_data = word_list[current_index]
 
-        if selected == current_translation:
-            retry_words[current_word]["correct_streak"] += 1
-            if retry_words[current_word]["correct_streak"] < 7:
-                retry_words[current_word]["date"] += 1
+        if selected == current_data["translation"]:
+            # Update streak in the main words dictionary
+            words[current_word]["correct_streak"] += 1
+            streak = words[current_word]["correct_streak"]
 
-            if retry_words[current_word]["correct_streak"] >= 7:
-                retry_words[current_word]["date"] += 7
+            # Update review date based on streak
+            if streak < 7:
+                words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=1))
+            elif streak < 21:
+                words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=7))
+            else:
+                words[current_word]["memorized"] = True
+                words[current_word]["retry"] = False
 
-            if retry_words[current_word]["correct_streak"] >= 21:
-                retry_words[current_word]["memorized"] = True
-                retry_words[current_word]["retry"] = False
-
+            messagebox.showinfo("Doğru!", f"Doğru cevap! Doğru cevap serisi: {streak}")
         else:
-            retry_words[current_word]["correct_streak"] = 0
-            messagebox.showerror("Yanlış!", f"Doğru cevap: {current_translation}")
+            words[current_word]["correct_streak"] = 0
+            messagebox.showerror("Yanlış!", f"Doğru cevap: {current_data['translation']}")
 
         next_word()
 
     def next_word():
-        nonlocal current_word, current_translation
-        if retry_words:
-            current_word, current_data = retry_words.popitem()
-            current_translation = current_data["translation"]
-            word_label.config(text=current_word)
-            speak_with_delay(current_word, delay=1000)  # Kelimeyi sesli oku
-            update_choices()
-        else:
-            messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
-            main_menu()
+        nonlocal current_index
+        current_index += 1
 
-    def update_choices():
-        choices = random.sample(
-            [data["translation"] for data in words.values() if data["translation"] != current_translation], 3
-        ) + [current_translation]
+        if current_index >= len(word_list):
+            messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
+            save_words(file_path, words)  # Save progress
+            main_menu()
+            return
+
+        current_word, current_data = word_list[current_index]
+        word_label.config(text=current_word)
+        speak_with_delay(current_word, delay=1000)
+        update_choices(current_data["translation"])
+
+    def update_choices(current_translation):
+        # Get all unique translations except the current one
+        all_translations = [data["translation"] for data in words.values()]
+        other_translations = list(set(t for t in all_translations if t != current_translation))
+
+        # Select 3 random wrong answers
+        wrong_choices = random.sample(other_translations, min(3, len(other_translations)))
+        choices = wrong_choices + [current_translation]
         random.shuffle(choices)
+
+        # Update buttons
         for btn in choice_buttons:
             btn.destroy()
-
         choice_buttons.clear()
+
         for choice in choices:
             btn = create_button(frame, choice, lambda c=choice: check_answer(c))
             choice_buttons.append(btn)
 
+    # Setup UI
     clear_window()
     frame = center_frame()
-    current_word, current_data = retry_words.popitem()
-    current_translation = current_data["translation"]
+
+    # Initialize with first word
+    current_word, current_data = word_list[current_index]
     word_label = create_label(frame, current_word, font=("Arial", 24))
-    speak_with_delay(current_word, delay=1000)  # İlk kelimeyi gecikmeli olarak sesli oku
+    speak_with_delay(current_word, delay=1000)
+
     choice_buttons = []
-    update_choices()
+    update_choices(current_data["translation"])
+
+    # Add additional controls
+    create_button(frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
+    create_button(frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu()])
 
 
 # İstatistikler ekranı (güncellenmiş, günlük analiz kaldırıldı)

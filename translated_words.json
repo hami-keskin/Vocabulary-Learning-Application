@@ -5077,9 +5077,9 @@
         "translation": "ılık",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
+        "date": "2024-11-30",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "was": {
         "translation": "olmuş",
@@ -5261,25 +5261,25 @@
         "translation": "genişletmek",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
+        "date": "2024-11-30",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "will": {
         "translation": "irade",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
+        "date": "2024-11-30",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "win": {
         "translation": "kazanç",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
+        "date": "2024-11-30",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "windows": {
         "translation": "pencere",
@@ -5348,9 +5348,9 @@
         "translation": "eserler",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
+        "date": "2024-11-30",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "world": {
         "translation": "dünya",
@@ -5419,8 +5419,8 @@
         "translation": "özlemek",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
-        "correct_streak": 0,
+        "date": "2024-11-30",
+        "correct_streak": 1,
         "known": false
     },
     "years": {
