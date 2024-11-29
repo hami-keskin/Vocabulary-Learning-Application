@@ -58,8 +58,9 @@
     "affects": {
         "translation": "etkiler",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "aforementioned": {
         "translation": "yukarıda belirtilen",
@@ -154,9 +155,10 @@
     },
     "and": {
         "translation": "Ve",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "angle": {
         "translation": "açılış",
@@ -178,9 +180,10 @@
     },
     "anyway": {
         "translation": "Neyse",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "anyways": {
         "translation": "neyse",
@@ -310,9 +313,10 @@
     },
     "back": {
         "translation": "geri",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "bandwidth": {
         "translation": "bant genişliği",
@@ -329,9 +333,10 @@
     },
     "bank": {
         "translation": "banka",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "bar": {
         "translation": "çubuk",
@@ -371,9 +376,10 @@
     },
     "beauty": {
         "translation": "güzellik",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "became": {
         "translation": "olmuş",
@@ -395,9 +401,10 @@
     },
     "been": {
         "translation": "olmuş",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "before": {
         "translation": "önce",
@@ -468,8 +475,9 @@
     "boarding": {
         "translation": "yatılı",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "boards": {
         "translation": "tahtalar",
@@ -485,9 +493,10 @@
     },
     "bonne": {
         "translation": "bonne",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "born": {
         "translation": "doğmak",
@@ -564,8 +573,9 @@
     "brought": {
         "translation": "getirilmiş",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "building": {
         "translation": "bina",
@@ -733,9 +743,10 @@
     },
     "coffee": {
         "translation": "Kahve",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "coitus": {
         "translation": "coitus",
@@ -811,9 +822,10 @@
     },
     "computer": {
         "translation": "bilgisayar",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "condition": {
         "translation": "durum",
@@ -842,8 +854,9 @@
     "context": {
         "translation": "bağlam",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "contradistinction": {
         "translation": "çelişki",
@@ -859,9 +872,10 @@
     },
     "cool": {
         "translation": "Serin",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "corn": {
         "translation": "Mısır",
@@ -1054,9 +1068,10 @@
     },
     "difficult": {
         "translation": "zor",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "digital": {
         "translation": "dijital",
@@ -1460,8 +1475,9 @@
     "farsi": {
         "translation": "fars",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "faster": {
         "translation": "Daha hızlı",
@@ -1501,15 +1517,17 @@
     },
     "female": {
         "translation": "dişi",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "figure": {
         "translation": "figür",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "fill": {
         "translation": "doldurmak",
@@ -1525,9 +1543,10 @@
     },
     "fine": {
         "translation": "iyi",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "finger": {
         "translation": "parmak",
@@ -1652,9 +1671,10 @@
     },
     "genetic": {
         "translation": "genetik",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "genius": {
         "translation": "dahi",
@@ -1683,9 +1703,10 @@
     },
     "girl": {
         "translation": "kız",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "give": {
         "translation": "vermek",
@@ -1803,15 +1824,17 @@
     },
     "hair": {
         "translation": "saç",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "haiti": {
         "translation": "Haiti",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "halfway": {
         "translation": "yarıya kadar",
@@ -1863,15 +1886,17 @@
     },
     "have": {
         "translation": "sahip olmak",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "having": {
         "translation": "sahip",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "hawking": {
         "translation": "haşhaş",
@@ -1893,9 +1918,10 @@
     },
     "hear": {
         "translation": "duymak",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "heart": {
         "translation": "kalp",
@@ -1991,8 +2017,9 @@
     "hindered": {
         "translation": "engellenmiş",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "his": {
         "translation": "onun",
@@ -2068,9 +2095,10 @@
     },
     "however": {
         "translation": "Yine de",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "huygens": {
         "translation": "huygenler",
@@ -2159,8 +2187,9 @@
     "instead": {
         "translation": "yerine",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "integral": {
         "translation": "integral",
@@ -2170,9 +2199,10 @@
     },
     "intercom": {
         "translation": "interkom",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "interesting": {
         "translation": "ilginç",
@@ -2620,8 +2650,9 @@
     "luncheon": {
         "translation": "öğle yemeği",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "lying": {
         "translation": "uzanmak",
@@ -2856,9 +2887,10 @@
     },
     "movie": {
         "translation": "film",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "moving": {
         "translation": "hareketli",
@@ -2899,9 +2931,10 @@
     },
     "nabokov": {
         "translation": "Nabokov",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "naked": {
         "translation": "çıplak",
@@ -2984,9 +3017,10 @@
     },
     "new": {
         "translation": "yeni",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "next": {
         "translation": "Sonraki",
@@ -3160,9 +3194,10 @@
     },
     "over": {
         "translation": "üzerinde",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "own": {
         "translation": "sahip olmak",
@@ -3202,15 +3237,17 @@
     },
     "parallax": {
         "translation": "paralaks",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "part": {
         "translation": "parça",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "participate": {
         "translation": "katılmak",
@@ -3377,9 +3414,10 @@
     },
     "possibility": {
         "translation": "olasılık",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "pound": {
         "translation": "pound",
@@ -3432,14 +3470,16 @@
     "proffer": {
         "translation": "teklif",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "protocol": {
         "translation": "protokol",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "proximal": {
         "translation": "proksimal",
@@ -3504,8 +3544,9 @@
     "re": {
         "translation": "tekrar",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "really": {
         "translation": "Gerçekten",
@@ -3641,9 +3682,10 @@
     },
     "same": {
         "translation": "Aynı",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "save": {
         "translation": "kaydetmek",
@@ -3677,9 +3719,10 @@
     },
     "school": {
         "translation": "okul",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "scientists": {
         "translation": "bilim adamları",
@@ -3708,8 +3751,9 @@
     "seat": {
         "translation": "koltuk",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "see": {
         "translation": "Görmek",
@@ -3762,8 +3806,9 @@
     "sentiment": {
         "translation": "duygusallık",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "separate": {
         "translation": "ayırmak",
@@ -3852,8 +3897,9 @@
     "significant": {
         "translation": "önemli",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "since": {
         "translation": "o zamandan beri",
@@ -3972,9 +4018,10 @@
     },
     "some": {
         "translation": "bazı",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "someday": {
         "translation": "bir gün",
@@ -4020,9 +4067,10 @@
     },
     "sounds": {
         "translation": "sesler",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "speak": {
         "translation": "konuşmak",
@@ -4149,8 +4197,9 @@
     "string": {
         "translation": "sicim",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "stuff": {
         "translation": "şey",
@@ -4238,9 +4287,10 @@
     },
     "tears": {
         "translation": "göz yaşları",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "technically": {
         "translation": "teknik olarak",
@@ -4329,9 +4379,10 @@
     },
     "them": {
         "translation": "onlara",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "then": {
         "translation": "Daha sonra",
@@ -4415,8 +4466,9 @@
     "thus": {
         "translation": "Böylece",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "tiger": {
         "translation": "kaplan",
@@ -4536,9 +4588,10 @@
     },
     "trying": {
         "translation": "deneme",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "tub": {
         "translation": "küvet",
@@ -4676,8 +4729,9 @@
     "veritable": {
         "translation": "gerçek",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "very": {
         "translation": "çok",
@@ -4711,9 +4765,10 @@
     },
     "wall": {
         "translation": "duvar",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "want": {
         "translation": "istek",
@@ -4723,9 +4778,10 @@
     },
     "wanted": {
         "translation": "aranan",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "warm": {
         "translation": "ılık",
@@ -4988,9 +5044,10 @@
     },
     "writing": {
         "translation": "yazma",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "wrong": {
         "translation": "yanlış",
