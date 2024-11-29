@@ -99,6 +99,7 @@ def learn_new_words_gui():
 
     def mark_known():
         current_data["known"] = True
+        current_data["correct_streak"] = 0  # Doğru öğrenildiğinde correct_streak sıfırlanır
         next_word()
 
     def add_to_retry():
@@ -185,6 +186,13 @@ def review_words_gui():
     def check_answer(selected):
         if selected == current_translation:
             retry_words[current_word]["correct_streak"] += 1
+            # correct_streak 7 olduğunda kelimeyi 7 günde bir tekrar ettir
+            if retry_words[current_word]["correct_streak"] == 7:
+                retry_words[current_word]["date"] = format_date(datetime.now() + timedelta(days=7))
+            # correct_streak 21 olduğunda memorized true ve retry false yap
+            if retry_words[current_word]["correct_streak"] >= 21:
+                retry_words[current_word]["memorized"] = True
+                retry_words[current_word]["retry"] = False
         else:
             retry_words[current_word]["correct_streak"] = 0
             messagebox.showerror("Yanlış!", f"Doğru cevap: {current_translation}")
