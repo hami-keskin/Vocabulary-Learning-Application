@@ -97,6 +97,10 @@ def learn_new_words_gui():
         current_data["memorized"] = True
         next_word()
 
+    def mark_known():
+        current_data["known"] = True
+        next_word()
+
     def add_to_retry():
         current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
         next_word()
@@ -128,8 +132,8 @@ def learn_new_words_gui():
         button.config(state=tk.DISABLED)
         root.after(2000, lambda: button.config(state=tk.NORMAL))  # 2 saniye sonra butonu etkinleştir
 
-    button_biliyorum = create_button(frame, "Biliyorum", mark_memorized)
-    button_biliyorum.config(command=lambda: [mark_memorized(), disable_button_for_delay(button_biliyorum)])
+    button_biliyorum = create_button(frame, "Biliyorum", mark_known)
+    button_biliyorum.config(command=lambda: [mark_known(), disable_button_for_delay(button_biliyorum)])
 
     button_tekraret = create_button(frame, "Tekrar Et", add_to_retry)
     button_tekraret.config(command=lambda: [add_to_retry(), disable_button_for_delay(button_tekraret)])
@@ -169,7 +173,7 @@ def simple_dialog(title, prompt):
 def review_words_gui():
     retry_words = {
         word: data for word, data in words.items() if
-        not data["memorized"] and data["retry"] and data["date"] != get_today()
+        not data["known"] and not data["memorized"] and data["retry"] and data["date"] != get_today()
     }
     if not retry_words:
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")

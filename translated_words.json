@@ -4575,84 +4575,98 @@
         "translation": "daha kötüsü",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "worst": {
         "translation": "en kötüsü",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "would": {
         "translation": "istemek",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "wouldn": {
         "translation": "olmazdı",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "writing": {
         "translation": "yazma",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "wrong": {
         "translation": "yanlış",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "yeah": {
         "translation": "Evet",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "yearn": {
         "translation": "özlemek",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "years": {
         "translation": "yıl",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "yes": {
         "translation": "Evet",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "yet": {
         "translation": "henüz",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "you": {
         "translation": "Sen",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "your": {
         "translation": "senin",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     },
     "yourself": {
         "translation": "kendin",
         "memorized": false,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "known": true
     }
 }
