@@ -67,10 +67,10 @@ def learn_new_words_gui():
     learn_window.title("Yeni Kelime Öğren")
     apply_dark_mode(learn_window)
     learn_window.attributes("-fullscreen", True)  # Tam ekran modu
-    tk.Label(learn_window, text=f"Kelime: {word}").pack(pady=20)
-    tk.Label(learn_window, text=f"Çevirisi: {selected_word['translation']}").pack(pady=20)
+    tk.Label(learn_window, text=f"{word}").pack(pady=20)
+    tk.Label(learn_window, text=f"{selected_word['translation']}").pack(pady=20)
     tk.Button(learn_window, text="Biliyorum", command=mark_memorized).pack(pady=10)
-    tk.Button(learn_window, text="Tekrar Listesine Ekle", command=add_to_retry).pack(pady=10)
+    tk.Button(learn_window, text="Tekrar Et", command=add_to_retry).pack(pady=10)
 
 # Kelime tekrar ekranı
 def review_words_gui():
