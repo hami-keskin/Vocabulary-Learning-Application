@@ -174,7 +174,7 @@ def simple_dialog(title, prompt):
 def review_words_gui():
     retry_words = {
         word: data for word, data in words.items()
-        if not data.get("known", False) and not data["memorized"] and data["retry"] and data["date"] != get_today()
+        if not data.get("known", False) and not data["memorized"] and data["retry"] and data["date"]
     }
     if not retry_words:
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
@@ -184,6 +184,7 @@ def review_words_gui():
     retry_words = {word: data for word, data in sorted_retry_words}
 
     def check_answer(selected):
+        nonlocal current_word, current_translation
         if selected == current_translation:
             retry_words[current_word]["correct_streak"] += 1
             # correct_streak 7 olduğunda kelimeyi 7 günde bir tekrar ettir
@@ -196,6 +197,7 @@ def review_words_gui():
         else:
             retry_words[current_word]["correct_streak"] = 0
             messagebox.showerror("Yanlış!", f"Doğru cevap: {current_translation}")
+
         next_word()
 
     def next_word():
@@ -204,7 +206,7 @@ def review_words_gui():
             current_word, current_data = retry_words.popitem()
             current_translation = current_data["translation"]
             word_label.config(text=current_word)
-            speak_with_delay(current_word, delay=1000)  # Kelimeyi gecikmeli olarak sesli oku
+            speak_with_delay(current_word, delay=1000)  # Kelimeyi sesli oku
             update_choices()
         else:
             messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
@@ -217,6 +219,8 @@ def review_words_gui():
         random.shuffle(choices)
         for btn in choice_buttons:
             btn.destroy()
+
+        choice_buttons.clear()
         for choice in choices:
             btn = create_button(frame, choice, lambda c=choice: check_answer(c))
             choice_buttons.append(btn)
@@ -229,6 +233,7 @@ def review_words_gui():
     speak_with_delay(current_word, delay=1000)  # İlk kelimeyi gecikmeli olarak sesli oku
     choice_buttons = []
     update_choices()
+
 
 # İstatistikler ekranı (güncellenmiş, günlük analiz kaldırıldı)
 def show_statistics_gui():
