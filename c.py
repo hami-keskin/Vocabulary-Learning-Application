@@ -174,7 +174,7 @@ def simple_dialog(title, prompt):
 def review_words_gui():
     retry_words = {
         word: data for word, data in words.items()
-        if not data.get("known", False) and not data["memorized"] and data["retry"] and data["date"]
+        if not data.get("known", False) and not data["memorized"] and data["retry"] and data["date"] == 0
     }
     if not retry_words:
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
@@ -187,10 +187,17 @@ def review_words_gui():
         nonlocal current_word, current_translation
         if selected == current_translation:
             retry_words[current_word]["correct_streak"] += 1
-            # correct_streak 7 olduğunda kelimeyi 7 günde bir tekrar ettir
+
+            # If correct_streak is less than 7, increase the date by 1 day
+            if retry_words[current_word]["correct_streak"] < 7:
+                retry_words[current_word]["date"] = format_date(
+                    parse_date(retry_words[current_word]["date"]) + timedelta(days=1))
+
+            # If correct_streak reaches 7, set the review interval to 7 days
             if retry_words[current_word]["correct_streak"] == 7:
                 retry_words[current_word]["date"] = format_date(datetime.now() + timedelta(days=7))
-            # correct_streak 21 olduğunda memorized true ve retry false yap
+
+            # If correct_streak is greater than or equal to 21, mark as memorized
             if retry_words[current_word]["correct_streak"] >= 21:
                 retry_words[current_word]["memorized"] = True
                 retry_words[current_word]["retry"] = False
