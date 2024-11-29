@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from datetime import datetime, timedelta
+from datetime import datetime
 import json
 import random
 
@@ -23,6 +23,22 @@ def parse_date(date_str):
 
 def format_date(date_obj):
     return date_obj.strftime("%Y-%m-%d")
+
+# Tema ayarları (Dark Mode)
+def apply_dark_mode(widget):
+    widget.configure(bg="#1e1e1e")
+    if isinstance(widget, tk.Tk) or isinstance(widget, tk.Toplevel):
+        widget.option_add("*Background", "#1e1e1e")
+        widget.option_add("*Foreground", "#ffffff")
+        widget.option_add("*Font", "Arial 14")
+        widget.option_add("*Button.Background", "#2a2a2a")
+        widget.option_add("*Button.Foreground", "#ffffff")
+        widget.option_add("*Button.Font", "Arial 14 bold")
+        widget.option_add("*Label.Font", "Arial 16 bold")
+        widget.option_add("*Button.ActiveBackground", "#3a3a3a")
+        widget.option_add("*Button.ActiveForeground", "#ffffff")
+        widget.option_add("*Button.Pady", 10)
+        widget.option_add("*Button.Width", 20)
 
 # Kelime öğrenme ekranı
 def learn_new_words_gui():
@@ -49,18 +65,15 @@ def learn_new_words_gui():
 
     learn_window = tk.Toplevel(root)
     learn_window.title("Yeni Kelime Öğren")
-    learn_window.attributes('-fullscreen', True)  # Tam ekran modu
-    tk.Label(learn_window, text=f"Kelime: {word}").pack(pady=10)
-    tk.Label(learn_window, text=f"Çevirisi: {selected_word['translation']}").pack(pady=10)
-    tk.Button(learn_window, text="Ezberlendi", command=mark_memorized).pack(pady=5)
-    tk.Button(learn_window, text="Tekrar Listesine Ekle", command=add_to_retry).pack(pady=5)
+    apply_dark_mode(learn_window)
+    tk.Label(learn_window, text=f"Kelime: {word}").pack(pady=20)
+    tk.Label(learn_window, text=f"Çevirisi: {selected_word['translation']}").pack(pady=20)
+    tk.Button(learn_window, text="Ezberlendi", command=mark_memorized).pack(pady=10)
+    tk.Button(learn_window, text="Tekrar Listesine Ekle", command=add_to_retry).pack(pady=10)
 
 # Kelime tekrar ekranı
 def review_words_gui():
-    retry_words = {
-        word: data for word, data in words.items()
-        if not data["memorized"] and data["retry"]
-    }
+    retry_words = {word: data for word, data in words.items() if not data["memorized"] and data["retry"]}
     if not retry_words:
         messagebox.showinfo("Bilgi", "Tekrar edilecek kelime yok!")
         return
@@ -79,8 +92,8 @@ def review_words_gui():
     for word, data in sorted_words:
         review_window = tk.Toplevel(root)
         review_window.title("Kelime Tekrarı")
-        review_window.attributes('-fullscreen', True)  # Tam ekran modu
-        tk.Label(review_window, text=f"Kelime: {word}").pack(pady=10)
+        apply_dark_mode(review_window)
+        tk.Label(review_window, text=f"Kelime: {word}").pack(pady=20)
 
         correct_translation = data["translation"]
         choices = random.sample(
@@ -89,7 +102,7 @@ def review_words_gui():
         random.shuffle(choices)
 
         for choice in choices:
-            tk.Button(review_window, text=choice, command=lambda c=choice: check_answer(c)).pack(pady=5)
+            tk.Button(review_window, text=choice, command=lambda c=choice: check_answer(c), width=30).pack(pady=10)
         break
 
 # İstatistikler ekranı
@@ -107,7 +120,7 @@ def show_statistics_gui():
 
 # Çıkış işlemi
 def exit_program():
-    save_changes()  # Çıkmadan önce değişiklikleri kaydet
+    save_changes()
     if messagebox.askyesno("Çıkış", "Programdan çıkmak istediğinizden emin misiniz?"):
         root.destroy()
 
@@ -122,12 +135,15 @@ words = load_words(file_path)
 
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
-root.attributes('-fullscreen', True)
+apply_dark_mode(root)
 
-tk.Button(root, text="Yeni Kelime Öğren", command=learn_new_words_gui, width=30).pack(pady=10)
-tk.Button(root, text="Kelime Tekrarı Yap", command=review_words_gui, width=30).pack(pady=10)
-tk.Button(root, text="İstatistikleri Göster", command=show_statistics_gui, width=30).pack(pady=10)
-tk.Button(root, text="Kaydet", command=save_changes, width=30).pack(pady=10)
-tk.Button(root, text="Çık", command=exit_program, width=30).pack(pady=10)
+# Tam ekran modunu uygulama
+root.attributes("-fullscreen", True)
+
+tk.Button(root, text="Yeni Kelime Öğren", command=learn_new_words_gui).pack(pady=15)
+tk.Button(root, text="Kelime Tekrarı Yap", command=review_words_gui).pack(pady=15)
+tk.Button(root, text="İstatistikleri Göster", command=show_statistics_gui).pack(pady=15)
+tk.Button(root, text="Kaydet", command=save_changes).pack(pady=15)
+tk.Button(root, text="Çık", command=exit_program).pack(pady=15)
 
 root.mainloop()
