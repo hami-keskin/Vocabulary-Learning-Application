@@ -42,6 +42,7 @@ def translate_words_with_google(input_file, output_file):
                 # Kelimenin Türkçe çevirisini, ezberlenip ezberlenmediğini, tekrar çalışılmasını ve tarihini ekliyoruz
                 translations[word] = {
                     "translation": translated.text,
+                    "known": False,
                     "memorized": False,  # Başlangıçta False, çünkü kelimenin ezberlenip ezberlenmediği manuel olarak değiştirilebilir.
                     "retry": False,  # Kelime ezberlenmediyse tekrar çalışılacak.
                     "date": datetime.now().strftime('%Y-%m-%d')  # Kelimenin eklenme tarihi
@@ -51,6 +52,7 @@ def translate_words_with_google(input_file, output_file):
                 print(f"Hata oluştu: {word}, {e}")
                 translations[word] = {
                     "translation": None,
+                    "known": False,
                     "memorized": False,
                     "retry": False,
                     "date": datetime.now().strftime('%Y-%m-%d')  # Hata durumunda da tarih eklenir

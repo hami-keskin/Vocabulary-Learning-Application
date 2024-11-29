@@ -83,8 +83,8 @@ def copy_to_clipboard(text):
 
 # Yeni kelime öğrenme ekranı (güncellenmiş)
 def learn_new_words_gui():
-    unmemorized = {word: data for word, data in words.items() if not data["memorized"] and not data["retry"]}
-    if not unmemorized:
+    unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
+    if not unknown:
         messagebox.showinfo("Bilgi", "Ezberlenecek yeni kelime yok!")
         return
 
@@ -107,8 +107,8 @@ def learn_new_words_gui():
 
     def next_word():
         nonlocal current_word, current_data
-        if unmemorized:
-            current_word, current_data = unmemorized.popitem()
+        if unknown:
+            current_word, current_data = unknown.popitem()
             update_word_labels()
         else:
             messagebox.showinfo("Bilgi", "Ezberlenecek kelime kalmadı!")
@@ -122,7 +122,7 @@ def learn_new_words_gui():
 
     clear_window()
     frame = center_frame()
-    current_word, current_data = unmemorized.popitem()
+    current_word, current_data = unknown.popitem()
     word_label = create_label(frame, current_word, font=("Arial", 24))
     translation_label = create_label(frame, current_data['translation'], font=("Arial", 20))
     speak_with_delay(current_word, delay=1000)  # İlk kelimeyi gecikmeli olarak sesli oku
