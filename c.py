@@ -107,6 +107,7 @@ def show_statistics_gui():
 
 # Çıkış işlemi
 def exit_program():
+    save_changes()  # Çıkmadan önce değişiklikleri kaydet
     if messagebox.askyesno("Çıkış", "Programdan çıkmak istediğinizden emin misiniz?"):
         root.destroy()
 
