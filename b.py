@@ -49,6 +49,12 @@ def translate_words_with_google(input_file, output_file):
             # Eğer kelime zaten mevcutsa, mevcut veriyi alalım
             translations[word] = existing_data[word]
 
+    # Kelime ve çevirisini küçük-büyük harf farkı gözetmeksizin kontrol et
+    for word, data in translations.items():
+        translation = data["translation"]
+        if translation and word.lower() == translation.lower():  # Küçük-büyük harf farkı gözetmeksizin karşılaştır
+            data["memorized"] = True  # Eğer kelime ve çeviri eşleşiyorsa, memorized'ı True yap
+
     # Yeni verileri mevcut verilerle birleştirerek güncel dosyaya yazalım
     existing_data.update(translations)
 
