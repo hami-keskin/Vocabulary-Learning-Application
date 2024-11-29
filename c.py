@@ -49,6 +49,7 @@ def learn_new_words_gui():
 
     learn_window = tk.Toplevel(root)
     learn_window.title("Yeni Kelime Öğren")
+    learn_window.attributes('-fullscreen', True)  # Tam ekran modu
     tk.Label(learn_window, text=f"Kelime: {word}").pack(pady=10)
     tk.Label(learn_window, text=f"Çevirisi: {selected_word['translation']}").pack(pady=10)
     tk.Button(learn_window, text="Ezberlendi", command=mark_memorized).pack(pady=5)
@@ -78,6 +79,7 @@ def review_words_gui():
     for word, data in sorted_words:
         review_window = tk.Toplevel(root)
         review_window.title("Kelime Tekrarı")
+        review_window.attributes('-fullscreen', True)  # Tam ekran modu
         tk.Label(review_window, text=f"Kelime: {word}").pack(pady=10)
 
         correct_translation = data["translation"]
