@@ -3490,56 +3490,61 @@
     "purse": {
         "translation": "el çantası",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "put": {
         "translation": "koymak",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "puzzle": {
         "translation": "bulmaca",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "quantum": {
         "translation": "kuantum",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "query": {
         "translation": "sorgu",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "quest": {
         "translation": "arayış",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "radiator": {
         "translation": "radyatör",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "raj": {
-        "translation": "rahip",
+        "translation": "hakimiyet",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "rational": {
         "translation": "akılcı",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "re": {
         "translation": "tekrar",
@@ -3550,73 +3555,78 @@
     },
     "really": {
         "translation": "Gerçekten",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "redundant": {
         "translation": "gereksiz",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "reference": {
         "translation": "referans",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "regards": {
         "translation": "saygılarımla",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "regular": {
         "translation": "düzenli",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "relationship": {
         "translation": "ilişki",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "relative": {
         "translation": "akraba",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "remain": {
         "translation": "geriye kalmak",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "remember": {
         "translation": "Unutma",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "reneged": {
-        "translation": "reneged",
+        "translation": "dönmüş",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "resolution": {
         "translation": "çözünürlük",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "response": {
         "translation": "cevap",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
