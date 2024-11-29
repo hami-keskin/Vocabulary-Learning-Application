@@ -56,6 +56,12 @@ def clear_window():
     for widget in root.winfo_children():
         widget.destroy()
 
+# Öğeleri ortalamak için bir çerçeve
+def center_frame():
+    frame = tk.Frame(root, bg="#1e1e1e")
+    frame.place(relx=0.5, rely=0.5, anchor="center")
+    return frame
+
 # Yeni kelime öğrenme ekranı
 def learn_new_words_gui():
     unmemorized = {word: data for word, data in words.items() if not data["memorized"] and not data["retry"]}
@@ -85,13 +91,14 @@ def learn_new_words_gui():
             main_menu()
 
     clear_window()
+    frame = center_frame()
     current_word, current_data = unmemorized.popitem()
-    word_label = create_label(root, current_word, font=("Arial", 24))
-    translation_label = create_label(root, current_data['translation'], font=("Arial", 20))
-    create_button(root, "Biliyorum", mark_memorized)
-    create_button(root, "Tekrar Et", add_to_retry)
-    create_button(root, "Sonraki Kelime", next_word)
-    create_button(root, "Geri Dön", main_menu)
+    word_label = create_label(frame, current_word, font=("Arial", 24))
+    translation_label = create_label(frame, current_data['translation'], font=("Arial", 20))
+    create_button(frame, "Biliyorum", mark_memorized)
+    create_button(frame, "Tekrar Et", add_to_retry)
+    create_button(frame, "Sonraki Kelime", next_word)
+    create_button(frame, "Geri Dön", main_menu)
 
 # Kelime tekrar ekranı
 def review_words_gui():
@@ -129,13 +136,14 @@ def review_words_gui():
         for btn in choice_buttons:
             btn.destroy()
         for choice in choices:
-            btn = create_button(root, choice, lambda c=choice: check_answer(c))
+            btn = create_button(frame, choice, lambda c=choice: check_answer(c))
             choice_buttons.append(btn)
 
     clear_window()
+    frame = center_frame()
     current_word, current_data = retry_words.popitem()
     current_translation = current_data["translation"]
-    word_label = create_label(root, current_word, font=("Arial", 24))
+    word_label = create_label(frame, current_word, font=("Arial", 24))
     choice_buttons = []
     update_choices()
 
@@ -156,11 +164,12 @@ def exit_program():
 # Ana menü
 def main_menu():
     clear_window()
-    create_button(root, "Yeni Kelime Öğren", learn_new_words_gui)
-    create_button(root, "Kelime Tekrarı Yap", review_words_gui)
-    create_button(root, "İstatistikleri Göster", show_statistics_gui)
-    create_button(root, "Kaydet", lambda: save_words(file_path, words))
-    create_button(root, "Çık", exit_program)
+    frame = center_frame()
+    create_button(frame, "Yeni Kelime Öğren", learn_new_words_gui)
+    create_button(frame, "Kelime Tekrarı Yap", review_words_gui)
+    create_button(frame, "İstatistikleri Göster", show_statistics_gui)
+    create_button(frame, "Kaydet", lambda: save_words(file_path, words))
+    create_button(frame, "Çık", exit_program)
 
 # Uygulama başlangıcı
 file_path = 'translated_words.json'
