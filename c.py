@@ -18,16 +18,6 @@ def save_words(file_path, words):
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(words, file, ensure_ascii=False, indent=4)
 
-# Tarih yardımcı fonksiyonları
-def parse_date(date_str):
-    return datetime.strptime(date_str, "%Y-%m-%d")
-
-def format_date(date_obj):
-    return date_obj.strftime("%Y-%m-%d")
-
-def get_today():
-    return format_date(datetime.now())
-
 # Tema ayarları
 def apply_dark_mode(widget):
     widget.configure(bg="#1e1e1e")
@@ -103,7 +93,7 @@ def learn_new_words_gui():
         next_word()
 
     def add_to_retry():
-        current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
+        current_data.update({"retry": True, "correct_streak": 0, "date": 0})
         next_word()
 
     def next_word():
@@ -180,24 +170,16 @@ def review_words_gui():
         messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
         return
 
-    sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
-    retry_words = {word: data for word, data in sorted_retry_words}
-
     def check_answer(selected):
         nonlocal current_word, current_translation
         if selected == current_translation:
-            retry_words[current_word]["correct_streak"] += 1
 
-            # If correct_streak is less than 7, increase the date by 1 day
             if retry_words[current_word]["correct_streak"] < 7:
-                retry_words[current_word]["date"] = format_date(
-                    parse_date(retry_words[current_word]["date"]) + timedelta(days=1))
+                retry_words[current_word]["correct_streak"] += 1
 
-            # If correct_streak reaches 7, set the review interval to 7 days
-            if retry_words[current_word]["correct_streak"] == 7:
-                retry_words[current_word]["date"] = format_date(datetime.now() + timedelta(days=7))
+            if retry_words[current_word]["correct_streak"] >= 7:
+                retry_words[current_word]["date"] += 7
 
-            # If correct_streak is greater than or equal to 21, mark as memorized
             if retry_words[current_word]["correct_streak"] >= 21:
                 retry_words[current_word]["memorized"] = True
                 retry_words[current_word]["retry"] = False
