@@ -105,6 +105,12 @@ def learn_new_words_gui():
             messagebox.showinfo("Bilgi", "Ezberlenecek kelime kalmadı!")
             main_menu()
 
+    def correct_translation():
+        new_translation = simple_dialog("Yeni Çeviriyi Girin", "Çeviriyi Girin:")
+        if new_translation:
+            current_data['translation'] = new_translation
+            update_word_labels()
+
     clear_window()
     frame = center_frame()
     current_word, current_data = unmemorized.popitem()
@@ -114,7 +120,27 @@ def learn_new_words_gui():
     create_button(frame, "Biliyorum", mark_memorized)
     create_button(frame, "Tekrar Et", add_to_retry)
     create_button(frame, "Sonraki Kelime", next_word)
+    create_button(frame, "Çeviriyi Düzelt", correct_translation)
     create_button(frame, "Geri Dön", main_menu)
+
+# Basit bir girdi penceresi
+def simple_dialog(title, prompt):
+    def on_submit():
+        entered_value = entry.get()
+        if entered_value:
+            top.destroy()
+            result[0] = entered_value
+
+    result = [None]
+    top = tk.Toplevel(root)
+    top.title(title)
+    create_label(top, prompt)
+    entry = tk.Entry(top)
+    entry.pack(pady=10)
+    submit_button = create_button(top, "Tamam", on_submit)
+    entry.focus_set()
+    top.wait_window(top)
+    return result[0]
 
 # Kelime tekrar ekranı (güncellenmiş)
 def review_words_gui():

@@ -3389,21 +3389,23 @@
     },
     "poor": {
         "translation": "fakir",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "population": {
         "translation": "nüfus",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "port": {
         "translation": "liman",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "position": {
         "translation": "konum",
@@ -3421,49 +3423,51 @@
     },
     "pound": {
         "translation": "pound",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "prince": {
         "translation": "prens",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "privilege": {
         "translation": "ayrıcalık",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "prize": {
         "translation": "ödül",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "pro": {
         "translation": "profesyonel",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "probably": {
         "translation": "muhtemelen",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "process": {
         "translation": "işlem",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
     "products": {
         "translation": "ürünler",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
         "date": "2024-11-29"
     },
@@ -3482,10 +3486,11 @@
         "correct_streak": 21
     },
     "proximal": {
-        "translation": "proksimal",
+        "translation": "yakın",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "purse": {
         "translation": "el çantası",
