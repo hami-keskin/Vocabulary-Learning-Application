@@ -54,27 +54,40 @@ def learn_new_words_gui():
     def mark_memorized():
         selected_word["memorized"] = True
         selected_word["correct_streak"] = 21
-        messagebox.showinfo("Başarı", f"{word} ezberlendi!")
+        next_word()
 
     def add_to_retry():
         selected_word["retry"] = True
         selected_word["correct_streak"] = 0
         selected_word["date"] = get_today()  # Bugünün tarihini ekle
-        messagebox.showinfo("Başarı", f"{word} tekrar listesine eklendi!")
+        next_word()
+
+    def next_word():
+        nonlocal word, selected_word
+        word_list = list(unmemorized.keys())
+        random.shuffle(word_list)
+        word = word_list[0]
+        selected_word = unmemorized[word]
+        word_label.config(text=word)
+        translation_label.config(text=selected_word['translation'])
 
     word_list = list(unmemorized.keys())
     random.shuffle(word_list)
     word = word_list[0]
     selected_word = unmemorized[word]
 
-    learn_window = tk.Toplevel(root)
-    learn_window.title("Yeni Kelime Öğren")
-    apply_dark_mode(learn_window)
-    learn_window.attributes("-fullscreen", True)  # Tam ekran modu
-    tk.Label(learn_window, text=f"{word}").pack(pady=20)
-    tk.Label(learn_window, text=f"{selected_word['translation']}").pack(pady=20)
-    tk.Button(learn_window, text="Biliyorum", command=mark_memorized).pack(pady=10)
-    tk.Button(learn_window, text="Tekrar Et", command=add_to_retry).pack(pady=10)
+    # Pencereyi oluştur
+    clear_window()
+    word_label = tk.Label(root, text=word, font=("Arial", 24), bg="#1e1e1e", fg="#ffffff")
+    word_label.pack(pady=20)
+
+    translation_label = tk.Label(root, text=selected_word['translation'], font=("Arial", 20), bg="#1e1e1e", fg="#ffffff")
+    translation_label.pack(pady=20)
+
+    tk.Button(root, text="Biliyorum", command=mark_memorized).pack(pady=10)
+    tk.Button(root, text="Tekrar Et", command=add_to_retry).pack(pady=10)
+    tk.Button(root, text="Sonraki Kelime", command=next_word).pack(pady=10)
+    tk.Button(root, text="Geri Dön", command=main_menu).pack(pady=10)
 
 # Kelime tekrar ekranı
 def review_words_gui():
@@ -94,27 +107,51 @@ def review_words_gui():
         nonlocal word, correct_translation
         if answer == correct_translation:
             retry_words[word]["correct_streak"] += 1
-            messagebox.showinfo("Doğru!", "Cevabınız doğru!")
+            next_word()
         else:
             retry_words[word]["correct_streak"] = 0
             messagebox.showerror("Yanlış!", f"Doğru cevap: {correct_translation}")
 
-    for word, data in sorted_words:
-        review_window = tk.Toplevel(root)
-        review_window.title("Kelime Tekrarı")
-        apply_dark_mode(review_window)
-        review_window.attributes("-fullscreen", True)  # Tam ekran modu
-        tk.Label(review_window, text=f"Kelime: {word}").pack(pady=20)
+    def next_word():
+        nonlocal word, selected_word
+        if sorted_words:
+            word, data = sorted_words.pop(0)
+            selected_word = data
+            correct_translation = data["translation"]
+            choices = random.sample(
+                [w["translation"] for w in words.values() if w["translation"] != correct_translation], 3
+            ) + [correct_translation]
+            random.shuffle(choices)
 
-        correct_translation = data["translation"]
-        choices = random.sample(
-            [w["translation"] for w in words.values() if w["translation"] != correct_translation], 3
-        ) + [correct_translation]
-        random.shuffle(choices)
+            word_label.config(text=word)
+            for widget in choice_buttons:
+                widget.destroy()
 
-        for choice in choices:
-            tk.Button(review_window, text=choice, command=lambda c=choice: check_answer(c), width=30).pack(pady=10)
-        break
+            for choice in choices:
+                button = tk.Button(root, text=choice, command=lambda c=choice: check_answer(c))
+                button.pack(pady=5)
+                choice_buttons.append(button)
+        else:
+            messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime bitti!")
+
+    word, selected_word = sorted_words.pop(0)
+    correct_translation = selected_word["translation"]
+    choice_buttons = []
+
+    clear_window()
+    word_label = tk.Label(root, text=word, font=("Arial", 24), bg="#1e1e1e", fg="#ffffff")
+    word_label.pack(pady=20)
+
+    for widget in choice_buttons:
+        widget.destroy()
+
+    for choice in choices:
+        button = tk.Button(root, text=choice, command=lambda c=choice: check_answer(c))
+        button.pack(pady=5)
+        choice_buttons.append(button)
+
+    tk.Button(root, text="Sonraki Kelime", command=next_word).pack(pady=10)
+    tk.Button(root, text="Geri Dön", command=main_menu).pack(pady=10)
 
 # İstatistikler ekranı
 def show_statistics_gui():
@@ -140,6 +177,20 @@ def save_changes():
     save_words(file_path, words)
     messagebox.showinfo("Bilgi", "Değişiklikler kaydedildi!")
 
+# Ana menü
+def main_menu():
+    clear_window()
+    tk.Button(root, text="Yeni Kelime Öğren", command=learn_new_words_gui).pack(pady=15)
+    tk.Button(root, text="Kelime Tekrarı Yap", command=review_words_gui).pack(pady=15)
+    tk.Button(root, text="İstatistikleri Göster", command=show_statistics_gui).pack(pady=15)
+    tk.Button(root, text="Kaydet", command=save_changes).pack(pady=15)
+    tk.Button(root, text="Çık", command=exit_program).pack(pady=15)
+
+# Pencereyi temizleme
+def clear_window():
+    for widget in root.winfo_children():
+        widget.destroy()
+
 # Ana uygulama penceresi
 file_path = 'translated_words.json'
 words = load_words(file_path)
@@ -148,13 +199,7 @@ root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
 apply_dark_mode(root)
 
-# Tam ekran modunu uygulama
-root.attributes("-fullscreen", True)
-
-tk.Button(root, text="Yeni Kelime Öğren", command=learn_new_words_gui).pack(pady=15)
-tk.Button(root, text="Kelime Tekrarı Yap", command=review_words_gui).pack(pady=15)
-tk.Button(root, text="İstatistikleri Göster", command=show_statistics_gui).pack(pady=15)
-tk.Button(root, text="Kaydet", command=save_changes).pack(pady=15)
-tk.Button(root, text="Çık", command=exit_program).pack(pady=15)
+# Ana menüye başla
+main_menu()
 
 root.mainloop()

@@ -603,9 +603,10 @@
     },
     "caltech": {
         "translation": "Caltech",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "can": {
         "translation": "olabilmek",
@@ -1023,9 +1024,10 @@
     },
     "didn": {
         "translation": "yapmadım",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "die": {
         "translation": "ölmek",
@@ -1042,8 +1044,9 @@
     "differential": {
         "translation": "diferansiyel",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "difficult": {
         "translation": "zor",
@@ -1959,9 +1962,10 @@
     },
     "high": {
         "translation": "yüksek",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "higher": {
         "translation": "daha yüksek",
@@ -2170,8 +2174,9 @@
     "interrupt": {
         "translation": "yarıda kesmek",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "interruptus": {
         "translation": "kınama",
@@ -2475,9 +2480,10 @@
     },
     "level": {
         "translation": "seviyesi",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "life": {
         "translation": "hayat",
@@ -2523,9 +2529,10 @@
     },
     "live": {
         "translation": "canlı",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "lived": {
         "translation": "yaşamış",
@@ -2811,9 +2818,10 @@
     },
     "most": {
         "translation": "en",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "motives": {
         "translation": "güdüler",
@@ -2829,9 +2837,10 @@
     },
     "movements": {
         "translation": "hareketler",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "movie": {
         "translation": "film",
@@ -2853,9 +2862,10 @@
     },
     "muscle": {
         "translation": "kas",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "must": {
         "translation": "mutlak",
@@ -3345,9 +3355,10 @@
     },
     "position": {
         "translation": "konum",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "possibility": {
         "translation": "olasılık",
@@ -3855,9 +3866,10 @@
     },
     "situation": {
         "translation": "durum",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "six": {
         "translation": "altı",
@@ -4065,9 +4077,10 @@
     },
     "step": {
         "translation": "adım",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "stephen": {
         "translation": "Stephen",
@@ -4083,9 +4096,10 @@
     },
     "still": {
         "translation": "Hala",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "stop": {
         "translation": "durmak",
@@ -4353,9 +4367,10 @@
     },
     "this": {
         "translation": "Bu",
-        "memorized": false,
+        "memorized": true,
         "retry": false,
-        "date": "2024-11-29"
+        "date": "2024-11-29",
+        "correct_streak": 21
     },
     "those": {
         "translation": "onlar",
@@ -4480,8 +4495,9 @@
     "trip": {
         "translation": "seyahat",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29"
+        "retry": true,
+        "date": "2024-11-29",
+        "correct_streak": 0
     },
     "true": {
         "translation": "gerçek",
