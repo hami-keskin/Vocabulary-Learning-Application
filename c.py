@@ -222,13 +222,29 @@ def review_words_gui():
     choice_buttons = []
     update_choices()
 
-# İstatistikler ekranı
+# İstatistikler ekranı (güncellenmiş, günlük analiz kaldırıldı)
 def show_statistics_gui():
     total = len(words)
     memorized = sum(1 for data in words.values() if data["memorized"])
     retry = sum(1 for data in words.values() if data["retry"])
-    stats = f"Toplam Kelime: {total}\nEzberlenen Kelimeler: {memorized}\nTekrar Edilecek Kelimeler: {retry}"
-    messagebox.showinfo("İstatistikler", stats)
+    known = sum(1 for data in words.values() if data.get("known", False))  # "Bilinen" kelimeler
+    unmemorized = total - memorized - retry - known
+
+    # İstatistik metni
+    stats = (
+        f"Toplam Kelime: {total}\n"
+        f"Ezberlenen Kelimeler: {memorized} ({memorized / total:.1%})\n"
+        f"Tekrar Edilecek Kelimeler: {retry}\n"
+        f"Bilinen Kelimeler: {known} ({known / total:.1%})\n"
+        f"Öğrenilmeyi Bekleyen Kelimeler: {unmemorized}\n"
+    )
+
+    # Gösterim
+    clear_window()
+    frame = center_frame()
+    create_label(frame, "İstatistikler", font=("Arial", 20))
+    stats_label = create_label(frame, stats, font=("Arial", 16), pady=10)
+    create_button(frame, "Geri Dön", main_menu)
 
 # Çıkış işlemi
 def exit_program():
