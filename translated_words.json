@@ -5238,65 +5238,67 @@
     "will": {
         "translation": "irade",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "win": {
         "translation": "kazanç",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "windows": {
         "translation": "pencere",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "winds": {
         "translation": "rüzgâr",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "winter": {
         "translation": "kış",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "with": {
         "translation": "ile",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "woman": {
         "translation": "kadın",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "women": {
         "translation": "kadınlar",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "won": {
         "translation": "kazanmak",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true
     },
     "wonderful": {
         "translation": "müthiş",

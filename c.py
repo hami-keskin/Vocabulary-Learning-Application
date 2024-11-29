@@ -73,7 +73,7 @@ def speak(text):
     speech_engine.runAndWait()
 
 # Sesli okuma fonksiyonunu gecikmeli hale getirelim
-def speak_with_delay(text, delay=1):
+def speak_with_delay(text, delay=1000):
     """Metni gecikmeli olarak sesli okuma"""
     root.after(delay, lambda: speak(text))
 
