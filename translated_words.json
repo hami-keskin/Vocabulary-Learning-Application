@@ -4463,259 +4463,296 @@
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "sweet": {
         "translation": "tatlı",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "switch": {
         "translation": "anahtar",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "take": {
         "translation": "almak",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "taken": {
         "translation": "alınmış",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "taking": {
         "translation": "alıcı",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "talking": {
         "translation": "konuşma",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "target": {
         "translation": "hedef",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "tears": {
         "translation": "göz yaşları",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "technically": {
         "translation": "teknik olarak",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "television": {
         "translation": "televizyon",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "tell": {
         "translation": "söylemek",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "tells": {
         "translation": "söyler",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "ten": {
         "translation": "on",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "terrific": {
         "translation": "müthiş",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "thai": {
         "translation": "Tayland",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "than": {
         "translation": "hariç",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "thank": {
         "translation": "teşekkür etmek",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "thanks": {
         "translation": "teşekkürler",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "thanksgiving": {
         "translation": "Şükran Günü",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "that": {
         "translation": "O",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "the": {
         "translation": ".",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "their": {
         "translation": "onların",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "them": {
         "translation": "onlara",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "then": {
         "translation": "Daha sonra",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "theory": {
         "translation": "teori",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "there": {
         "translation": "Orası",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "these": {
         "translation": "bunlar",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "they": {
         "translation": "Onlar",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "thing": {
         "translation": "şey",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "think": {
         "translation": "düşünmek",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "thinking": {
         "translation": "düşünme",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "this": {
         "translation": "Bu",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "those": {
         "translation": "onlar",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "though": {
         "translation": "Yine de",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "thought": {
         "translation": "düşünce",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "through": {
         "translation": "başından sonuna kadar",
         "memorized": false,
-        "retry": false,
+        "retry": true,
         "date": "2024-11-29",
-        "known": false
+        "known": false,
+        "correct_streak": 0
     },
     "thus": {
         "translation": "Böylece",

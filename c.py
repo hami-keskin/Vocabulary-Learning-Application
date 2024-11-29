@@ -51,35 +51,27 @@ def create_button(parent, text, command, pady=10, width=20):
     button.pack()
     return button
 
-# Pencereyi temizleme
 def clear_window():
     for widget in root.winfo_children():
         widget.destroy()
 
-# Öğeleri ortalamak için bir çerçeve
 def center_frame():
     frame = tk.Frame(root, bg="#1e1e1e")
     frame.place(relx=0.5, rely=0.5, anchor="center")
     return frame
 
-# Sesli okuma motoru başlat
 speech_engine = pyttsx3.init()
 
 def speak(text):
-    """Metni sesli okuma"""
     speech_engine.say(text)
     speech_engine.runAndWait()
 
-# Sesli okuma fonksiyonunu gecikmeli hale getirelim
 def speak_with_delay(text, delay=1000):
-    """Metni gecikmeli olarak sesli okuma"""
     root.after(delay, lambda: speak(text))
 
-# Kelimeyi kopyalamak için fonksiyon
 def copy_to_clipboard(text):
-    pyperclip.copy(text)  # Metni panoya kopyala
+    pyperclip.copy(text)
 
-# Yeni kelime öğrenme ekranı (güncellenmiş)
 def learn_new_words_gui():
     unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
     if not unknown:
@@ -89,7 +81,7 @@ def learn_new_words_gui():
     def update_word_labels():
         word_label.config(text=current_word)
         translation_label.config(text=current_data['translation'])
-        speak_with_delay(current_word, delay=1000)  # Kelimeyi gecikmeli olarak sesli oku
+        speak_with_delay(current_word, delay=1000)
 
     def mark_memorized():
         current_data["memorized"] = True
@@ -97,7 +89,7 @@ def learn_new_words_gui():
 
     def mark_known():
         current_data["known"] = True
-        current_data["correct_streak"] = 0  # Doğru öğrenildiğinde correct_streak sıfırlanır
+        current_data["correct_streak"] = 0
         next_word()
 
     def add_to_retry():
@@ -119,17 +111,16 @@ def learn_new_words_gui():
             current_data['translation'] = new_translation
             update_word_labels()
 
+    def disable_button_for_delay(button):
+        button.config(state=tk.DISABLED)
+        root.after(2000, lambda: button.config(state=tk.NORMAL))
+
     clear_window()
     frame = center_frame()
     current_word, current_data = unknown.popitem()
     word_label = create_label(frame, current_word, font=("Arial", 24))
     translation_label = create_label(frame, current_data['translation'], font=("Arial", 20))
-    speak_with_delay(current_word, delay=1000)  # İlk kelimeyi gecikmeli olarak sesli oku
-
-    def disable_button_for_delay(button):
-        """Butonu 2 saniye boyunca devre dışı bırak ve ardından tekrar etkinleştir"""
-        button.config(state=tk.DISABLED)
-        root.after(2000, lambda: button.config(state=tk.NORMAL))  # 2 saniye sonra butonu etkinleştir
+    speak_with_delay(current_word, delay=1000)
 
     button_biliyorum = create_button(frame, "Biliyorum", mark_known)
     button_biliyorum.config(command=lambda: [mark_known(), disable_button_for_delay(button_biliyorum)])
@@ -143,13 +134,10 @@ def learn_new_words_gui():
     button_correct = create_button(frame, "Çeviriyi Düzelt", correct_translation)
     button_correct.config(command=lambda: [correct_translation(), disable_button_for_delay(button_correct)])
 
-    button_copy = create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
-
-    button_sesli_okuma = create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))
-
+    create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
+    create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))
     create_button(frame, "Geri Dön", main_menu)
 
-# Basit bir girdi penceresi
 def simple_dialog(title, prompt):
     def on_submit():
         entered_value = entry.get()
@@ -163,12 +151,11 @@ def simple_dialog(title, prompt):
     create_label(top, prompt)
     entry = tk.Entry(top)
     entry.pack(pady=10)
-    submit_button = create_button(top, "Tamam", on_submit)
+    create_button(top, "Tamam", on_submit)
     entry.focus_set()
     top.wait_window(top)
     return result[0]
 
-# Kelime tekrar ekranı (güncellenmiş)
 def review_words_gui():
     today = get_today()
     retry_words = {
@@ -238,12 +225,12 @@ def review_words_gui():
             btn = create_button(main_frame, choice, lambda c=choice: check_answer(c))
             choice_buttons.append(btn)
 
-    # Clear and setup main window
     clear_window()
+    main_frame = center_frame()
+    bottom_frame = tk.Frame(root, bg="#1e1e1e")
+    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")
 
-    # Create main content frame (centered)
-    main_frame = tk.Frame(root, bg="#1e1e1e")
-    main_frame.place(relx=0.5, rely=0.4, anchor="center")  # Moved up to make room for bottom buttons
+
 
     # Create bottom frame for additional controls
     bottom_frame = tk.Frame(root, bg="#1e1e1e")
@@ -305,7 +292,7 @@ words = load_words(file_path)
 
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
-apply_dark_mode(root)
+apply_dark_mode(root)   
 root.attributes("-fullscreen", True)
 root.bind("<Escape>", lambda e: root.attributes("-fullscreen", False))
 main_menu()
