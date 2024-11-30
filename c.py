@@ -292,7 +292,7 @@ words = load_words(file_path)
 
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
-apply_dark_mode(root)   
+apply_dark_mode(root)
 root.attributes("-fullscreen", True)
 root.bind("<Escape>", lambda e: root.attributes("-fullscreen", False))
 main_menu()
