@@ -13,14 +13,14 @@ def apply_dark_mode(widget):
         widget.option_add("*Button.ActiveBackground", "#3a3a3a")
         widget.option_add("*Button.ActiveForeground", "#ffffff")
 
-def create_label(parent, text, font=("Arial", 16), pady=20):
-    label = tk.Label(parent, text=text, font=font, bg="#1e1e1e", fg="#ffffff")
-    label.pack(pady=pady)
+def create_label(frame, text, font=("Arial", 12), fg="white", bg="black", pady=0, padx=0):
+    label = tk.Label(frame, text=text, font=font, fg=fg, bg=bg, pady=pady, padx=padx)
+    label.pack(pady=pady, padx=padx)
     return label
 
-def create_button(parent, text, command, pady=10, width=20):
-    button = tk.Button(parent, text=text, command=command, pady=pady, width=width)
-    button.pack()
+def create_button(frame, text, command, fg="white", bg="black"):
+    button = tk.Button(frame, text=text, command=command, fg=fg, bg=bg)
+    button.pack(pady=10)
     return button
 
 def clear_window(root):
