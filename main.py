@@ -1,237 +1,37 @@
 import tkinter as tk
 from tkinter import messagebox
-from datetime import timedelta
-import random
 
-from date_utils import get_today, parse_date, format_date
-from file_operations import save_words, load_words
-from speech import speak_with_delay, copy_to_clipboard, speak
-from theme import apply_dark_mode
-from widgets import clear_window, center_frame, create_label, create_button
+from file_operations import load_words, save_words
+from gui_components import apply_dark_mode, clear_window, center_frame, create_button
+from learning import learn_new_words_gui, review_words_gui
+from statistics import show_statistics_gui
+from utils import get_today
 
-
-def learn_new_words_gui():
-    unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
-    if not unknown:
-        messagebox.showinfo("Bilgi", "Ezberlenecek yeni kelime yok!")
-        return
-
-    def update_word_labels():
-        word_label.config(text=current_word)
-        translation_label.config(text=current_data['translation'])
-        speak_with_delay(current_word, delay=1000)
-
-    def mark_memorized():
-        current_data["memorized"] = True
-        next_word()
-
-    def mark_known():
-        current_data["known"] = True
-        current_data["correct_streak"] = 0
-        next_word()
-
-    def add_to_retry():
-        current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
-        next_word()
-
-    def next_word():
-        nonlocal current_word, current_data
-        if unknown:
-            current_word, current_data = unknown.popitem()
-            update_word_labels()
-        else:
-            messagebox.showinfo("Bilgi", "Ezberlenecek kelime kalmadı!")
-            main_menu()
-
-    def correct_translation():
-        new_translation = simple_dialog("Yeni Çeviriyi Girin", "Çeviriyi Girin:")
-        if new_translation:
-            current_data['translation'] = new_translation
-            update_word_labels()
-
-    def disable_button_for_delay(button):
-        button.config(state=tk.DISABLED)
-        root.after(2000, lambda: button.config(state=tk.NORMAL))
-
-    clear_window()
-    frame = center_frame()
-    current_word, current_data = unknown.popitem()
-    word_label = create_label(frame, current_word, font=("Arial", 24))
-    translation_label = create_label(frame, current_data['translation'], font=("Arial", 20))
-    speak_with_delay(current_word, delay=1000)
-
-    button_biliyorum = create_button(frame, "Biliyorum", mark_known)
-    button_biliyorum.config(command=lambda: [mark_known(), disable_button_for_delay(button_biliyorum)])
-
-    button_tekraret = create_button(frame, "Tekrar Et", add_to_retry)
-    button_tekraret.config(command=lambda: [add_to_retry(), disable_button_for_delay(button_tekraret)])
-
-    button_sonraki = create_button(frame, "Sonraki Kelime", next_word)
-    button_sonraki.config(command=lambda: [next_word(), disable_button_for_delay(button_sonraki)])
-
-    button_correct = create_button(frame, "Çeviriyi Düzelt", correct_translation)
-    button_correct.config(command=lambda: [correct_translation(), disable_button_for_delay(button_correct)])
-
-    create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
-    create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))
-    create_button(frame, "Geri Dön", main_menu)
-
-def simple_dialog(title, prompt):
-    def on_submit():
-        entered_value = entry.get()
-        if entered_value:
-            top.destroy()
-            result[0] = entered_value
-
-    result = [None]
-    top = tk.Toplevel(root)
-    top.title(title)
-    create_label(top, prompt)
-    entry = tk.Entry(top)
-    entry.pack(pady=10)
-    create_button(top, "Tamam", on_submit)
-    entry.focus_set()
-    top.wait_window(top)
-    return result[0]
-
-def review_words_gui():
-    today = get_today()
-    retry_words = {
-        word: data for word, data in words.items()
-        if not data.get("known", False) and not data["memorized"] and data["retry"] and parse_date(data["date"]) <= parse_date(today)
-    }
-    if not retry_words:
-        messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
-        return
-
-    sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
-    retry_words = {word: data for word, data in sorted_retry_words}
-    word_list = list(retry_words.items())
-    current_index = 0
-
-    def check_answer(selected):
-        nonlocal current_index
-        current_word, current_data = word_list[current_index]
-
-        if selected == current_data["translation"]:
-            words[current_word]["correct_streak"] += 1
-            streak = words[current_word]["correct_streak"]
-
-            if streak < 7:
-                words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=1))
-            elif streak < 21:
-                words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=7))
-            else:
-                words[current_word]["memorized"] = True
-                words[current_word]["retry"] = False
-
-            messagebox.showinfo("Doğru!", f"Doğru cevap! Doğru cevap serisi: {streak}")
-        else:
-            words[current_word]["correct_streak"] = 0
-            messagebox.showerror("Yanlış!", f"Doğru cevap: {current_data['translation']}")
-
-        next_word()
-
-    def next_word():
-        nonlocal current_index
-        current_index += 1
-
-        if current_index >= len(word_list):
-            messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
-            save_words(file_path, words)
-            main_menu()
-            return
-
-        current_word, current_data = word_list[current_index]
-        word_label.config(text=current_word)
-        speak_with_delay(current_word, delay=1000)
-        update_choices(current_data["translation"])
-
-    def update_choices(current_translation):
-        all_translations = [data["translation"] for data in words.values()]
-        other_translations = list(set(t for t in all_translations if t != current_translation))
-
-        wrong_choices = random.sample(other_translations, min(3, len(other_translations)))
-        choices = wrong_choices + [current_translation]
-        random.shuffle(choices)
-
-        for btn in choice_buttons:
-            btn.destroy()
-        choice_buttons.clear()
-
-        for choice in choices:
-            btn = create_button(main_frame, choice, lambda c=choice: check_answer(c))
-            choice_buttons.append(btn)
-
-    clear_window()
-    main_frame = center_frame()
-    bottom_frame = tk.Frame(root, bg="#1e1e1e")
-    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")
-
-
-
-    # Create bottom frame for additional controls
-    bottom_frame = tk.Frame(root, bg="#1e1e1e")
-    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")  # Positioned at bottom
-
-    # Initialize with first word in main frame
-    current_word, current_data = word_list[current_index]
-    word_label = create_label(main_frame, current_word, font=("Arial", 24))
-    speak_with_delay(current_word, delay=1000)
-
-    choice_buttons = []
-    update_choices(current_data["translation"])
-
-    # Add additional controls to bottom frame
-    create_button(bottom_frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
-    create_button(bottom_frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu()])
-# İstatistikler ekranı (güncellenmiş, günlük analiz kaldırıldı)
-def show_statistics_gui():
-    total = len(words)
-    known = sum(1 for data in words.values() if data.get("known", False))
-    memorized = sum(1 for data in words.values() if data["memorized"] and not data.get("known", False))
-    retry = sum(1 for data in words.values() if data["retry"])
-    unmemorized = total - memorized - known - retry
-
-    stats = (
-        f"Toplam Kelime: {total}\n"
-        f"Bilinen Kelimeler: {known} ({known / total:.1%})\n"
-        f"Ezberlenen Kelimeler: {memorized} ({memorized / total:.1%})\n"
-        f"Tekrar Edilecek Kelimeler: {retry}\n"
-        f"Öğrenilmeyi Bekleyen Kelimeler: {unmemorized}\n"
-    )
-
-    # Gösterim
-    clear_window()
-    frame = center_frame()
-    create_label(frame, "İstatistikler", font=("Arial", 20))
-    stats_label = create_label(frame, stats, font=("Arial", 16), pady=10)
-    create_button(frame, "Geri Dön", main_menu)
-
-# Çıkış işlemi
-def exit_program():
-    save_words(file_path, words)
-    if messagebox.askyesno("Çıkış", "Programdan çıkmak istediğinizden emin misiniz?"):
-        root.destroy()
-
-# Ana menü
-def main_menu():
-    clear_window()
-    frame = center_frame()
-    create_button(frame, "Yeni Kelime Öğren", learn_new_words_gui)
-    create_button(frame, "Kelime Tekrarı Yap", review_words_gui)
-    create_button(frame, "İstatistikleri Göster", show_statistics_gui)
-    create_button(frame, "Kaydet", lambda: save_words(file_path, words))
-    create_button(frame, "Çık", exit_program)
-
-# Uygulama başlangıcı
+# Application startup
 file_path = 'translated_words.json'
 words = load_words(file_path)
+
+def main_menu(root):
+    from learning import learn_new_words_gui, review_words_gui
+    from statistics import show_statistics_gui
+
+    def exit_program():
+        save_words(file_path, words)
+        if messagebox.askyesno("Çıkış", "Programdan çıkmak istediğinizden emin misiniz?"):
+            root.destroy()
+
+    clear_window(root)
+    frame = center_frame(root)
+    create_button(frame, "Yeni Kelime Öğren", lambda: learn_new_words_gui(root, words, main_menu))
+    create_button(frame, "Kelime Tekrarı Yap", lambda: review_words_gui(root, words, file_path, main_menu))
+    create_button(frame, "İstatistikleri Göster", lambda: show_statistics_gui(root, words, file_path, main_menu))
+    create_button(frame, "Kaydet", lambda: save_words(file_path, words))
+    create_button(frame, "Çık", exit_program)
 
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
 apply_dark_mode(root)
 root.attributes("-fullscreen", True)
 root.bind("<Escape>", lambda e: root.attributes("-fullscreen", False))
-main_menu()
+main_menu(root)
 root.mainloop()
