@@ -1,6 +1,6 @@
 import pyttsx3
 import pyperclip
-from datetime import datetime, timedelta
+from datetime import datetime
 
 speech_engine = pyttsx3.init()
 

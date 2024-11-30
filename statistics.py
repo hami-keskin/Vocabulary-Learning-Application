@@ -1,5 +1,4 @@
 from gui_components import clear_window, create_label, create_button, center_frame
-from utils import get_today
 
 def show_statistics_gui(root, words, file_path, main_menu):
     total = len(words)

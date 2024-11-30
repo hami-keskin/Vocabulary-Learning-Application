@@ -3789,51 +3789,58 @@
     "restatement": {
         "translation": "yeniden ifade etme",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-12-01",
+        "known": false,
+        "correct_streak": 1
     },
     "result": {
         "translation": "sonuç",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "retrieve": {
         "translation": "geri almak",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-12-01",
+        "known": false,
+        "correct_streak": 1
     },
     "right": {
         "translation": "Sağ",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "rip": {
         "translation": "Huzur içinde yatsın",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-11-30",
+        "known": false,
+        "correct_streak": 0
     },
     "room": {
         "translation": "oda",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "russian": {
         "translation": "Rusça",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "sagittarius": {
         "translation": "Yay",
@@ -4591,9 +4598,9 @@
         "translation": "alıcı",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-29",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "talking": {
         "translation": "konuşma",

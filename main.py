@@ -3,16 +3,14 @@ from tkinter import messagebox
 
 from file_operations import load_words, save_words
 from gui_components import apply_dark_mode, clear_window, center_frame, create_button
-from learning import learn_new_words_gui, review_words_gui
-from statistics import show_statistics_gui
-from utils import get_today
 
 # Application startup
 file_path = 'translated_words.json'
 words = load_words(file_path)
 
 def main_menu(root):
-    from learning import learn_new_words_gui, review_words_gui
+    from learn_new_words_gui import learn_new_words_gui
+    from review_words_gui import review_words_gui
     from statistics import show_statistics_gui
 
     def exit_program():
