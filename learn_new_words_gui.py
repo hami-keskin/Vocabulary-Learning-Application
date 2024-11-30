@@ -4,9 +4,8 @@ from datetime import timedelta
 from tkinter import messagebox
 
 from file_operations import save_words
-from utils import speak_with_delay, get_today, parse_date, format_date, copy_to_clipboard, speak
+from utils import speak, get_today, parse_date, format_date, copy_to_clipboard
 from gui_components import clear_window, create_label, create_button, center_frame
-
 
 def learn_new_words_gui(root, words, file_path, main_menu):
     unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
@@ -17,7 +16,7 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     def update_word_labels():
         word_label.config(text=current_word)
         translation_label.config(text=current_data['translation'])
-        speak_with_delay(current_word, root, delay=1000)
+        root.after(100, lambda: speak(current_word))
 
     def mark_memorized():
         current_data["memorized"] = True
@@ -56,7 +55,9 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     current_word, current_data = unknown.popitem()
     word_label = create_label(frame, current_word, font=("Arial", 24))
     translation_label = create_label(frame, current_data['translation'], font=("Arial", 20))
-    speak_with_delay(current_word, root, delay=1000)
+
+    # Kelimeyi seslendirmek yerine ekranda göstermeyi önce yapıyoruz
+    update_word_labels()
 
     button_biliyorum = create_button(frame, "Biliyorum", mark_known)
     button_biliyorum.config(command=lambda: [mark_known(), disable_button_for_delay(button_biliyorum)])
@@ -73,7 +74,6 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
     create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))
     create_button(frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu(root)])
-
 
 def simple_dialog(root, title, prompt):
     def on_submit():
