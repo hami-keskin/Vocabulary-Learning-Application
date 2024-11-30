@@ -8,7 +8,7 @@ from utils import speak_with_delay, get_today, parse_date, format_date, copy_to_
 from gui_components import clear_window, create_label, create_button, center_frame
 
 
-def learn_new_words_gui(root, words, main_menu):
+def learn_new_words_gui(root, words, file_path, main_menu):
     unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
     if not unknown:
         messagebox.showinfo("Bilgi", "Ezberlenecek yeni kelime yok!")
@@ -72,7 +72,8 @@ def learn_new_words_gui(root, words, main_menu):
 
     create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
     create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))
-    create_button(frame, "Geri Dön", main_menu)
+    create_button(frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu(root)])
+
 
 def simple_dialog(root, title, prompt):
     def on_submit():
@@ -116,9 +117,9 @@ def review_words_gui(root, words, file_path, main_menu):
             streak = words[current_word]["correct_streak"]
 
             if streak < 7:
-                words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=1))
+                words[current_word]["date"] = format_date(parse_date(today) + timedelta(days=1))
             elif streak < 21:
-                words[current_word]["date"] = format_date(parse_date(words[current_word]["date"]) + timedelta(days=7))
+                words[current_word]["date"] = format_date(parse_date(today) + timedelta(days=7))
             else:
                 words[current_word]["memorized"] = True
                 words[current_word]["retry"] = False

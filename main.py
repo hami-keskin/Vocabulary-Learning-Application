@@ -22,7 +22,7 @@ def main_menu(root):
 
     clear_window(root)
     frame = center_frame(root)
-    create_button(frame, "Yeni Kelime Öğren", lambda: learn_new_words_gui(root, words, main_menu))
+    create_button(frame, "Yeni Kelime Öğren", lambda: learn_new_words_gui(root, words, file_path, main_menu))
     create_button(frame, "Kelime Tekrarı Yap", lambda: review_words_gui(root, words, file_path, main_menu))
     create_button(frame, "İstatistikleri Göster", lambda: show_statistics_gui(root, words, file_path, main_menu))
     create_button(frame, "Kaydet", lambda: save_words(file_path, words))
