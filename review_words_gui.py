@@ -38,9 +38,6 @@ def review_words_gui(root, words, file_path, main_menu):
                 words[current_word]["memorized"] = True
                 words[current_word]["retry"] = False
 
-            # Save progress after answering
-            save_words(file_path, words)
-
             # Proceed to next word if correct
             next_word()
         else:
@@ -51,8 +48,8 @@ def review_words_gui(root, words, file_path, main_menu):
                     button.config(bg="green")  # Correct button in green
                 button.config(state=tk.DISABLED)  # Disable all choices after an answer
 
-            # Save progress after answering
-            save_words(file_path, words)
+        # Save progress after answering, both for correct and incorrect answers
+        save_words(file_path, words)
 
     def next_word():
         nonlocal current_index
