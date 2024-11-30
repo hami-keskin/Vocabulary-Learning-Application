@@ -6,7 +6,7 @@ from datetime import timedelta
 from tkinter import messagebox
 
 from file_operations import save_words
-from utils import speak_with_delay, get_today, parse_date, format_date, speak
+from utils import speak, get_today, parse_date, format_date
 from gui_components import clear_window, create_label, create_button, center_frame
 
 def review_words_gui(root, words, file_path, main_menu):
@@ -64,8 +64,8 @@ def review_words_gui(root, words, file_path, main_menu):
             return
 
         current_word, current_data = word_list[current_index]
-        word_label.config(text=current_word)
-        speak_with_delay(current_word, root, delay=1000)
+        word_label.config(text=current_word)  # Kelimeyi önce ekrana yerleştir
+        root.after(500, lambda: speak(current_word))  # Kelime ekrana geldikten sonra seslendir
         update_choices(current_data["translation"])
 
     def update_choices(current_translation):
@@ -92,7 +92,8 @@ def review_words_gui(root, words, file_path, main_menu):
 
     current_word, current_data = word_list[current_index]
     word_label = create_label(main_frame, current_word, font=("Arial", 24))
-    speak_with_delay(current_word, root, delay=1000)
+    # Kelimeyi ekrana yerleştiriyoruz, seslendirme işlemi bir süre sonra başlayacak
+    root.after(100, lambda: speak(current_word))
 
     choice_buttons = []
     update_choices(current_data["translation"])
