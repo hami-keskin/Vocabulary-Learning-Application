@@ -1,14 +1,14 @@
-import tkinter as tk
 from tkinter import messagebox
+import tkinter as tk
 
+from date_utils import get_today
+from gui_utils import clear_window, center_frame, create_label, create_button
 from main import main_menu, root, words
 from speech_utils import speak_with_delay, speak
-from gui_utils import create_label, create_button, clear_window, center_frame
-from date_utils import get_today
 from utils import copy_to_clipboard
 
 
-def learn_new_words_gui(root, words, main_menu):
+def learn_new_words_gui():
     unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
     if not unknown:
         messagebox.showinfo("Bilgi", "Ezberlenecek yeni kelime yok!")
