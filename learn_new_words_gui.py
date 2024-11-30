@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 from file_operations import save_words
-from utils import speak, get_today, copy_to_clipboard
+from utils import speak, mark_known, add_to_retry, copy_to_clipboard
 from gui_components import clear_window, create_label, create_button, center_frame
 
 def learn_new_words_gui(root, words, file_path, main_menu):
@@ -15,19 +15,6 @@ def learn_new_words_gui(root, words, file_path, main_menu):
         word_label.config(text=current_word)
         translation_label.config(text=current_data['translation'])
         root.after(100, lambda: speak(current_word))
-
-    def mark_memorized():
-        current_data["memorized"] = True
-        next_word()
-
-    def mark_known():
-        current_data["known"] = True
-        current_data["correct_streak"] = 0
-        next_word()
-
-    def add_to_retry():
-        current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
-        next_word()
 
     def next_word():
         nonlocal current_word, current_data
@@ -57,17 +44,10 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     # Kelimeyi seslendirmek yerine ekranda göstermeyi önce yapıyoruz
     update_word_labels()
 
-    button_biliyorum = create_button(frame, "Biliyorum", mark_known)
-    button_biliyorum.config(command=lambda: [mark_known(), disable_button_for_delay(button_biliyorum)])
-
-    button_tekraret = create_button(frame, "Tekrar Et", add_to_retry)
-    button_tekraret.config(command=lambda: [add_to_retry(), disable_button_for_delay(button_tekraret)])
-
-    button_sonraki = create_button(frame, "Sonraki Kelime", next_word)
-    button_sonraki.config(command=lambda: [next_word(), disable_button_for_delay(button_sonraki)])
-
-    button_correct = create_button(frame, "Çeviriyi Düzelt", correct_translation)
-    button_correct.config(command=lambda: [correct_translation(), disable_button_for_delay(button_correct)])
+    button_biliyorum = create_button(frame, "Biliyorum", lambda: [mark_known(current_data, next_word), disable_button_for_delay(button_biliyorum)])
+    button_tekraret = create_button(frame, "Tekrar Et", lambda: [add_to_retry(current_data, next_word), disable_button_for_delay(button_tekraret)])
+    button_sonraki = create_button(frame, "Sonraki Kelime", lambda: [next_word(), disable_button_for_delay(button_sonraki)])
+    button_correct = create_button(frame, "Çeviriyi Düzelt", lambda: [correct_translation(), disable_button_for_delay(button_correct)])
 
     create_button(frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word))
     create_button(frame, "Kelimeyi Sesli Oku", lambda: speak(current_word))

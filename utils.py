@@ -22,3 +22,17 @@ def format_date(date_obj):
 
 def get_today():
     return format_date(datetime.now())
+
+
+def mark_memorized(current_data, next_word):
+    current_data["memorized"] = True
+    next_word()
+
+def mark_known(current_data, next_word):
+    current_data["known"] = True
+    current_data["correct_streak"] = 0
+    next_word()
+
+def add_to_retry(current_data, next_word):
+    current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
+    next_word()
