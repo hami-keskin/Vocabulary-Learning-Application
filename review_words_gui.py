@@ -38,6 +38,9 @@ def review_words_gui(root, words, file_path, main_menu):
                 words[current_word]["memorized"] = True
                 words[current_word]["retry"] = False
 
+            # Save progress after answering
+            save_words(file_path, words)
+
             # Proceed to next word if correct
             next_word()
         else:
@@ -95,5 +98,9 @@ def review_words_gui(root, words, file_path, main_menu):
     choice_buttons = []
     update_choices(current_data["translation"])
 
+    # Create "Sonraki Kelime" button to move to the next word
+    next_word_button = create_button(bottom_frame, "Sonraki Kelime", next_word)
+
+    # Additional buttons for speaking and returning to the main menu
     create_button(bottom_frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
     create_button(bottom_frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu(root)])
