@@ -1,3 +1,5 @@
+# review_words_gui.py
+
 import tkinter as tk
 import random
 from datetime import timedelta
@@ -45,7 +47,7 @@ def review_words_gui(root, words, file_path, main_menu):
             # Highlight the correct button in green and disable other buttons
             for button in choice_buttons:
                 if button.cget("text") == correct_translation:
-                    button.config(bg="green")  # Correct button in green
+                    button.config(fg="green")  # Correct button text in green
                 button.config(state=tk.DISABLED)  # Disable all choices after an answer
 
         # Save progress after answering, both for correct and incorrect answers

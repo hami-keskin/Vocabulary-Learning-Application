@@ -3926,17 +3926,17 @@
         "translation": "senaryo",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "scribbled": {
         "translation": "karalanmış",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "season": {
         "translation": "mevsim",
@@ -4006,9 +4006,9 @@
         "translation": "hassas",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "sent": {
         "translation": "gönderilmiş",
@@ -4022,9 +4022,9 @@
         "translation": "duygusallık",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "separate": {
         "translation": "ayırmak",
@@ -4086,9 +4086,9 @@
         "translation": "gömlek",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "should": {
         "translation": "zorunlu",
@@ -4134,9 +4134,9 @@
         "translation": "önemli",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "since": {
         "translation": "o zamandan beri",
@@ -4214,25 +4214,25 @@
         "translation": "küstahlık",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "slit": {
         "translation": "yarık",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "slits": {
         "translation": "yarık",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "smart": {
         "translation": "akıllı",
@@ -4254,9 +4254,9 @@
         "translation": "düz",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "so": {
         "translation": "Bu yüzden",
@@ -4342,9 +4342,9 @@
         "translation": "düzenlemek",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "sounds": {
         "translation": "sesler",
@@ -4374,9 +4374,9 @@
         "translation": "türler",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "spell": {
         "translation": "hecelemek",
@@ -4390,9 +4390,9 @@
         "translation": "parodi",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "stairs": {
         "translation": "merdiven",
@@ -4502,9 +4502,9 @@
         "translation": "sicim",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "stuff": {
         "translation": "şey",
@@ -4670,9 +4670,9 @@
         "translation": "müthiş",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 1
+        "correct_streak": 2
     },
     "thai": {
         "translation": "Tayland",
@@ -4830,9 +4830,9 @@
         "translation": "Yine de",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 1
+        "correct_streak": 2
     },
     "thought": {
         "translation": "düşünce",
@@ -4846,9 +4846,9 @@
         "translation": "başından sonuna kadar",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 1
+        "correct_streak": 2
     },
     "thus": {
         "translation": "Böylece",
