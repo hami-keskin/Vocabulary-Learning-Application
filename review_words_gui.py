@@ -22,11 +22,11 @@ def review_words_gui(root, words, file_path, main_menu):
     word_list = list(retry_words.items())
     current_index = 0
 
-    def check_answer(selected):
+    def check_answer(selected, correct_translation, btn):
         nonlocal current_index
         current_word, current_data = word_list[current_index]
 
-        if selected == current_data["translation"]:
+        if selected == correct_translation:
             words[current_word]["correct_streak"] += 1
             streak = words[current_word]["correct_streak"]
 
@@ -38,12 +38,18 @@ def review_words_gui(root, words, file_path, main_menu):
                 words[current_word]["memorized"] = True
                 words[current_word]["retry"] = False
 
-            messagebox.showinfo("Doğru!", f"Doğru cevap! Doğru cevap serisi: {streak}")
+            # Proceed to next word if correct
+            next_word()
         else:
             words[current_word]["correct_streak"] = 0
-            messagebox.showerror("Yanlış!", f"Doğru cevap: {current_data['translation']}")
+            # Highlight the correct button in green and disable other buttons
+            for button in choice_buttons:
+                if button.cget("text") == correct_translation:
+                    button.config(bg="green")  # Correct button in green
+                button.config(state=tk.DISABLED)  # Disable all choices after an answer
 
-        next_word()
+            # Save progress after answering
+            save_words(file_path, words)
 
     def next_word():
         nonlocal current_index
@@ -72,8 +78,9 @@ def review_words_gui(root, words, file_path, main_menu):
             btn.destroy()
         choice_buttons.clear()
 
+        # Create buttons for each choice and bind the correct handler
         for choice in choices:
-            btn = create_button(main_frame, choice, lambda c=choice: check_answer(c))
+            btn = create_button(main_frame, choice, lambda c=choice: check_answer(c, current_translation, btn))
             choice_buttons.append(btn)
 
     clear_window(root)
