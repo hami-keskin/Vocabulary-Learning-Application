@@ -1,5 +1,5 @@
 from gui_utils import create_label, create_button, clear_window, center_frame
-from main import words
+from main import words, main_menu
 
 
 def show_statistics_gui():
