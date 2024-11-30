@@ -48,10 +48,10 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     clear_window(root)
     frame = center_frame(root)
     current_word, current_data = unknown.popitem()
-    word_label = create_label(frame, current_word, font=("Arial", 24))
+    word_label = create_label(frame, current_word, font=("Arial", 24), fg="white", bg="black")
 
     # Çeviriyi düzenlenebilir hale getirmek için Entry widget'i
-    translation_label = tk.Entry(frame, font=("Arial", 20), justify="center")
+    translation_label = tk.Entry(frame, font=("Arial", 20), justify="center", fg="white", bg="black", relief="flat", insertbackground="white")
     translation_label.pack(pady=10)
     translation_label.config(state=tk.DISABLED)  # Başlangıçta düzenlenemez
 
