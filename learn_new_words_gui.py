@@ -1,10 +1,8 @@
 import tkinter as tk
-import random
-from datetime import timedelta
 from tkinter import messagebox
 
 from file_operations import save_words
-from utils import speak, get_today, parse_date, format_date, copy_to_clipboard
+from utils import speak, get_today, copy_to_clipboard
 from gui_components import clear_window, create_label, create_button, center_frame
 
 def learn_new_words_gui(root, words, file_path, main_menu):
