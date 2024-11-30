@@ -3822,9 +3822,9 @@
         "translation": "Huzur içinde yatsın",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "room": {
         "translation": "oda",
@@ -3846,17 +3846,17 @@
         "translation": "Yay",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "said": {
         "translation": "söz konusu",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "same": {
         "translation": "Aynı",
@@ -3886,9 +3886,9 @@
         "translation": "söz",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "says": {
         "translation": "diyor",
