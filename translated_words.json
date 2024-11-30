@@ -3691,100 +3691,114 @@
     "rational": {
         "translation": "akılcı",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-11-30",
+        "known": false,
+        "correct_streak": 0
     },
     "re": {
         "translation": "tekrar",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "really": {
         "translation": "Gerçekten",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "redundant": {
         "translation": "gereksiz",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-11-30",
+        "known": false,
+        "correct_streak": 0
     },
     "reference": {
         "translation": "referans",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "regards": {
         "translation": "saygılarımla",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "regular": {
         "translation": "düzenli",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "relationship": {
         "translation": "ilişki",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "relative": {
         "translation": "akraba",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-11-30",
+        "known": false,
+        "correct_streak": 0
     },
     "remain": {
         "translation": "geriye kalmak",
         "memorized": false,
-        "retry": false,
-        "date": "2024-11-29",
-        "known": false
+        "retry": true,
+        "date": "2024-11-30",
+        "known": false,
+        "correct_streak": 0
     },
     "remember": {
         "translation": "Unutma",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "resolution": {
         "translation": "çözünürlük",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "response": {
         "translation": "cevap",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "rest": {
         "translation": "dinlenmek",
         "memorized": false,
         "retry": false,
         "date": "2024-11-29",
-        "known": false
+        "known": true,
+        "correct_streak": 0
     },
     "restatement": {
         "translation": "yeniden ifade etme",
