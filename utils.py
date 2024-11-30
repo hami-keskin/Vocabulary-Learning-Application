@@ -1,3 +1,5 @@
+import tkinter as tk
+
 import pyttsx3
 import pyperclip
 from datetime import datetime
@@ -36,3 +38,11 @@ def mark_known(current_data, next_word):
 def add_to_retry(current_data, next_word):
     current_data.update({"retry": True, "correct_streak": 0, "date": get_today()})
     next_word()
+
+def show_notification(root, message, duration=2000):
+    """Geçici bir bilgi etiketi gösterir."""
+    notification_label = tk.Label(root, bg="yellow", fg="black", font=("Arial", 12), pady=5)
+    notification_label.pack_forget()  # Başlangıçta gizlenir
+    notification_label.config(text=message)
+    notification_label.pack(side=tk.TOP, fill=tk.X)
+    root.after(duration, lambda: notification_label.pack_forget())

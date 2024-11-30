@@ -1,12 +1,9 @@
-# review_words_gui.py
-
 import tkinter as tk
 import random
 from datetime import timedelta
-from tkinter import messagebox
 
 from file_operations import save_words
-from utils import speak, get_today, parse_date, format_date
+from utils import speak, get_today, parse_date, format_date, show_notification
 from gui_components import clear_window, create_label, create_button, center_frame
 
 def review_words_gui(root, words, file_path, main_menu):
@@ -16,7 +13,7 @@ def review_words_gui(root, words, file_path, main_menu):
         if not data.get("known", False) and not data["memorized"] and data["retry"] and parse_date(data["date"]) <= parse_date(today)
     }
     if not retry_words:
-        messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime yok!")
+        show_notification(root, "Bugün tekrar edilecek kelime yok!")
         return
 
     sorted_retry_words = sorted(retry_words.items(), key=lambda item: parse_date(item[1]["date"]))
@@ -40,7 +37,7 @@ def review_words_gui(root, words, file_path, main_menu):
                 words[current_word]["memorized"] = True
                 words[current_word]["retry"] = False
 
-            # Proceed to next word if correct
+            show_notification(root, "Doğru! Bir sonraki kelimeye geçiliyor...")
             next_word()
         else:
             words[current_word]["correct_streak"] = 0
@@ -50,6 +47,8 @@ def review_words_gui(root, words, file_path, main_menu):
                     button.config(fg="green")  # Correct button text in green
                 button.config(state=tk.DISABLED)  # Disable all choices after an answer
 
+            show_notification(root, "Yanlış! Doğru cevap gösteriliyor.")
+
         # Save progress after answering, both for correct and incorrect answers
         save_words(file_path, words)
 
@@ -58,7 +57,7 @@ def review_words_gui(root, words, file_path, main_menu):
         current_index += 1
 
         if current_index >= len(word_list):
-            messagebox.showinfo("Bilgi", "Bugün tekrar edilecek kelime kalmadı!")
+            show_notification(root, "Bugün tekrar edilecek kelime kalmadı!")
             save_words(file_path, words)
             main_menu(root)
             return

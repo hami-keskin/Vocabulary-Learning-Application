@@ -3692,9 +3692,9 @@
         "translation": "akılcı",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "re": {
         "translation": "tekrar",
@@ -3716,9 +3716,9 @@
         "translation": "gereksiz",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "reference": {
         "translation": "referans",
@@ -3756,17 +3756,17 @@
         "translation": "akraba",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "remain": {
         "translation": "geriye kalmak",
         "memorized": false,
         "retry": true,
-        "date": "2024-11-30",
+        "date": "2024-12-01",
         "known": false,
-        "correct_streak": 0
+        "correct_streak": 1
     },
     "remember": {
         "translation": "Unutma",

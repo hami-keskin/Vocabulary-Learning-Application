@@ -1,14 +1,13 @@
 import tkinter as tk
-from tkinter import messagebox
 
 from file_operations import save_words
-from utils import speak, mark_known, add_to_retry, copy_to_clipboard
+from utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
 from gui_components import clear_window, create_label, create_button, center_frame
 
 def learn_new_words_gui(root, words, file_path, main_menu):
     unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}
     if not unknown:
-        messagebox.showinfo("Bilgi", "Ezberlenecek yeni kelime yok!")
+        show_notification(root, "Ezberlenecek yeni kelime yok!")
         return
 
     def update_word_labels():
@@ -25,7 +24,7 @@ def learn_new_words_gui(root, words, file_path, main_menu):
             current_word, current_data = unknown.popitem()
             update_word_labels()
         else:
-            messagebox.showinfo("Bilgi", "Ezberlenecek kelime kalmadı!")
+            show_notification(root, "Ezberlenecek kelime kalmadı!")
             main_menu(root)
 
     def enable_translation_edit():
@@ -40,6 +39,7 @@ def learn_new_words_gui(root, words, file_path, main_menu):
             translation_label.config(state=tk.DISABLED)
             save_button.pack_forget()  # Kaydet butonunu gizle
             update_word_labels()
+            show_notification(root, "Çeviri güncellendi!")
 
     def disable_button_for_delay(button):
         button.config(state=tk.DISABLED)
