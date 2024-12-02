@@ -41,11 +41,11 @@ def review_words_gui(root, words, file_path, main_menu):
             next_word()
         else:
             words[current_word]["correct_streak"] = 0
-            # Highlight the correct button in green and disable other buttons
+
+            # Highlight the correct button in green
             for button in choice_buttons:
                 if button.cget("text") == correct_translation:
-                    button.config(fg="green")  # Correct button text in green
-                button.config(state=tk.DISABLED)  # Disable all choices after an answer
+                    button.config(fg="green")  # Correct button green with white text
 
             show_notification(root, "Yanlış! Doğru cevap gösteriliyor.")
 
