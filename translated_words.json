@@ -5196,9 +5196,9 @@
         "translation": "gerçek",
         "memorized": false,
         "retry": true,
-        "date": "2024-12-01",
+        "date": "2024-12-03",
         "known": false,
-        "correct_streak": 2
+        "correct_streak": 3
     },
     "very": {
         "translation": "çok",
@@ -5268,9 +5268,9 @@
         "translation": "ılık",
         "memorized": false,
         "retry": true,
-        "date": "2024-12-01",
+        "date": "2024-12-03",
         "known": false,
-        "correct_streak": 2
+        "correct_streak": 3
     },
     "was": {
         "translation": "olmuş",
@@ -5452,9 +5452,9 @@
         "translation": "genişletmek",
         "memorized": false,
         "retry": true,
-        "date": "2024-12-01",
+        "date": "2024-12-03",
         "known": false,
-        "correct_streak": 2
+        "correct_streak": 3
     },
     "will": {
         "translation": "irade",
