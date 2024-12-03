@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from subtitle_processing_gui import subtitle_processing_gui
+from word_processing_gui import subtitle_processing_gui
 from utils import show_notification
 from file_operations import load_words, save_words
 from gui_components import apply_dark_mode, clear_window, center_frame, create_button
