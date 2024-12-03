@@ -20,6 +20,7 @@ def review_words_gui(root, words, file_path, main_menu):
     retry_words = {word: data for word, data in sorted_retry_words}
     word_list = list(retry_words.items())
     current_index = 0
+    current_word, current_data = word_list[current_index]
 
     def check_answer(selected, correct_translation, btn):
         nonlocal current_index
@@ -53,7 +54,7 @@ def review_words_gui(root, words, file_path, main_menu):
         save_words(file_path, words)
 
     def next_word():
-        nonlocal current_index
+        nonlocal current_index, current_word, current_data
         current_index += 1
 
         if current_index >= len(word_list):
@@ -89,17 +90,13 @@ def review_words_gui(root, words, file_path, main_menu):
     bottom_frame = tk.Frame(root, bg="#1e1e1e")
     bottom_frame.place(relx=0.5, rely=0.9, anchor="center")
 
-    current_word, current_data = word_list[current_index]
     word_label = create_label(main_frame, current_word, font=("Arial", 24))
-    # Kelimeyi ekrana yerleştiriyoruz, seslendirme işlemi bir süre sonra başlayacak
-    root.after(100, lambda: speak(current_word))
+    root.after(100, lambda: speak(current_word))  # İlk kelimeyi seslendir
 
     choice_buttons = []
     update_choices(current_data["translation"])
 
-    # Create "Sonraki Kelime" button to move to the next word
-    next_word_button = create_button(bottom_frame, "Sonraki Kelime", next_word)
-
-    # Additional buttons for speaking and returning to the main menu
+    # Butonlar
+    create_button(bottom_frame, "Sonraki Kelime", next_word)
     create_button(bottom_frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
     create_button(bottom_frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu(root)])
