@@ -23,7 +23,7 @@ def main_menu(root):
             save_words(file_path, words)
             show_notification(root, "Veriler başarıyla kaydedildi!")
         elif action == subtitle_processing_gui:
-            action(root, main_menu)  # subtitle_processing_gui sadece root ve main_menu alıyor
+            action(root, main_menu)
         else:
             action(root, words, file_path, main_menu)
 

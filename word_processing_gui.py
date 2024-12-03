@@ -29,6 +29,7 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
 def translate_words_with_google(input_file, output_file, root, progress_bar, progress_label):
     translator = Translator()
 
+    # Dosya okuma işlemi
     with open(input_file, 'r', encoding='utf-8') as file:
         english_words = json.load(file)
 
@@ -36,6 +37,7 @@ def translate_words_with_google(input_file, output_file, root, progress_bar, pro
     total_words = len(english_words)
 
     try:
+        # Var olan verileri okuma
         with open(output_file, 'r', encoding='utf-8') as json_file:
             existing_data = json.load(json_file)
             if not existing_data:
@@ -45,6 +47,7 @@ def translate_words_with_google(input_file, output_file, root, progress_bar, pro
         show_notification(root, f"'{output_file}' dosyası bulunamadı veya geçersiz, yeni verilerle başlatılıyor.", color="yellow")
         existing_data = {}
 
+    # Kelime çevirme işlemi
     for idx, word in enumerate(english_words):
         if word not in existing_data:
             try:
@@ -79,12 +82,16 @@ def translate_words_with_google(input_file, output_file, root, progress_bar, pro
         progress_label.config(text=f"İlerleme: {progress}%")
         root.update_idletasks()
 
+    # Verileri birleştirme
     existing_data.update(translations)
 
-    with open(output_file, 'w', encoding='utf-8') as json_file:
-        json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
-
-    show_notification(root, f"Çeviriler başarıyla '{output_file}' dosyasına kaydedildi.", color="green")
+    # Güncellenmiş veriyi dosyaya kaydetme
+    try:
+        with open(output_file, 'w', encoding='utf-8') as json_file:
+            json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
+        show_notification(root, f"Çeviriler başarıyla '{output_file}' dosyasına kaydedildi.", color="green")
+    except Exception as e:
+        show_notification(root, f"Çeviriler kaydedilemedi: {e}", color="red")
 
 # Arayüz (GUI) fonksiyonu
 def subtitle_processing_gui(root, main_menu):
