@@ -1,25 +1,28 @@
 from gui_components import clear_window, create_label, create_button, center_frame
 
-def show_statistics_gui(root, words, file_path, main_menu):
+def calculate_stats(words):
+    """Kelimelerden istatistikleri hesaplar."""
     total = len(words)
     if total == 0:
-        stats = "Hiç kelime yok!"
-    else:
-        known = sum(1 for data in words.values() if data.get("known", False))
-        memorized = sum(1 for data in words.values() if data["memorized"] and not data.get("known", False))
-        retry = sum(1 for data in words.values() if data["retry"])
-        unmemorized = total - memorized - known - retry
+        return "Hiç kelime yok!"
 
-        stats = (
-            f"Toplam Kelime: {total}\n\n"
-            f"Bilinen Kelimeler: {known} ({known / total:.1%})\n"
-            f"Ezberlenen Kelimeler: {memorized} ({memorized / total:.1%})\n"
-            f"Tekrar Edilecek Kelimeler: {retry} ({retry / total:.1%})\n"
-            f"Öğrenilmeyi Bekleyen Kelimeler: {unmemorized} ({unmemorized / total:.1%})\n"
-        )
+    counts = {
+        "Bilinen Kelimeler": sum(1 for data in words.values() if data.get("known", False)),
+        "Ezberlenen Kelimeler": sum(1 for data in words.values() if data["memorized"] and not data.get("known", False)),
+        "Tekrar Edilecek Kelimeler": sum(1 for data in words.values() if data["retry"]),
+    }
+    counts["Öğrenilmeyi Bekleyen Kelimeler"] = total - sum(counts.values())
+
+    return "\n".join(
+        f"{key}: {value} ({value / total:.1%})"
+        for key, value in counts.items()
+    )
+
+def show_statistics_gui(root, words, file_path, main_menu):
+    stats = calculate_stats(words)
 
     clear_window(root)
     frame = center_frame(root)
     create_label(frame, "İstatistikler", font=("Arial", 20))
-    stats_label = create_label(frame, stats, font=("Arial", 16), pady=10)
+    create_label(frame, stats, font=("Arial", 16), pady=10)
     create_button(frame, "Geri Dön", lambda: main_menu(root))
