@@ -41,8 +41,8 @@ def learn_new_words_gui(root, words, file_path, main_menu):
             show_notification(root, "Çeviri başarıyla güncellendi!", color="green")
 
     def disable_button_for_delay(button):
-        if not button.winfo_exists():
-            return  # Buton kaybolmuşsa işlem yapma
+        if button.winfo_exists() == 0:  # Buton kaybolmuşsa
+            return  # Hiçbir işlem yapma
         button.config(state=tk.DISABLED)
         root.after(2000, lambda: button.config(state=tk.NORMAL))
 
