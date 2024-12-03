@@ -1,5 +1,4 @@
 import tkinter as tk
-
 from file_operations import save_words
 from utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
 from gui_components import clear_window, create_label, create_button, center_frame
@@ -42,144 +41,52 @@ def learn_new_words_gui(root, words, file_path, main_menu):
             show_notification(root, "Çeviri başarıyla güncellendi!", color="green")
 
     def disable_button_for_delay(button):
+        if not button.winfo_exists():
+            return  # Buton kaybolmuşsa işlem yapma
         button.config(state=tk.DISABLED)
         root.after(2000, lambda: button.config(state=tk.NORMAL))
 
+    def create_action_button(frame, text, command, row, col, colspan=1):
+        button = tk.Button(
+            frame,
+            text=text,
+            command=command,
+            font=("Arial", 14, "bold"),
+            bg="#333333",
+            fg="white",
+            activebackground="#555555",
+            activeforeground="white",
+            relief="flat"
+        )
+        button.grid(row=row, column=col, columnspan=colspan, padx=10, pady=10, sticky="ew")
+        return button
+
     clear_window(root)
 
-    # Ana çerçeveyi ekranın ortasına yerleştir
     main_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
     main_frame.place(relx=0.5, rely=0.5, anchor="center")
 
-    # İlk kelime ve veri
     current_word, current_data = unknown.popitem()
 
-    # Kelime etiketi
-    word_label = tk.Label(
-        main_frame,
-        text=current_word,
-        font=("Arial", 24, "bold"),
-        bg="#1e1e1e",
-        fg="white",
-        wraplength=400
-    )
+    word_label = tk.Label(main_frame, text=current_word, font=("Arial", 24, "bold"), bg="#1e1e1e", fg="white", wraplength=400)
     word_label.grid(row=0, column=0, columnspan=2, pady=20)
 
-    # Çeviri girişi
-    translation_label = tk.Entry(
-        main_frame,
-        font=("Arial", 20),
-        justify="center",
-        fg="white",
-        bg="#333333",
-        relief="flat",
-        insertbackground="white"
-    )
+    translation_label = tk.Entry(main_frame, font=("Arial", 20), justify="center", fg="white", bg="#333333", relief="flat", insertbackground="white")
     translation_label.grid(row=1, column=0, columnspan=2, pady=10, sticky="ew")
     translation_label.config(state=tk.DISABLED)
 
-    # Kaydet butonu (başlangıçta gizli)
-    save_button = tk.Button(
-        main_frame,
-        text="Kaydet",
-        command=save_new_translation,
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    )
+    save_button = tk.Button(main_frame, text="Kaydet", command=save_new_translation, font=("Arial", 14, "bold"), bg="#333333", fg="white", activebackground="#555555", activeforeground="white", relief="flat")
     save_button.grid_forget()
 
-    # Butonlar
-    button_biliyorum = tk.Button(
-        main_frame,
-        text="Biliyorum",
-        command=lambda: [mark_known(current_data, next_word), disable_button_for_delay(button_biliyorum)],
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    )
-    button_biliyorum.grid(row=2, column=0, padx=10, pady=10)
+    # Butonları oluştur
+    button_biliyorum = create_action_button(main_frame, "Biliyorum", lambda: [mark_known(current_data, next_word), disable_button_for_delay(button_biliyorum)], 2, 0)
+    button_tekraret = create_action_button(main_frame, "Tekrar Et", lambda: [add_to_retry(current_data, next_word), disable_button_for_delay(button_tekraret)], 2, 1)
+    button_correct = create_action_button(main_frame, "Çeviriyi Düzelt", lambda: [enable_translation_edit(), disable_button_for_delay(button_correct)], 4, 0)
+    button_sonraki = create_action_button(main_frame, "Sonraki Kelime", lambda: [next_word(), disable_button_for_delay(button_sonraki)], 4, 1)
 
-    button_tekraret = tk.Button(
-        main_frame,
-        text="Tekrar Et",
-        command=lambda: [add_to_retry(current_data, next_word), disable_button_for_delay(button_tekraret)],
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    )
-    button_tekraret.grid(row=2, column=1, padx=10, pady=10)
+    create_action_button(main_frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word), 5, 0)
+    create_action_button(main_frame, "Kelimeyi Sesli Oku", lambda: speak(current_word), 5, 1)
 
-    button_correct = tk.Button(
-        main_frame,
-        text="Çeviriyi Düzelt",
-        command=lambda: [enable_translation_edit(), disable_button_for_delay(button_correct)],
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    )
-    button_correct.grid(row=4, column=0, padx=10, pady=10)
-
-    button_sonraki = tk.Button(
-        main_frame,
-        text="Sonraki Kelime",
-        command=lambda: [next_word(), disable_button_for_delay(button_sonraki)],
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    )
-    button_sonraki.grid(row=4, column=1, padx=10, pady=10)
-
-    # Ek butonlar
-    tk.Button(
-        main_frame,
-        text="Kelimeyi Kopyala",
-        command=lambda: copy_to_clipboard(current_word),
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    ).grid(row=5, column=0, padx=10, pady=10)
-
-    tk.Button(
-        main_frame,
-        text="Kelimeyi Sesli Oku",
-        command=lambda: speak(current_word),
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    ).grid(row=5, column=1, padx=10, pady=10)
-
-    tk.Button(
-        main_frame,
-        text="Ana Menüye Dön",
-        command=lambda: [save_words(file_path, words), main_menu(root)],
-        font=("Arial", 14, "bold"),
-        bg="#333333",
-        fg="white",
-        activebackground="#555555",
-        activeforeground="white",
-        relief="flat"
-    ).grid(row=6, column=0, columnspan=2, pady=20)
+    tk.Button(main_frame, text="Ana Menüye Dön", command=lambda: [save_words(file_path, words), main_menu(root)], font=("Arial", 14, "bold"), bg="#333333", fg="white", activebackground="#555555", activeforeground="white", relief="flat").grid(row=6, column=0, columnspan=2, pady=20)
 
     update_word_labels()
