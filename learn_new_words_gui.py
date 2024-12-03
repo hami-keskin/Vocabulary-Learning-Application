@@ -84,7 +84,8 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     button_correct = create_action_button(main_frame, "Çeviriyi Düzelt", lambda: [enable_translation_edit(), disable_button_for_delay(button_correct)], 4, 0)
     button_sonraki = create_action_button(main_frame, "Sonraki Kelime", lambda: [next_word(), disable_button_for_delay(button_sonraki)], 4, 1)
 
-    create_action_button(main_frame, "Kelimeyi Kopyala", lambda: copy_to_clipboard(current_word), 5, 0)
+    create_action_button(main_frame, "Kelimeyi Kopyala", lambda: [copy_to_clipboard(current_word), show_notification(root, "Kelime kopyalandı!", color="green")], 5, 0)
+
     create_action_button(main_frame, "Kelimeyi Sesli Oku", lambda: speak(current_word), 5, 1)
 
     tk.Button(main_frame, text="Ana Menüye Dön", command=lambda: [save_words(file_path, words), main_menu(root)], font=("Arial", 14, "bold"), bg="#333333", fg="white", activebackground="#555555", activeforeground="white", relief="flat").grid(row=6, column=0, columnspan=2, pady=20)
