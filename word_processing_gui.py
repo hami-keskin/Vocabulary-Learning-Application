@@ -26,7 +26,7 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
         return f"Hata oluştu: {e}"
 
 # İngilizce kelimeleri Google Translate ile Türkçeye çeviren fonksiyon
-def translate_words_with_google(input_file, output_file, root, progress_bar, progress_label):
+def translate_words_with_google(input_file, output_file, root, progress_bar, progress_label, words):
     translator = Translator()
 
     # Dosya okuma işlemi
@@ -85,6 +85,20 @@ def translate_words_with_google(input_file, output_file, root, progress_bar, pro
     # Verileri birleştirme
     existing_data.update(translations)
 
+    # Veriyi ana 'words' değişkenine aktar
+    words.update(existing_data)
+
+    # Güncellenmiş veriyi dosyaya kaydetme
+    try:
+        with open(output_file, 'w', encoding='utf-8') as json_file:
+            json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
+        show_notification(root, f"Çeviriler başarıyla '{output_file}' dosyasına kaydedildi.", color="green")
+    except Exception as e:
+        show_notification(root, f"Çeviriler kaydedilemedi: {e}", color="red")
+
+    # Verileri birleştirme
+    existing_data.update(translations)
+
     # Güncellenmiş veriyi dosyaya kaydetme
     try:
         with open(output_file, 'w', encoding='utf-8') as json_file:
@@ -94,7 +108,7 @@ def translate_words_with_google(input_file, output_file, root, progress_bar, pro
         show_notification(root, f"Çeviriler kaydedilemedi: {e}", color="red")
 
 # Arayüz (GUI) fonksiyonu
-def subtitle_processing_gui(root, main_menu):
+def subtitle_processing_gui(root, main_menu, words):
     def browse_input_file():
         file_path = filedialog.askopenfilename(
             title="Dosyayı Seç",
@@ -116,7 +130,8 @@ def subtitle_processing_gui(root, main_menu):
         result = process_subtitle_file(input_file, unique_words_file)
         show_notification(root, result, color="green")
 
-        translate_words_with_google(unique_words_file, translated_words_file, root, progress_bar, progress_label)
+        # Çeviri işlemini başlat
+        translate_words_with_google(unique_words_file, translated_words_file, root, progress_bar, progress_label, words)
 
     clear_window(root)
     frame = center_frame(root)
