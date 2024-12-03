@@ -29,7 +29,7 @@ def main_menu(root):
         ("Yeni Kelime Öğren", learn_new_words_gui),
         ("Kelime Tekrarı Yap", review_words_gui),
         ("İstatistikleri Göster", show_statistics_gui),
-        ("Altyazı Dosyasını İşle", subtitle_processing_gui),  # Yeni seçenek
+        ("Kelime ekle", subtitle_processing_gui),  # Yeni seçenek
         ("Kaydet", "save"),
         ("Çık", "exit"),
     ]

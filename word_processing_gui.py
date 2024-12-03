@@ -1,11 +1,12 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog
 import re
 import json
 from utils import show_notification
 from file_operations import load_words, save_words
 from gui_components import apply_dark_mode, clear_window, center_frame, create_button
 
+# Altyazı dosyasını işleme fonksiyonu
 def process_subtitle_file(input_file, output_file="unique_words.json"):
     try:
         unique_words = set()
@@ -23,6 +24,7 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
     except Exception as e:
         return f"Hata oluştu: {e}"
 
+# Altyazı işleme arayüzü
 def subtitle_processing_gui(root, words, file_path, main_menu):
     def browse_input_file():
         file_path = filedialog.askopenfilename(
@@ -38,11 +40,11 @@ def subtitle_processing_gui(root, words, file_path, main_menu):
         output_file = "unique_words.json"  # Varsayılan çıkış dosyası
 
         if not input_file:
-            messagebox.showerror("Hata", "Bir giriş dosyası belirtmelisiniz.")
+            show_notification(root, "Bir giriş dosyası belirtmelisiniz.", color="red")
             return
 
         result = process_subtitle_file(input_file, output_file)
-        messagebox.showinfo("Sonuç", result)
+        show_notification(root, result, color="green")
 
     clear_window(root)
     frame = center_frame(root)
