@@ -47,7 +47,7 @@ def review_words_gui(root, words, file_path, main_menu):
 
             if streak < 7:
                 words[current_word]["date"] = format_date(parse_date(today) + timedelta(days=1))
-            elif streak < 14:
+            elif streak < 10:
                 words[current_word]["date"] = format_date(parse_date(today) + timedelta(days=7))
             else:
                 words[current_word]["memorized"] = True
