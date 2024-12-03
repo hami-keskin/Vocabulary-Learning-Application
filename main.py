@@ -1,4 +1,6 @@
 import tkinter as tk
+
+from subtitle_processing_gui import subtitle_processing_gui
 from utils import show_notification
 from file_operations import load_words, save_words
 from gui_components import apply_dark_mode, clear_window, center_frame, create_button
@@ -7,14 +9,13 @@ from gui_components import apply_dark_mode, clear_window, center_frame, create_b
 file_path = 'translated_words.json'
 words = load_words(file_path)
 
+# Ana menüye yeni seçenek ekleme
 def main_menu(root):
-    """Ana menüyü oluşturur."""
     from learn_new_words_gui import learn_new_words_gui
     from review_words_gui import review_words_gui
     from statistics import show_statistics_gui
 
     def handle_button_click(action):
-        """Butonlar için ortak işlem işlevi."""
         if action == "exit":
             save_words(file_path, words)
             root.after(100, root.quit)
@@ -28,6 +29,7 @@ def main_menu(root):
         ("Yeni Kelime Öğren", learn_new_words_gui),
         ("Kelime Tekrarı Yap", review_words_gui),
         ("İstatistikleri Göster", show_statistics_gui),
+        ("Altyazı Dosyasını İşle", subtitle_processing_gui),  # Yeni seçenek
         ("Kaydet", "save"),
         ("Çık", "exit"),
     ]
@@ -38,6 +40,8 @@ def main_menu(root):
         create_button(frame, text, lambda act=action: handle_button_click(act))
 
 # Uygulama başlangıcı
+file_path = 'translated_words.json'
+words = load_words(file_path)
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
 apply_dark_mode(root)
