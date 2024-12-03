@@ -81,22 +81,48 @@ def review_words_gui(root, words, file_path, main_menu):
         choice_buttons.clear()
 
         # Create buttons for each choice and bind the correct handler
-        for choice in choices:
-            btn = create_button(main_frame, choice, lambda c=choice: check_answer(c, current_translation, btn))
+        for idx, choice in enumerate(choices):
+            btn = tk.Button(
+                main_frame,
+                text=choice,
+                command=lambda c=choice: check_answer(c, current_translation, btn),
+                wraplength=250,  # Uzun metinler için sınır
+                bg="#333333",
+                fg="white",
+                activebackground="#555555",
+                activeforeground="white",
+                font=("Arial", 14, "bold")
+            )
+            btn.grid(row=idx + 1, column=0, pady=10, padx=10, sticky="ew")  # Daha düzenli yerleşim
             choice_buttons.append(btn)
 
     clear_window(root)
-    main_frame = center_frame(root)
-    bottom_frame = tk.Frame(root, bg="#1e1e1e")
-    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")
 
-    word_label = create_label(main_frame, current_word, font=("Arial", 24))
+    # Çerçeveleri ekranın merkezine yerleştirme
+    main_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
+    main_frame.place(relx=0.5, rely=0.4, anchor="center")  # Ekran merkezine konumlandırma
+
+    bottom_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
+    bottom_frame.place(relx=0.5, rely=0.7, anchor="center")  # Ana çerçevenin altında konumlandırma
+
+    word_label = tk.Label(
+        main_frame,
+        text=current_word,
+        font=("Arial", 24),
+        bg="#1e1e1e",
+        fg="white",
+        wraplength=300  # Uzun kelimeler için
+    )
+    word_label.grid(row=0, column=0, pady=20)
     root.after(100, lambda: speak(current_word))  # İlk kelimeyi seslendir
 
     choice_buttons = []
     update_choices(current_data["translation"])
 
     # Butonlar
-    create_button(bottom_frame, "Sonraki Kelime", next_word)
-    create_button(bottom_frame, "Kelimeyi Tekrar Oku", lambda: speak(current_word))
-    create_button(bottom_frame, "Ana Menüye Dön", lambda: [save_words(file_path, words), main_menu(root)])
+    tk.Button(bottom_frame, text="Sonraki Kelime", command=next_word, bg="#333333", fg="white").pack(side="left",
+                                                                                                     padx=10, pady=5)
+    tk.Button(bottom_frame, text="Kelimeyi Tekrar Oku", command=lambda: speak(current_word), bg="#333333",
+              fg="white").pack(side="left", padx=10, pady=5)
+    tk.Button(bottom_frame, text="Ana Menüye Dön", command=lambda: [save_words(file_path, words), main_menu(root)],
+              bg="#333333", fg="white").pack(side="right", padx=10, pady=5)
