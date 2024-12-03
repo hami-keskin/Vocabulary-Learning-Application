@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog, ttk
 import re
 import json
 from datetime import datetime
@@ -26,13 +26,14 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
         return f"Hata oluştu: {e}"
 
 # İngilizce kelimeleri Google Translate ile Türkçeye çeviren fonksiyon
-def translate_words_with_google(input_file, output_file, root):
+def translate_words_with_google(input_file, output_file, root, progress_bar, progress_label):
     translator = Translator()
 
     with open(input_file, 'r', encoding='utf-8') as file:
         english_words = json.load(file)
 
     translations = {}
+    total_words = len(english_words)
 
     try:
         with open(output_file, 'r', encoding='utf-8') as json_file:
@@ -44,7 +45,7 @@ def translate_words_with_google(input_file, output_file, root):
         show_notification(root, f"'{output_file}' dosyası bulunamadı veya geçersiz, yeni verilerle başlatılıyor.", color="yellow")
         existing_data = {}
 
-    for word in english_words:
+    for idx, word in enumerate(english_words):
         if word not in existing_data:
             try:
                 translated = translator.translate(word, src='en', dest='tr')
@@ -71,6 +72,12 @@ def translate_words_with_google(input_file, output_file, root):
                 }
         else:
             translations[word] = existing_data[word]
+
+        # İlerleme çubuğunu güncelle
+        progress = int((idx + 1) / total_words * 100)
+        progress_bar['value'] = progress
+        progress_label.config(text=f"İlerleme: {progress}%")
+        root.update_idletasks()
 
     existing_data.update(translations)
 
@@ -102,7 +109,7 @@ def subtitle_processing_gui(root, main_menu):
         result = process_subtitle_file(input_file, unique_words_file)
         show_notification(root, result, color="green")
 
-        translate_words_with_google(unique_words_file, translated_words_file, root)
+        translate_words_with_google(unique_words_file, translated_words_file, root, progress_bar, progress_label)
 
     clear_window(root)
     frame = center_frame(root)
@@ -112,5 +119,10 @@ def subtitle_processing_gui(root, main_menu):
     input_file_entry.grid(row=0, column=1, pady=10)
     tk.Button(frame, text="Gözat", command=browse_input_file).grid(row=0, column=2, padx=10)
 
-    tk.Button(frame, text="Başlat", command=start_processing, font=("Arial", 14), bg="#333333", fg="white").grid(row=1, column=0, columnspan=3, pady=20)
-    tk.Button(frame, text="Ana Menüye Dön", command=lambda: main_menu(root), font=("Arial", 14), bg="#555555", fg="white").grid(row=2, column=0, columnspan=3, pady=10)
+    progress_bar = ttk.Progressbar(frame, orient="horizontal", length=300, mode="determinate")
+    progress_bar.grid(row=1, column=0, columnspan=3, pady=10)
+    progress_label = tk.Label(frame, text="İlerleme: 0%", font=("Arial", 12))
+    progress_label.grid(row=2, column=0, columnspan=3, pady=5)
+
+    tk.Button(frame, text="Başlat", command=start_processing, font=("Arial", 14), bg="#333333", fg="white").grid(row=3, column=0, columnspan=3, pady=20)
+    tk.Button(frame, text="Ana Menüye Dön", command=lambda: main_menu(root), font=("Arial", 14), bg="#555555", fg="white").grid(row=4, column=0, columnspan=3, pady=10)
