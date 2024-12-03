@@ -22,6 +22,8 @@ def main_menu(root):
         elif action == "save":
             save_words(file_path, words)
             show_notification(root, "Veriler başarıyla kaydedildi!")
+        elif action == subtitle_processing_gui:
+            action(root, main_menu)  # subtitle_processing_gui sadece root ve main_menu alıyor
         else:
             action(root, words, file_path, main_menu)
 
@@ -38,6 +40,7 @@ def main_menu(root):
     frame = center_frame(root)
     for text, action in actions:
         create_button(frame, text, lambda act=action: handle_button_click(act))
+
 
 # Uygulama başlangıcı
 file_path = 'translated_words.json'
