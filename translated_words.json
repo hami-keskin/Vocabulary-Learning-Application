@@ -6182,5 +6182,3673 @@
         "retry": false,
         "date": "2024-11-29",
         "known": true
+    },
+    "ability": {
+        "translation": "yetenek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "above": {
+        "translation": "üstünde",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "accelerating": {
+        "translation": "hızlandırma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "accept": {
+        "translation": "kabul etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "accepted": {
+        "translation": "kabul edilmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "accident": {
+        "translation": "kaza",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "act": {
+        "translation": "davranmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "adjacent": {
+        "translation": "bitişik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "afraid": {
+        "translation": "korkmuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ago": {
+        "translation": "evvel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "aircraft": {
+        "translation": "uçak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "almost": {
+        "translation": "neredeyse",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "aluminum": {
+        "translation": "alüminyum",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "another": {
+        "translation": "bir diğer",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "anyone": {
+        "translation": "herhangi biri",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "anywhere": {
+        "translation": "herhangi bir yer",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "apnea": {
+        "translation": "apne",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "apologize": {
+        "translation": "özür dilemek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "approximately": {
+        "translation": "yaklaşık olarak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "aquarium": {
+        "translation": "akvaryum",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "archimedes": {
+        "translation": "Arşimetler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "argument": {
+        "translation": "argüman",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "arms": {
+        "translation": "kol",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "arrived": {
+        "translation": "ulaşmış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "art": {
+        "translation": "sanat",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "assemble": {
+        "translation": "birleştirmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "asses": {
+        "translation": "eşek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "assume": {
+        "translation": "farz etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "assumption": {
+        "translation": "varsayım",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "atomic": {
+        "translation": "atomik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "atractive": {
+        "translation": "atak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "autotrophs": {
+        "translation": "ototroflar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "away": {
+        "translation": "uzak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "baby": {
+        "translation": "Bebek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "background": {
+        "translation": "arka plan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bad": {
+        "translation": "kötü",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bastards": {
+        "translation": "piç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bedroom": {
+        "translation": "yatak odası",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bee": {
+        "translation": "arı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "began": {
+        "translation": "başlamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "belts": {
+        "translation": "kayışlar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "better": {
+        "translation": "daha iyi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "billion": {
+        "translation": "milyar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bit": {
+        "translation": "biraz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bitch": {
+        "translation": "orospu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "body": {
+        "translation": "vücut",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bomb": {
+        "translation": "bomba",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "books": {
+        "translation": "kitap",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "boy": {
+        "translation": "erkek çocuk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bran": {
+        "translation": "kepek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "breakfast": {
+        "translation": "kahvaltı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "bring": {
+        "translation": "getirmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "buildings": {
+        "translation": "binalar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "built": {
+        "translation": "yapılı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cable": {
+        "translation": "kablo",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "caesar": {
+        "translation": "Sezar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cam": {
+        "translation": "kam",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "came": {
+        "translation": "gelmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "capacity": {
+        "translation": "kapasite",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "carbohydrate": {
+        "translation": "karbonhidrat",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "carpet": {
+        "translation": "halı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "case": {
+        "translation": "dava",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "catches": {
+        "translation": "yakalama",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cell": {
+        "translation": "hücre",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cells": {
+        "translation": "hücre",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "center": {
+        "translation": "merkez",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "century": {
+        "translation": "yüzyıl",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cereal": {
+        "translation": "mısır gevreği",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "challenge": {
+        "translation": "meydan okumak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "chaos": {
+        "translation": "kaos",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "chatter": {
+        "translation": "çırpmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "chatting": {
+        "translation": "sohbet",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "chatty": {
+        "translation": "konuşkan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cheap": {
+        "translation": "ucuz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "check": {
+        "translation": "kontrol etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "children": {
+        "translation": "çocuklar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "choice": {
+        "translation": "seçenek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "choose": {
+        "translation": "seçmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "chopsticks": {
+        "translation": "çubuklar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "clarify": {
+        "translation": "açıklamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cleaned": {
+        "translation": "temizlenmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "closet": {
+        "translation": "dolap",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cocktail": {
+        "translation": "kokteyl",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "combination": {
+        "translation": "kombinasyon",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "comic": {
+        "translation": "çizgi roman",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "coming": {
+        "translation": "gelen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "complex": {
+        "translation": "karmaşık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "components": {
+        "translation": "bileşenler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "compulsive": {
+        "translation": "zorlayıcı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "congress": {
+        "translation": "kongre",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "considering": {
+        "translation": "düşünerek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "content": {
+        "translation": "içerik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "contributions": {
+        "translation": "katkılar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "control": {
+        "translation": "kontrol",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "convinced": {
+        "translation": "ikna edilmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "coolant": {
+        "translation": "soğutucu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "corner": {
+        "translation": "köşe",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "corrugated": {
+        "translation": "oluklu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "couch": {
+        "translation": "kanepe",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "couldn": {
+        "translation": "yapamamış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "crap": {
+        "translation": "saçmalık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "crossbar": {
+        "translation": "çapraz çubuk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "crosses": {
+        "translation": "haç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "crying": {
+        "translation": "ağlama",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "cure": {
+        "translation": "tedavi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "dare": {
+        "translation": "cesaret",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "death": {
+        "translation": "ölüm",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "decelerates": {
+        "translation": "yavaşlar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "deeply": {
+        "translation": "derinlemesine",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "degrees": {
+        "translation": "dereceler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "delivered": {
+        "translation": "teslim edilmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "delivery": {
+        "translation": "teslimat",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "dense": {
+        "translation": "yoğun",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "depending": {
+        "translation": "bağlı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "depth": {
+        "translation": "derinlik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "derives": {
+        "translation": "türetmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "descendants": {
+        "translation": "torunlar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "design": {
+        "translation": "tasarım",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "determined": {
+        "translation": "azimli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "developed": {
+        "translation": "gelişmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "dirty": {
+        "translation": "kirli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "discovery": {
+        "translation": "keşif",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "discussed": {
+        "translation": "tartışılmış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "discussion": {
+        "translation": "tartışma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "doctor": {
+        "translation": "doktor",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "does": {
+        "translation": "yapmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "doing": {
+        "translation": "yapmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "doll": {
+        "translation": "oyuncak bebek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "dowels": {
+        "translation": "dübel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "dresses": {
+        "translation": "elbiseler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "drip": {
+        "translation": "damlamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "drool": {
+        "translation": "saçmalamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "drunk": {
+        "translation": "sarhoş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "earth": {
+        "translation": "toprak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "easy": {
+        "translation": "kolay",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "efforts": {
+        "translation": "çabalar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "elevator": {
+        "translation": "asansör",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "emitter": {
+        "translation": "yayıcı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "energy": {
+        "translation": "enerji",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "engine": {
+        "translation": "motor",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "enhancement": {
+        "translation": "geliştirme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "entire": {
+        "translation": "bütün",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "entropy": {
+        "translation": "entropi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "epinephrine": {
+        "translation": "epinefrin",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "equal": {
+        "translation": "eşit",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "error": {
+        "translation": "hata",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "established": {
+        "translation": "kurulmuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "evening": {
+        "translation": "akşam",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ever": {
+        "translation": "durmadan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "every": {
+        "translation": "Her",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "everyone": {
+        "translation": "herkes",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "evidence": {
+        "translation": "kanıt",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "evolution": {
+        "translation": "evrim",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "example": {
+        "translation": "örnek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "expansion": {
+        "translation": "genleşme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "expecting": {
+        "translation": "bekleyen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "experiment": {
+        "translation": "deney",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "explain": {
+        "translation": "açıklamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "explanation": {
+        "translation": "açıklama",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "exposure": {
+        "translation": "maruziyet",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "extension": {
+        "translation": "eklenti",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "eye": {
+        "translation": "göz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "falling": {
+        "translation": "düşme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "falls": {
+        "translation": "düşer",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "fans": {
+        "translation": "hayran",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "farm": {
+        "translation": "çiftlik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "feat": {
+        "translation": "başarı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "feeling": {
+        "translation": "his",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "feet": {
+        "translation": "ayak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "field": {
+        "translation": "alan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "fingers": {
+        "translation": "parmaklık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "flat": {
+        "translation": "düz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "flatware": {
+        "translation": "sofra takımı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "flawless": {
+        "translation": "kusursuz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "flight": {
+        "translation": "uçuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "floor": {
+        "translation": "zemin",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "fly": {
+        "translation": "uçmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "folk": {
+        "translation": "halk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "force": {
+        "translation": "güç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "fork": {
+        "translation": "çatal",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "formula": {
+        "translation": "formül",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "found": {
+        "translation": "kurmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "fourth": {
+        "translation": "dördüncü",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "frankly": {
+        "translation": "açıkçası",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "fulcrum": {
+        "translation": "dayanak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "full": {
+        "translation": "tam dolu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "funny": {
+        "translation": "eğlenceli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "furniture": {
+        "translation": "mobilya",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "garage": {
+        "translation": "garaj",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "gave": {
+        "translation": "verilmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "general": {
+        "translation": "genel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "gentle": {
+        "translation": "nazik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ghost": {
+        "translation": "hayalet",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "girlfriend": {
+        "translation": "kız arkadaşı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "goddess": {
+        "translation": "tanrıça",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "gowns": {
+        "translation": "far",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "grade": {
+        "translation": "seviye",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "granted": {
+        "translation": "imtiyazlı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "gravity": {
+        "translation": "yer çekimi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "green": {
+        "translation": "yeşil",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "grew": {
+        "translation": "büyümüş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ground": {
+        "translation": "zemin",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "half": {
+        "translation": "yarım",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hallmark": {
+        "translation": "ayırt edici şey",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hallway": {
+        "translation": "koridor",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "happen": {
+        "translation": "olmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hard": {
+        "translation": "zor",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hardly": {
+        "translation": "zorlu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "haven": {
+        "translation": "cennet",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "heard": {
+        "translation": "duyulmuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "heartless": {
+        "translation": "kalpsiz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "heat": {
+        "translation": "sıcaklık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "helicopter": {
+        "translation": "helikopter",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "helpful": {
+        "translation": "yardımsever",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "history": {
+        "translation": "tarih",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hold": {
+        "translation": "tutmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "homie": {
+        "translation": "homi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "honey": {
+        "translation": "Bal",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hope": {
+        "translation": "umut",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hot": {
+        "translation": "sıcak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hour": {
+        "translation": "saat",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hug": {
+        "translation": "sarılmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "hugged": {
+        "translation": "sarılmış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "huh": {
+        "translation": "Ha",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "human": {
+        "translation": "insan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "husband": {
+        "translation": "koca",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "imaginative": {
+        "translation": "yaratıcı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "immaculate": {
+        "translation": "tertemiz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "immediately": {
+        "translation": "hemen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "imposition": {
+        "translation": "dayatma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "inaccuracy": {
+        "translation": "yanlışlık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "inch": {
+        "translation": "inç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "inclined": {
+        "translation": "eğimli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "increase": {
+        "translation": "arttırmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "inefficient": {
+        "translation": "verimsiz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "infection": {
+        "translation": "enfeksiyon",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "inferring": {
+        "translation": "çıkarma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "infrared": {
+        "translation": "kızılötesi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "initial": {
+        "translation": "ilk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "insane": {
+        "translation": "inanılmaz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "insist": {
+        "translation": "ısrar etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "insomnia": {
+        "translation": "uykusuzluk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "instructions": {
+        "translation": "talimatlar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "intellectual": {
+        "translation": "entelektüel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "interestingly": {
+        "translation": "ilginç bir şekilde",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "interrupting": {
+        "translation": "kesip",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "intoxicating": {
+        "translation": "sarhoş edici",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "involve": {
+        "translation": "içermek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "involved": {
+        "translation": "dahil olmuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "jerks": {
+        "translation": "gerizekalılar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "join": {
+        "translation": "katılmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "judgment": {
+        "translation": "yargılama",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "junkyard": {
+        "translation": "hurdalık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "jury": {
+        "translation": "jüri",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "keep": {
+        "translation": "kale",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "kept": {
+        "translation": "tutulmuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "key": {
+        "translation": "anahtar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "knowing": {
+        "translation": "bilen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "known": {
+        "translation": "bilinen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "label": {
+        "translation": "etiket",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lack": {
+        "translation": "eksiklik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lantern": {
+        "translation": "fener",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "late": {
+        "translation": "geç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "later": {
+        "translation": "Daha sonra",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "latter": {
+        "translation": "ikincisi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lean": {
+        "translation": "eğilmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "leap": {
+        "translation": "sıçramak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "length": {
+        "translation": "uzunluk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lever": {
+        "translation": "kol",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lift": {
+        "translation": "kaldırmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lifting": {
+        "translation": "kaldırma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "line": {
+        "translation": "astar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "liquid": {
+        "translation": "sıvı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "listening": {
+        "translation": "dinleme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "living": {
+        "translation": "yaşamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "locked": {
+        "translation": "kilitli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "looked": {
+        "translation": "bakmış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "loud": {
+        "translation": "yüksek sesle",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "loved": {
+        "translation": "sevilen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lover": {
+        "translation": "sevgili",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "low": {
+        "translation": "Düşük",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lower": {
+        "translation": "daha düşük",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "lullabies": {
+        "translation": "ninni",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "madam": {
+        "translation": "bayan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "man": {
+        "translation": "Adam",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "many": {
+        "translation": "birçok",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "marathon": {
+        "translation": "maraton",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "march": {
+        "translation": "mart",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "master": {
+        "translation": "usta",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "matches": {
+        "translation": "kibritler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "matter": {
+        "translation": "konu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "means": {
+        "translation": "araç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "meant": {
+        "translation": "anlamına gelen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "measurable": {
+        "translation": "ölçülebilir",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "media": {
+        "translation": "medya",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "meet": {
+        "translation": "tanışmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "merciful": {
+        "translation": "merhametli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "messy": {
+        "translation": "dağınık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "meters": {
+        "translation": "metre",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "methods": {
+        "translation": "yöntem",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "middle": {
+        "translation": "orta",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "miles": {
+        "translation": "mil",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "miss": {
+        "translation": "kayıp",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "mistakes": {
+        "translation": "hatalar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "morning": {
+        "translation": "Sabah",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "mother": {
+        "translation": "anne",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "mouth": {
+        "translation": "ağız",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "movies": {
+        "translation": "film",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "mystery": {
+        "translation": "gizem",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "napkin": {
+        "translation": "peçete",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "neanderthals": {
+        "translation": "Neandertaller",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "nearly": {
+        "translation": "neredeyse",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "nod": {
+        "translation": "başını sallamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "noises": {
+        "translation": "ses",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "non": {
+        "translation": "olmayan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "now": {
+        "translation": "Şimdi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "numbers": {
+        "translation": "sayılar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "numerically": {
+        "translation": "sayısal olarak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "object": {
+        "translation": "nesne",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "objection": {
+        "translation": "itiraz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "obvious": {
+        "translation": "bariz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "occur": {
+        "translation": "meydana gelmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "oil": {
+        "translation": "yağ",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "open": {
+        "translation": "açık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "opened": {
+        "translation": "açık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "opinion": {
+        "translation": "fikir",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "order": {
+        "translation": "emir",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "organizational": {
+        "translation": "örgütsel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "organize": {
+        "translation": "organize etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "other": {
+        "translation": "diğer",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "otolaryngologist": {
+        "translation": "kulak burun boğaz uzmanı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ourselves": {
+        "translation": "kendimizi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "outside": {
+        "translation": "dıştan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "overflow": {
+        "translation": "taşmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "oxyacetylene": {
+        "translation": "oksiasetilen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "package": {
+        "translation": "paketi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pad": {
+        "translation": "ped",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "painful": {
+        "translation": "acı verici",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "panels": {
+        "translation": "paneller",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "paradigm": {
+        "translation": "paradigma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "parents": {
+        "translation": "ebeveynler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "participation": {
+        "translation": "katılım",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pathology": {
+        "translation": "patoloji",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pavement": {
+        "translation": "kaldırım",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "peanut": {
+        "translation": "fıstık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "peanuts": {
+        "translation": "fıstık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "peasy": {
+        "translation": "çekirdek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "peers": {
+        "translation": "akran",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "per": {
+        "translation": "başına",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "perfectly": {
+        "translation": "mükemmel bir şekilde",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "perfume": {
+        "translation": "parfüm",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "personally": {
+        "translation": "kişisel olarak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "photo": {
+        "translation": "fotoğraf",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "physicists": {
+        "translation": "fizikçiler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pictographic": {
+        "translation": "piktografik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pieces": {
+        "translation": "parçalar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pitched": {
+        "translation": "perdeli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "plans": {
+        "translation": "planlar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "poisoning": {
+        "translation": "zehirlenme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "police": {
+        "translation": "polis",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "potential": {
+        "translation": "potansiyel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "power": {
+        "translation": "güç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "predicated": {
+        "translation": "öngörülmüş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "premise": {
+        "translation": "öncül",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "presence": {
+        "translation": "mevcudiyet",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pretty": {
+        "translation": "tatlı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "problem": {
+        "translation": "sorun",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "proctologist": {
+        "translation": "sera uzmanı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "proud": {
+        "translation": "gurur duymak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "puffs": {
+        "translation": "puflar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "puffy": {
+        "translation": "kabarık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pull": {
+        "translation": "çekmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pump": {
+        "translation": "pompa",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "push": {
+        "translation": "itmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "pyramid": {
+        "translation": "piramit",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "quality": {
+        "translation": "kalite",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "quarter": {
+        "translation": "çeyrek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "question": {
+        "translation": "soru",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "radiation": {
+        "translation": "radyasyon",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "radium": {
+        "translation": "radyum",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "rate": {
+        "translation": "oran",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "reaching": {
+        "translation": "ulaşan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "realize": {
+        "translation": "fark etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "reasonable": {
+        "translation": "mantıklı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "reasonableness": {
+        "translation": "mantıklılık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "rebuilt": {
+        "translation": "yeniden inşa edilmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "recognize": {
+        "translation": "tanımak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "reduced": {
+        "translation": "azaltılmış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "reflection": {
+        "translation": "refleks",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "register": {
+        "translation": "kayıt olmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "regret": {
+        "translation": "pişmanlık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "removes": {
+        "translation": "Çıkarır",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "repeater": {
+        "translation": "tekrarlayan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "replace": {
+        "translation": "yer değiştirmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "representation": {
+        "translation": "temsil",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "required": {
+        "translation": "gerekli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "research": {
+        "translation": "araştırma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "reservoir": {
+        "translation": "rezervuar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "responsibility": {
+        "translation": "sorumluluk",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "responsive": {
+        "translation": "duyarlı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ridiculous": {
+        "translation": "saçma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "rife": {
+        "translation": "hevesli",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "ring": {
+        "translation": "yüzük",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "rough": {
+        "translation": "kaba",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "run": {
+        "translation": "koşmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sake": {
+        "translation": "hatır",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sale": {
+        "translation": "satış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sang": {
+        "translation": "şaka yapmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sarcasm": {
+        "translation": "alay",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sausages": {
+        "translation": "sosis",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "scented": {
+        "translation": "kokulu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "schematic": {
+        "translation": "şematik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "science": {
+        "translation": "bilim",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "scientific": {
+        "translation": "ilmi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "scrap": {
+        "translation": "hurda",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "screen": {
+        "translation": "ekran",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "screws": {
+        "translation": "vidalar",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "second": {
+        "translation": "ikinci",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "seriously": {
+        "translation": "Cidden",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "served": {
+        "translation": "servis edilen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sexual": {
+        "translation": "cinsel",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sheet": {
+        "translation": "çarşaf",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "shelf": {
+        "translation": "raf",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "shoes": {
+        "translation": "ayakkabı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "shoot": {
+        "translation": "film çekmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "shot": {
+        "translation": "atış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sick": {
+        "translation": "hasta",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "simple": {
+        "translation": "basit",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sine": {
+        "translation": "sinüs",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sing": {
+        "translation": "şarkı söylemek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sink": {
+        "translation": "atmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sinus": {
+        "translation": "sinüs",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sir": {
+        "translation": "Sayın",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sleep": {
+        "translation": "uyumak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sleeping": {
+        "translation": "uyku",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "slept": {
+        "translation": "uyudu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sliced": {
+        "translation": "dilimlenmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "slow": {
+        "translation": "yavaş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "smell": {
+        "translation": "koku",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sneak": {
+        "translation": "gizlice gizlice girme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "snoring": {
+        "translation": "horlama",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "solar": {
+        "translation": "güneş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "solely": {
+        "translation": "sadece",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "somebody": {
+        "translation": "biri",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "someone": {
+        "translation": "birisi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "somewhat": {
+        "translation": "biraz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "son": {
+        "translation": "oğlu",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "space": {
+        "translation": "uzay",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "spare": {
+        "translation": "kıyamamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "speed": {
+        "translation": "hız",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "splendidly": {
+        "translation": "muhteşem bir şekilde",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "spoke": {
+        "translation": "konuşan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "spoon": {
+        "translation": "kaşık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "square": {
+        "translation": "kare",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "standing": {
+        "translation": "ayakta",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "started": {
+        "translation": "başlayan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "starts": {
+        "translation": "başlamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "state": {
+        "translation": "durum",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "stay": {
+        "translation": "kalmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "steel": {
+        "translation": "çelik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "storage": {
+        "translation": "depolamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "store": {
+        "translation": "mağaza",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "straightening": {
+        "translation": "düzleştirme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "strength": {
+        "translation": "kuvvet",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "suggested": {
+        "translation": "önerilen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "suggests": {
+        "translation": "önerir",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "superman": {
+        "translation": "süpermen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "surgeon": {
+        "translation": "cerrah",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "surprised": {
+        "translation": "şaşırmış",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sweden": {
+        "translation": "İsveç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "swedish": {
+        "translation": "İsveççe",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "swell": {
+        "translation": "şişmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "swelling": {
+        "translation": "şişme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "swirling": {
+        "translation": "dönen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "sync": {
+        "translation": "senkronize etmek",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "system": {
+        "translation": "sistem",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "table": {
+        "translation": "masa",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "talk": {
+        "translation": "konuşmak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tall": {
+        "translation": "uzun",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "thailand": {
+        "translation": "Tayland",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "themselves": {
+        "translation": "kendileri",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "things": {
+        "translation": "şeyler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "thorough": {
+        "translation": "tam",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "thou": {
+        "translation": "sen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "three": {
+        "translation": "üç",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "throat": {
+        "translation": "boğaz",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "times": {
+        "translation": "kez",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tiny": {
+        "translation": "minik",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "told": {
+        "translation": "söylenmiş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tomorrow": {
+        "translation": "Yarın",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tonight": {
+        "translation": "bu akşam",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tools": {
+        "translation": "aletler",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "torch": {
+        "translation": "meşale",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tractor": {
+        "translation": "traktör",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "traveling": {
+        "translation": "seyahat",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "tray": {
+        "translation": "tepsi",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "truly": {
+        "translation": "tamamen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "turned": {
+        "translation": "döndü",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "understand": {
+        "translation": "anlamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "uniforms": {
+        "translation": "üniforma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "unless": {
+        "translation": "meğer ki",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "unorthodox": {
+        "translation": "alışılmadık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "unraveling": {
+        "translation": "çözme",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "upper": {
+        "translation": "üst",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "upset": {
+        "translation": "üzgün",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "vanilla": {
+        "translation": "vanilya",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "vienna": {
+        "translation": "Viyana",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "violated": {
+        "translation": "ihlal edilen",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "vortex": {
+        "translation": "girdap",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wage": {
+        "translation": "maaş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wakes": {
+        "translation": "uyanık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "waking": {
+        "translation": "uyanık",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wash": {
+        "translation": "yıkamak",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wasted": {
+        "translation": "heba olmuş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "web": {
+        "translation": "ağ",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "whatever": {
+        "translation": "Her neyse",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "while": {
+        "translation": "sırasında",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wife": {
+        "translation": "eş",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "willingness": {
+        "translation": "istekli olma",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "without": {
+        "translation": "olmadan",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wondering": {
+        "translation": "merak eden",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "word": {
+        "translation": "kelime",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "wound": {
+        "translation": "yara",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
+    },
+    "yellow": {
+        "translation": "sarı",
+        "known": false,
+        "memorized": false,
+        "retry": false,
+        "date": "2024-12-03"
     }
 }
