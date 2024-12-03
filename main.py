@@ -1,34 +1,43 @@
 import tkinter as tk
-from utils import show_notification  # show_notification fonksiyonunu içeri aktar
-
+from utils import show_notification
 from file_operations import load_words, save_words
 from gui_components import apply_dark_mode, clear_window, center_frame, create_button
 
-# Application startup
+# Dosya yolu ve kelime yükleme
 file_path = 'translated_words.json'
 words = load_words(file_path)
 
 def main_menu(root):
+    """Ana menüyü oluşturur."""
     from learn_new_words_gui import learn_new_words_gui
     from review_words_gui import review_words_gui
     from statistics import show_statistics_gui
 
-    def exit_program():
-        save_words(file_path, words)
-        root.after(100, root.quit)  # 5 saniye sonra programı kapat
+    def handle_button_click(action):
+        """Butonlar için ortak işlem işlevi."""
+        if action == "exit":
+            save_words(file_path, words)
+            root.after(100, root.quit)
+        elif action == "save":
+            save_words(file_path, words)
+            show_notification(root, "Veriler başarıyla kaydedildi!")
+        else:
+            action(root, words, file_path, main_menu)
 
-    def save_and_notify():
-        save_words(file_path, words)  # Save the words to file
-        show_notification(root, "Veriler başarıyla kaydedildi!")  # Show notification after save
+    actions = [
+        ("Yeni Kelime Öğren", learn_new_words_gui),
+        ("Kelime Tekrarı Yap", review_words_gui),
+        ("İstatistikleri Göster", show_statistics_gui),
+        ("Kaydet", "save"),
+        ("Çık", "exit"),
+    ]
 
     clear_window(root)
     frame = center_frame(root)
-    create_button(frame, "Yeni Kelime Öğren", lambda: learn_new_words_gui(root, words, file_path, main_menu))
-    create_button(frame, "Kelime Tekrarı Yap", lambda: review_words_gui(root, words, file_path, main_menu))
-    create_button(frame, "İstatistikleri Göster", lambda: show_statistics_gui(root, words, file_path, main_menu))
-    create_button(frame, "Kaydet", save_and_notify)  # Save and show notification when clicked
-    create_button(frame, "Çık", exit_program)
+    for text, action in actions:
+        create_button(frame, text, lambda act=action: handle_button_click(act))
 
+# Uygulama başlangıcı
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
 apply_dark_mode(root)
