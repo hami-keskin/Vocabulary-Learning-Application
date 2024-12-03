@@ -6,7 +6,6 @@ from utils import show_notification
 from file_operations import load_words, save_words
 from gui_components import apply_dark_mode, clear_window, center_frame, create_button
 
-# Yeni fonksiyon: Altyazı dosyasını işleme
 def process_subtitle_file(input_file, output_file="unique_words.json"):
     try:
         unique_words = set()
@@ -24,11 +23,10 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
     except Exception as e:
         return f"Hata oluştu: {e}"
 
-# Yeni GUI: Altyazı işleme
 def subtitle_processing_gui(root, words, file_path, main_menu):
     def browse_input_file():
         file_path = filedialog.askopenfilename(
-            title="Altyazı Dosyası Seç",
+            title="Dosyayı Seç",
             filetypes=(("Text Files", "*.txt"), ("All Files", "*.*"))
         )
         if file_path:
@@ -49,11 +47,10 @@ def subtitle_processing_gui(root, words, file_path, main_menu):
     clear_window(root)
     frame = center_frame(root)
 
-    tk.Label(frame, text="Altyazı Dosyası:", font=("Arial", 14)).grid(row=0, column=0, pady=10, sticky="w")
+    tk.Label(frame, text="Dosya:", font=("Arial", 14)).grid(row=0, column=0, pady=10, sticky="w")
     input_file_entry = tk.Entry(frame, width=40)
     input_file_entry.grid(row=0, column=1, pady=10)
     tk.Button(frame, text="Gözat", command=browse_input_file).grid(row=0, column=2, padx=10)
 
     tk.Button(frame, text="Başlat", command=start_processing, font=("Arial", 14), bg="#333333", fg="white").grid(row=1, column=0, columnspan=3, pady=20)
     tk.Button(frame, text="Ana Menüye Dön", command=lambda: main_menu(root), font=("Arial", 14), bg="#555555", fg="white").grid(row=2, column=0, columnspan=3, pady=10)
- 
