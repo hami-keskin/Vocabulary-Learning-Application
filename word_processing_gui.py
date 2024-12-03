@@ -91,7 +91,7 @@ def subtitle_processing_gui(root, main_menu):
     def browse_input_file():
         file_path = filedialog.askopenfilename(
             title="Dosyayı Seç",
-            filetypes=(("Text Files", "*.txt"), ("All Files", "*.*"))
+            filetypes=(("Altyazı Dosyaları", "*.txt *.srt"), ("Tüm Dosyalar", "*.*"))
         )
         if file_path:
             input_file_entry.delete(0, tk.END)
