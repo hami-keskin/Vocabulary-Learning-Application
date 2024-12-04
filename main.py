@@ -1,9 +1,9 @@
 import tkinter as tk
 
-from C.word_processing_gui import subtitle_processing_gui
-from C.utils import show_notification
-from C.file_operations import load_words, save_words
-from C.gui_components import apply_dark_mode, clear_window, center_frame, create_button
+from DZ.word_processing_gui import subtitle_processing_gui
+from DZ.utils import show_notification
+from DZ.file_operations import load_words, save_words
+from DZ.gui_components import apply_dark_mode, clear_window, center_frame, create_button
 
 # Dosya yolu ve kelime yükleme
 file_path = 'translated_words.json'
@@ -11,9 +11,9 @@ words = load_words(file_path)
 
 # Ana menüye yeni seçenek ekleme
 def main_menu(root):
-    from C.learn_new_words_gui import learn_new_words_gui
-    from C.review_words_gui import review_words_gui
-    from C.my_statistics import show_statistics_gui
+    from DZ.learn_new_words_gui import learn_new_words_gui
+    from DZ.review_words_gui import review_words_gui
+    from DZ.my_statistics import show_statistics_gui
 
     def handle_button_click(action):
         if action == "exit":

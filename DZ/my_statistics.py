@@ -1,4 +1,4 @@
-from C.gui_components import clear_window, create_label, create_button, center_frame
+from DZ.gui_components import clear_window, create_label, create_button, center_frame
 
 def calculate_stats(words):
     """Kelimelerden istatistikleri hesaplar."""

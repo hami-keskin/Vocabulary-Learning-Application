@@ -4,8 +4,8 @@ import re
 import json
 from datetime import datetime
 from googletrans import Translator
-from C.gui_components import clear_window, center_frame
-from C.utils import show_notification
+from DZ.gui_components import clear_window, center_frame
+from DZ.utils import show_notification
 
 
 # Altyazı dosyasından benzersiz kelimeleri çıkaran fonksiyon

@@ -1,7 +1,7 @@
 import tkinter as tk
-from C.file_operations import save_words
-from C.utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
-from C.gui_components import clear_window
+from DZ.file_operations import save_words
+from DZ.utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
+from DZ.gui_components import clear_window
 
 
 def learn_new_words_gui(root, words, file_path, main_menu):
