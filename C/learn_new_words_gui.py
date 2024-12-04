@@ -1,7 +1,8 @@
 import tkinter as tk
-from file_operations import save_words
-from utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
-from gui_components import clear_window, create_label, create_button, center_frame
+from C.file_operations import save_words
+from C.utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
+from C.gui_components import clear_window
+
 
 def learn_new_words_gui(root, words, file_path, main_menu):
     unknown = {word: data for word, data in words.items() if not data["known"] and not data["retry"]}

@@ -2,9 +2,9 @@ import tkinter as tk
 import random
 from datetime import timedelta
 
-from file_operations import save_words
-from gui_components import clear_window
-from utils import speak, get_today, parse_date, format_date, show_notification
+from C.file_operations import save_words
+from C.gui_components import clear_window
+from C.utils import speak, get_today, parse_date, format_date, show_notification
 
 
 def create_choice_button(frame, text, command, row):

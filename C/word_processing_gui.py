@@ -4,8 +4,9 @@ import re
 import json
 from datetime import datetime
 from googletrans import Translator
-from utils import show_notification
-from gui_components import clear_window, center_frame
+from C.gui_components import clear_window, center_frame
+from C.utils import show_notification
+
 
 # Altyazı dosyasından benzersiz kelimeleri çıkaran fonksiyon
 def process_subtitle_file(input_file, output_file="unique_words.json"):
@@ -120,8 +121,8 @@ def subtitle_processing_gui(root, main_menu, words):
 
     def start_processing():
         input_file = input_file_entry.get()
-        unique_words_file = "unique_words.json"
-        translated_words_file = "translated_words.json"
+        unique_words_file = "../unique_words.json"
+        translated_words_file = "../translated_words.json"
 
         if not input_file:
             show_notification(root, "Bir giriş dosyası belirtmelisiniz.", color="red")
