@@ -6,6 +6,7 @@ from file_operations import save_words
 from gui_components import clear_window
 from utils import speak, get_today, parse_date, format_date, show_notification
 
+
 def create_choice_button(frame, text, command, row):
     """Buton oluşturma fonksiyonu"""
     btn = tk.Button(
@@ -22,8 +23,11 @@ def create_choice_button(frame, text, command, row):
     btn.grid(row=row, column=0, pady=10, padx=10, sticky="ew")
     return btn
 
+
 def review_words_gui(root, words, file_path, main_menu):
     today = get_today()
+
+    # Seçilen kelimeler, sadece "retry" değeri True olanlar olacak
     retry_words = {
         word: data for word, data in words.items()
         if not data.get("known", False) and not data["memorized"] and data["retry"] and parse_date(data["date"]) <= parse_date(today)
@@ -80,8 +84,9 @@ def review_words_gui(root, words, file_path, main_menu):
         update_choices(current_data["translation"])
 
     def update_choices(correct_translation):
-        all_translations = [data["translation"] for data in words.values()]
-        wrong_choices = list(set(all_translations) - {correct_translation})
+        # Update choices: only include words with retry=True and not the correct translation
+        retry_translations = [data["translation"] for word, data in retry_words.items()]
+        wrong_choices = list(set(retry_translations) - {correct_translation})
         choices = random.sample(wrong_choices, min(3, len(wrong_choices))) + [correct_translation]
         random.shuffle(choices)
 
