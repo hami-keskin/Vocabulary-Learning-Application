@@ -13,7 +13,7 @@ words = load_words(file_path)
 def main_menu(root):
     from DZ.learn_new_words_gui import learn_new_words_gui
     from DZ.review_words_gui import review_words_gui
-    from DZ.my_statistics import show_statistics_gui
+    from DZ.user_statistics import show_statistics_gui
 
     def handle_button_click(action):
         if action == "exit":
