@@ -96,27 +96,37 @@ def review_words_gui(root, words, file_path, main_menu):
 
         # Butonları oluştur ve şıkları güncelle
         for idx, choice in enumerate(choices):
-            btn = create_choice_button(main_frame, choice, lambda c=choice: check_answer(c, correct_word, btn), idx + 1)
+            btn = create_choice_button(choices_frame, choice, lambda c=choice: check_answer(c, correct_word, btn), idx + 1)
             choice_buttons.append(btn)
 
     clear_window(root)
-    main_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
-    main_frame.place(relx=0.5, rely=0.4, anchor="center")
 
+    # Üst frame
+    top_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
+    top_frame.place(relx=0.5, rely=0.25, anchor="center")
+
+    # Orta frame (kelimenin gösterileceği alan)
+    middle_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
+    middle_frame.place(relx=0.5, rely=0.4, anchor="center")
+
+    # Alt frame (seçenek butonlarının gösterileceği alan)
     bottom_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
     bottom_frame.place(relx=0.5, rely=0.7, anchor="center")
 
     # Kelimenin Türkçe karşılığı başlıkta gösterilecek
-    # Kelimenin Türkçe karşılığı başlıkta gösterilecek
     word_label = tk.Label(
-        main_frame,
+        middle_frame,
         text=current_data["translation"],
         font=("Arial", 24),
         bg="#1e1e1e",
         fg="white",
         wraplength=600  # Daha geniş bir genişlik
     )
-    word_label.grid(row=0, column=0, pady=20, columnspan=2, sticky="ew")  # Sütunları genişlet
+    word_label.grid(row=0, column=0, pady=20)
+
+    # Şıklar için frame oluştur
+    choices_frame = tk.Frame(middle_frame)
+    choices_frame.grid(row=1, column=0, pady=20)
 
     root.after(100, lambda: speak(current_word))
 
