@@ -78,11 +78,15 @@ def translate_words(words, output_file, sozluk_file, root, progress_bar, progres
     words_data.update(existing_data)
 
 def processing_gui(root, main_menu, words_data):
-
     def browse_input_file():
         file_path = filedialog.askopenfilename(
             title="Dosyayı Seç",
-            filetypes=(("Dosyalar", "*.txt *.srt"), ("Tüm Dosyalar", "*.*"))
+            filetypes=(
+                ("Metin Dosyaları", "*.txt *.srt *.csv *.vtt"),
+                ("JSON Dosyaları", "*.json"),
+                ("PDF Dosyaları", "*.pdf"),
+                ("Tüm Dosyalar", "*.*")
+            )
         )
         if file_path:
             input_file_entry.delete(0, tk.END)

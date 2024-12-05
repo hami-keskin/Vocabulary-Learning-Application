@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from DZ.word_processing_gui import subtitle_processing_gui
+from DZ.word_processing_gui import processing_gui
 from DZ.utils import show_notification
 from DZ.file_operations import load_json, save_json
 from DZ.gui_components import apply_dark_mode, clear_window, center_frame, create_button
@@ -22,7 +22,7 @@ def main_menu(root):
         elif action == "save":
             save_json(file_path, words)
             show_notification(root, "Veriler başarıyla kaydedildi!")
-        elif action == subtitle_processing_gui:
+        elif action == processing_gui:
             action(root, main_menu, words)  # words parametresini geçir
         else:
             action(root, words, file_path, main_menu)
@@ -31,7 +31,7 @@ def main_menu(root):
         ("Yeni Kelime Öğren", learn_new_words_gui),
         ("Kelime Tekrarı Yap", review_words_gui),
         ("İstatistikleri Göster", show_statistics_gui),
-        ("Kelime ekle", subtitle_processing_gui),  # Yeni seçenek
+        ("Kelime ekle", processing_gui),  # Yeni seçenek
         ("Kaydet", "save"),
         ("Çık", "exit"),
     ]
