@@ -107,8 +107,17 @@ def review_words_gui(root, words, file_path, main_menu):
     bottom_frame.place(relx=0.5, rely=0.7, anchor="center")
 
     # Kelimenin Türkçe karşılığı başlıkta gösterilecek
-    word_label = tk.Label(main_frame, text=current_data["translation"], font=("Arial", 24), bg="#1e1e1e", fg="white", wraplength=300)
-    word_label.grid(row=0, column=0, pady=20)
+    # Kelimenin Türkçe karşılığı başlıkta gösterilecek
+    word_label = tk.Label(
+        main_frame,
+        text=current_data["translation"],
+        font=("Arial", 24),
+        bg="#1e1e1e",
+        fg="white",
+        wraplength=600  # Daha geniş bir genişlik
+    )
+    word_label.grid(row=0, column=0, pady=20, columnspan=2, sticky="ew")  # Sütunları genişlet
+
     root.after(100, lambda: speak(current_word))
 
     choice_buttons = []
