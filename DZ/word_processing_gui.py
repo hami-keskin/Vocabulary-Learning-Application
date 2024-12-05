@@ -8,8 +8,23 @@ from DZ.gui_components import clear_window, center_frame
 from DZ.utils import show_notification
 
 
-# Altyazı dosyasından benzersiz kelimeleri çıkaran fonksiyon
+def load_json(file_path, default=None):
+    """Helper function to load JSON data from a file, with error handling."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except (FileNotFoundError, json.decoder.JSONDecodeError):
+        return default if default is not None else {}
+
+
+def save_json(file_path, data):
+    """Helper function to save JSON data to a file."""
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(data, file, ensure_ascii=False, indent=4)
+
+
 def process_subtitle_file(input_file, output_file="unique_words.json"):
+    """Extract unique words from subtitle file."""
     try:
         unique_words = set()
         with open(input_file, 'r', encoding='utf-8') as file:
@@ -19,45 +34,27 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
                 words = re.findall(r'\b[a-zA-Z]{2,}\b', line.lower())
                 unique_words.update(words)
 
-        with open(output_file, 'w', encoding='utf-8') as json_file:
-            json.dump(sorted(list(unique_words)), json_file, ensure_ascii=False, indent=4)
-
-        return f"Kelimeler '{output_file}' dosyasına başarıyla kaydedildi."
+        save_json(output_file, sorted(list(unique_words)))
     except Exception as e:
         return f"Hata oluştu: {e}"
 
 
-# Kelimeleri çevirme fonksiyonu
 def translate_words(input_file, output_file, sozluk_file, root, progress_bar, progress_label, words):
+    """Translate words from the input file and save translations."""
     translator = Translator()
-
-    # Giriş dosyasını oku
-    with open(input_file, 'r', encoding='utf-8') as file:
-        english_words = json.load(file)
+    english_words = load_json(input_file, default=[])
+    existing_data = load_json(output_file, default={})
+    sozluk_data = load_json(sozluk_file, default={})
 
     translations = {}
     total_words = len(english_words)
 
-    try:
-        # Mevcut çeviri dosyasını oku
-        with open(output_file, 'r', encoding='utf-8') as json_file:
-            existing_data = json.load(json_file)
-    except (FileNotFoundError, json.decoder.JSONDecodeError):
-        existing_data = {}
-
-    # Sözlük dosyasını oku (sadece okuma)
-    try:
-        with open(sozluk_file, 'r', encoding='utf-8') as sozluk:
-            sozluk_data = json.load(sozluk)
-    except (FileNotFoundError, json.decoder.JSONDecodeError):
-        sozluk_data = {}
-
-    # Kelimeleri çevir
     for idx, word in enumerate(english_words):
+        # Check if word exists in the existing data or dictionary
         if word in existing_data:
             translations[word] = existing_data[word]
         elif word in sozluk_data:
-            # Sözlükte varsa, anlamı ekle
+            # If found in dictionary, add translation and other fields
             translations[word] = {
                 "translation": sozluk_data[word],
                 "known": False,
@@ -66,21 +63,17 @@ def translate_words(input_file, output_file, sozluk_file, root, progress_bar, pr
                 "date": datetime.now().strftime('%Y-%m-%d')
             }
         else:
-            # Google Translate kullan
+            # If not in existing data or dictionary, use Google Translate
             try:
                 translated = translator.translate(word, src='en', dest='tr')
-
-                if word.lower() == translated.text.lower():
-                    continue
-
-                translations[word] = {
-                    "translation": translated.text,
-                    "known": False,
-                    "memorized": False,
-                    "retry": False,
-                    "date": datetime.now().strftime('%Y-%m-%d')
-                }
-
+                if word.lower() != translated.text.lower():
+                    translations[word] = {
+                        "translation": translated.text,
+                        "known": False,
+                        "memorized": False,
+                        "retry": False,
+                        "date": datetime.now().strftime('%Y-%m-%d')
+                    }
             except Exception as e:
                 show_notification(root, f"Hata oluştu: {word}, {e}", color="red")
                 translations[word] = {
@@ -91,29 +84,21 @@ def translate_words(input_file, output_file, sozluk_file, root, progress_bar, pr
                     "date": datetime.now().strftime('%Y-%m-%d')
                 }
 
-        # İlerleme çubuğunu güncelle
+        # Update progress bar
         progress = int((idx + 1) / total_words * 100)
         progress_bar['value'] = progress
         progress_label.config(text=f"İlerleme: {progress}%")
         root.update_idletasks()
 
-    # Verileri birleştirme
     existing_data.update(translations)
-
-    # Güncellenmiş veriyi çeviri dosyasına kaydetme
-    try:
-        with open(output_file, 'w', encoding='utf-8') as json_file:
-            json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
-        show_notification(root, f"Çeviriler başarıyla '{output_file}' dosyasına kaydedildi.", color="green")
-    except Exception as e:
-        show_notification(root, f"Çeviriler kaydedilemedi: {e}", color="red")
-
-    # Veriyi ana 'words' değişkenine aktar
+    save_json(output_file, existing_data)
     words.update(existing_data)
 
 
-# Arayüz (GUI) fonksiyonu
+
 def subtitle_processing_gui(root, main_menu, words):
+    """GUI for processing subtitles and translating words."""
+
     def browse_input_file():
         file_path = filedialog.askopenfilename(
             title="Dosyayı Seç",
@@ -127,17 +112,16 @@ def subtitle_processing_gui(root, main_menu, words):
         input_file = input_file_entry.get()
         unique_words_file = "unique_words.json"
         translated_words_file = "translated_words.json"
-        sozluk_file = "sozluk.json"  # Sözlük dosyası
+        sozluk_file = "sozluk.json"
 
         if not input_file:
             show_notification(root, "Bir giriş dosyası belirtmelisiniz.", color="red")
             return
 
         result = process_subtitle_file(input_file, unique_words_file)
-        show_notification(root, result, color="green")
 
-        # Çeviri işlemini başlat
-        translate_words(unique_words_file, translated_words_file, sozluk_file, root, progress_bar, progress_label, words)
+        translate_words(unique_words_file, translated_words_file, sozluk_file, root, progress_bar, progress_label,
+                        words)
 
     clear_window(root)
     frame = center_frame(root)
@@ -152,5 +136,9 @@ def subtitle_processing_gui(root, main_menu, words):
     progress_label = tk.Label(frame, text="İlerleme: 0%", font=("Arial", 12))
     progress_label.grid(row=2, column=0, columnspan=3, pady=5)
 
-    tk.Button(frame, text="Başlat", command=start_processing, font=("Arial", 14), bg="#333333", fg="white").grid(row=3, column=0, columnspan=3, pady=20)
-    tk.Button(frame, text="Ana Menüye Dön", command=lambda: main_menu(root), font=("Arial", 14), bg="#555555", fg="white").grid(row=4, column=0, columnspan=3, pady=10)
+    tk.Button(frame, text="Başlat", command=start_processing, font=("Arial", 14), bg="#333333", fg="white").grid(row=3,
+                                                                                                                 column=0,
+                                                                                                                 columnspan=3,
+                                                                                                                 pady=20)
+    tk.Button(frame, text="Ana Menüye Dön", command=lambda: main_menu(root), font=("Arial", 14), bg="#555555",
+              fg="white").grid(row=4, column=0, columnspan=3, pady=10)
