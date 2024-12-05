@@ -134,5 +134,4 @@ def review_words_gui(root, words, file_path, main_menu):
     update_choices(current_word)
 
     tk.Button(bottom_frame, text="Sonraki Kelime", command=next_word, bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
-    tk.Button(bottom_frame, text="Kelimeyi Tekrar Oku", command=lambda: speak(current_word), bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
     tk.Button(bottom_frame, text="Ana Menüye Dön", command=lambda: [save_json(file_path, words), main_menu(root)], bg="#333333", fg="white").pack(side="right", padx=10, pady=5)
