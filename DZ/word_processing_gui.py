@@ -23,7 +23,7 @@ def save_json(file_path, data):
         json.dump(data, file, ensure_ascii=False, indent=4)
 
 
-def process_subtitle_file(input_file, output_file="unique_words.json"):
+def process_subtitle_file(input_file):
     """Extract unique words from subtitle file."""
     try:
         unique_words = set()
@@ -33,23 +33,21 @@ def process_subtitle_file(input_file, output_file="unique_words.json"):
                     continue
                 words = re.findall(r'\b[a-zA-Z]{2,}\b', line.lower())
                 unique_words.update(words)
-
-        save_json(output_file, sorted(list(unique_words)))
+        return sorted(list(unique_words))
     except Exception as e:
         return f"Hata oluştu: {e}"
 
 
-def translate_words(input_file, output_file, sozluk_file, root, progress_bar, progress_label, words):
+def translate_words(words, output_file, sozluk_file, root, progress_bar, progress_label, words_data):
     """Translate words from the input file and save translations."""
     translator = Translator()
-    english_words = load_json(input_file, default=[])
     existing_data = load_json(output_file, default={})
     sozluk_data = load_json(sozluk_file, default={})
 
     translations = {}
-    total_words = len(english_words)
+    total_words = len(words)
 
-    for idx, word in enumerate(english_words):
+    for idx, word in enumerate(words):
         # Check if word exists in the existing data or dictionary
         if word in existing_data:
             translations[word] = existing_data[word]
@@ -92,11 +90,10 @@ def translate_words(input_file, output_file, sozluk_file, root, progress_bar, pr
 
     existing_data.update(translations)
     save_json(output_file, existing_data)
-    words.update(existing_data)
+    words_data.update(existing_data)
 
 
-
-def subtitle_processing_gui(root, main_menu, words):
+def subtitle_processing_gui(root, main_menu, words_data):
     """GUI for processing subtitles and translating words."""
 
     def browse_input_file():
@@ -110,7 +107,6 @@ def subtitle_processing_gui(root, main_menu, words):
 
     def start_processing():
         input_file = input_file_entry.get()
-        unique_words_file = "unique_words.json"
         translated_words_file = "translated_words.json"
         sozluk_file = "sozluk.json"
 
@@ -118,10 +114,11 @@ def subtitle_processing_gui(root, main_menu, words):
             show_notification(root, "Bir giriş dosyası belirtmelisiniz.", color="red")
             return
 
-        result = process_subtitle_file(input_file, unique_words_file)
+        # Process subtitle and get unique words
+        words = process_subtitle_file(input_file)
 
-        translate_words(unique_words_file, translated_words_file, sozluk_file, root, progress_bar, progress_label,
-                        words)
+        # Translate the words
+        translate_words(words, translated_words_file, sozluk_file, root, progress_bar, progress_label, words_data)
 
     clear_window(root)
     frame = center_frame(root)
