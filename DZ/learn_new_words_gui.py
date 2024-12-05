@@ -14,8 +14,11 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     def update_word_labels():
         word_label.config(text=current_word)
         translation_label.config(state=tk.NORMAL)
-        translation_label.delete(0, tk.END)
-        translation_label.insert(0, current_data['translation'])
+
+        # Clear existing text and insert the new translation (use proper indices for Text widget)
+        translation_label.delete("1.0", tk.END)  # '1.0' is the start of the text
+        translation_label.insert("1.0", current_data['translation'])  # Insert at the start
+
         translation_label.config(state=tk.DISABLED)
         root.after(100, lambda: speak(current_word))
 
@@ -34,11 +37,13 @@ def learn_new_words_gui(root, words, file_path, main_menu):
         save_button.grid(row=3, column=0, columnspan=2, pady=5)  # Kaydet butonunu göster
 
     def save_new_translation():
-        new_translation = translation_label.get()
+        # Get the content from the Text widget using valid indices
+        new_translation = translation_label.get("1.0",
+                                                tk.END).strip()  # "1.0" is the start, "tk.END" is the end of the text
         if new_translation:
             current_data['translation'] = new_translation
             translation_label.config(state=tk.DISABLED)
-            save_button.grid_forget()  # Kaydet butonunu gizle
+            save_button.grid_forget()  # Hide the save button
             update_word_labels()
             show_notification(root, "Çeviri başarıyla güncellendi!", color="green")
 
@@ -73,7 +78,8 @@ def learn_new_words_gui(root, words, file_path, main_menu):
     word_label = tk.Label(main_frame, text=current_word, font=("Arial", 24, "bold"), bg="#1e1e1e", fg="white", wraplength=400)
     word_label.grid(row=0, column=0, columnspan=2, pady=20)
 
-    translation_label = tk.Entry(main_frame, font=("Arial", 20), justify="center", fg="white", bg="#333333", relief="flat", insertbackground="white")
+    translation_label = tk.Text(main_frame, font=("Arial", 20), height=4, wrap="word", fg="white", bg="#333333",
+                                relief="flat", insertbackground="white")
     translation_label.grid(row=1, column=0, columnspan=2, pady=10, sticky="ew")
     translation_label.config(state=tk.DISABLED)
 
