@@ -103,19 +103,19 @@ def review_words_gui(root, words, file_path, main_menu):
 
     # Üst frame
     top_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
-    top_frame.place(relx=0.9, rely=0.1, anchor="center")  # Yüksekliği daha yukarıya alındı
+    top_frame.place(relx=0.5, rely=0.1, anchor="center")  # Yüksekliği daha yukarıya alındı
 
     # Orta frame (kelimenin gösterileceği alan) - Uzunluğu arttırıldı
     middle_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
-    middle_frame.place(relx=0.5, rely=0.6, anchor="center")  # Orta frame daha uzun
+    middle_frame.place(relx=0.5, rely=0.4, anchor="center")  # Orta frame daha uzun
 
     # Alt frame (seçenek butonlarının gösterileceği alan) sabitlendi
     bottom_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
-    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")  # Alt frame'i daha aşağıya yerleştirdik ve sabit
+    bottom_frame.place(relx=0.5, rely=0.8, anchor="center")  # Alt frame'i daha aşağıya yerleştirdik ve sabit
 
     # Kelimenin Türkçe karşılığı başlıkta gösterilecek
     word_label = tk.Label(
-        middle_frame,
+        top_frame,  # word_label'ı top_frame'e taşıdık
         text=current_data["translation"],
         font=("Arial", 24),
         bg="#1e1e1e",
