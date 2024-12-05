@@ -9,8 +9,7 @@ from DZ.file_operations import load_json, save_json
 from DZ.gui_components import clear_window, center_frame
 from DZ.utils import show_notification
 
-def process_subtitle_file(input_file):
-    """Extract unique words from subtitle file."""
+def process_file(input_file):
     try:
         unique_words = set()
         with open(input_file, 'r', encoding='utf-8') as file:
@@ -78,13 +77,12 @@ def translate_words(words, output_file, sozluk_file, root, progress_bar, progres
     save_json(output_file, existing_data)
     words_data.update(existing_data)
 
-def subtitle_processing_gui(root, main_menu, words_data):
-    """GUI for processing subtitles and translating words."""
+def processing_gui(root, main_menu, words_data):
 
     def browse_input_file():
         file_path = filedialog.askopenfilename(
             title="Dosyayı Seç",
-            filetypes=(("Altyazı Dosyaları", "*.txt *.srt"), ("Tüm Dosyalar", "*.*"))
+            filetypes=(("Dosyalar", "*.txt *.srt"), ("Tüm Dosyalar", "*.*"))
         )
         if file_path:
             input_file_entry.delete(0, tk.END)
@@ -99,8 +97,7 @@ def subtitle_processing_gui(root, main_menu, words_data):
             show_notification(root, "Bir giriş dosyası belirtmelisiniz.", color="red")
             return
 
-        # Process subtitle and get unique words
-        words = process_subtitle_file(input_file)
+        words = process_file(input_file)
 
         # Translate the words
         translate_words(words, translated_words_file, sozluk_file, root, progress_bar, progress_label, words_data)
