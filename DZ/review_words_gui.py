@@ -103,15 +103,15 @@ def review_words_gui(root, words, file_path, main_menu):
 
     # Üst frame
     top_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
-    top_frame.place(relx=0.5, rely=0.25, anchor="center")
+    top_frame.place(relx=0.5, rely=0.1, anchor="center")  # Yüksekliği daha yukarıya alındı
 
-    # Orta frame (kelimenin gösterileceği alan)
+    # Orta frame (kelimenin gösterileceği alan) - Uzunluğu arttırıldı
     middle_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
-    middle_frame.place(relx=0.5, rely=0.4, anchor="center")
+    middle_frame.place(relx=0.5, rely=0.4, anchor="center")  # Orta frame daha uzun
 
     # Alt frame (seçenek butonlarının gösterileceği alan)
     bottom_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
-    bottom_frame.place(relx=0.5, rely=0.7, anchor="center")
+    bottom_frame.place(relx=0.5, rely=0.9, anchor="center")  # Alt frame'i daha aşağıya yerleştirdik
 
     # Kelimenin Türkçe karşılığı başlıkta gösterilecek
     word_label = tk.Label(
@@ -120,7 +120,7 @@ def review_words_gui(root, words, file_path, main_menu):
         font=("Arial", 24),
         bg="#1e1e1e",
         fg="white",
-        wraplength=600  # Daha geniş bir genişlik
+        wraplength=1500  # Daha geniş bir genişlik
     )
     word_label.grid(row=0, column=0, pady=20)
 
@@ -134,4 +134,5 @@ def review_words_gui(root, words, file_path, main_menu):
     update_choices(current_word)
 
     tk.Button(bottom_frame, text="Sonraki Kelime", command=next_word, bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
+    tk.Button(bottom_frame, text="Kelimeyi Tekrar Oku", command=lambda: speak(current_word), bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
     tk.Button(bottom_frame, text="Ana Menüye Dön", command=lambda: [save_json(file_path, words), main_menu(root)], bg="#333333", fg="white").pack(side="right", padx=10, pady=5)
