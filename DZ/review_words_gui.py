@@ -57,8 +57,10 @@ def review_words_gui(root, words, file_path, main_menu):
                 words[current_word]["memorized"] = True
                 words[current_word]["retry"] = False
 
-            show_notification(root, "Doğru! Bir sonraki kelimeye geçiliyor...")
-            next_word()
+            show_notification(root, "Doğru! Seslendiriliyor ve bir sonraki kelimeye geçiliyor...")
+            # Seslendir ve ardından sonraki kelimeye geç
+            root.after(500, lambda: speak(current_word))  # Speak after updating the word
+            root.after(2000, next_word)  # 2 saniye sonra bir sonraki kelimeye geç
         else:
             words[current_word]["correct_streak"] = 0
             # Doğru butonu yeşil olarak vurgula
@@ -80,7 +82,6 @@ def review_words_gui(root, words, file_path, main_menu):
 
         current_word, current_data = word_list[current_index]
         word_label.config(text=current_data["translation"])  # Update word label with Turkish translation
-        root.after(500, lambda: speak(current_word))  # Speak after updating the word
         update_choices(current_word)
 
     def update_choices(correct_word):
@@ -127,8 +128,6 @@ def review_words_gui(root, words, file_path, main_menu):
     # Şıklar için frame oluştur
     choices_frame = tk.Frame(middle_frame)
     choices_frame.grid(row=1, column=0, pady=20)
-
-    root.after(100, lambda: speak(current_word))
 
     choice_buttons = []
     update_choices(current_word)
