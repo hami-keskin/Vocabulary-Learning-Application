@@ -27,8 +27,8 @@ def process_subtitle_file(input_file):
 def translate_words(words, output_file, sozluk_file, root, progress_bar, progress_label, words_data):
     """Translate words from the input file and save translations."""
     translator = Translator()
-    existing_data = load_json(output_file, default={})
-    sozluk_data = load_json(sozluk_file, default={})
+    existing_data = load_json(output_file)  # Remove default={} argument
+    sozluk_data = load_json(sozluk_file)   # Remove default={} argument
 
     translations = {}
     total_words = len(words)
@@ -77,7 +77,6 @@ def translate_words(words, output_file, sozluk_file, root, progress_bar, progres
     existing_data.update(translations)
     save_json(output_file, existing_data)
     words_data.update(existing_data)
-
 
 def subtitle_processing_gui(root, main_menu, words_data):
     """GUI for processing subtitles and translating words."""
