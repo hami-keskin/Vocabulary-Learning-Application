@@ -4,24 +4,10 @@ import re
 import json
 from datetime import datetime
 from googletrans import Translator
+
+from DZ.file_operations import load_json, save_json
 from DZ.gui_components import clear_window, center_frame
 from DZ.utils import show_notification
-
-
-def load_json(file_path, default=None):
-    """Helper function to load JSON data from a file, with error handling."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            return json.load(file)
-    except (FileNotFoundError, json.decoder.JSONDecodeError):
-        return default if default is not None else {}
-
-
-def save_json(file_path, data):
-    """Helper function to save JSON data to a file."""
-    with open(file_path, 'w', encoding='utf-8') as file:
-        json.dump(data, file, ensure_ascii=False, indent=4)
-
 
 def process_subtitle_file(input_file):
     """Extract unique words from subtitle file."""

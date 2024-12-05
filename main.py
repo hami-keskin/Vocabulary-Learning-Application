@@ -2,12 +2,12 @@ import tkinter as tk
 
 from DZ.word_processing_gui import subtitle_processing_gui
 from DZ.utils import show_notification
-from DZ.file_operations import load_words, save_words
+from DZ.file_operations import load_json, save_json
 from DZ.gui_components import apply_dark_mode, clear_window, center_frame, create_button
 
 # Dosya yolu ve kelime yükleme
 file_path = 'translated_words.json'
-words = load_words(file_path)
+words = load_json(file_path)
 
 # Ana menüye yeni seçenek ekleme
 def main_menu(root):
@@ -17,10 +17,10 @@ def main_menu(root):
 
     def handle_button_click(action):
         if action == "exit":
-            save_words(file_path, words)
+            save_json(file_path, words)
             root.after(100, root.quit)
         elif action == "save":
-            save_words(file_path, words)
+            save_json(file_path, words)
             show_notification(root, "Veriler başarıyla kaydedildi!")
         elif action == subtitle_processing_gui:
             action(root, main_menu, words)  # words parametresini geçir
@@ -43,7 +43,7 @@ def main_menu(root):
 
 # Uygulama başlangıcı
 file_path = 'translated_words.json'
-words = load_words(file_path)
+words = load_json(file_path)
 root = tk.Tk()
 root.title("Kelime Ezberleme Uygulaması")
 apply_dark_mode(root)

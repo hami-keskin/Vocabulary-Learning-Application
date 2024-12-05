@@ -2,7 +2,7 @@ import tkinter as tk
 import random
 from datetime import timedelta
 
-from DZ.file_operations import save_words
+from DZ.file_operations import save_json
 from DZ.gui_components import clear_window
 from DZ.utils import speak, get_today, parse_date, format_date, show_notification
 
@@ -67,14 +67,14 @@ def review_words_gui(root, words, file_path, main_menu):
                     button.config(fg="green")
 
             show_notification(root, "Yanlış! Doğru cevap gösteriliyor.")
-        save_words(file_path, words)
+        save_json(file_path, words)
 
     def next_word():
         nonlocal current_index, current_word, current_data
         current_index += 1
         if current_index >= len(word_list):
             show_notification(root, "Bugün tekrar edilecek kelime kalmadı!")
-            save_words(file_path, words)
+            save_json(file_path, words)
             main_menu(root)
             return
 
@@ -116,4 +116,4 @@ def review_words_gui(root, words, file_path, main_menu):
 
     tk.Button(bottom_frame, text="Sonraki Kelime", command=next_word, bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
     tk.Button(bottom_frame, text="Kelimeyi Tekrar Oku", command=lambda: speak(current_word), bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
-    tk.Button(bottom_frame, text="Ana Menüye Dön", command=lambda: [save_words(file_path, words), main_menu(root)], bg="#333333", fg="white").pack(side="right", padx=10, pady=5)
+    tk.Button(bottom_frame, text="Ana Menüye Dön", command=lambda: [save_json(file_path, words), main_menu(root)], bg="#333333", fg="white").pack(side="right", padx=10, pady=5)

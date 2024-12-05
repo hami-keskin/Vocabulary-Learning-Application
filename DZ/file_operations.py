@@ -1,6 +1,6 @@
 import json
 
-def load_words(file_path):
+def load_json(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             # Ensure that the file is not empty
@@ -14,6 +14,6 @@ def load_words(file_path):
     except json.decoder.JSONDecodeError:
         return {}  # Return an empty dictionary if the JSON is invalid
 
-def save_words(file_path, words):
+def save_json(file_path, data):
     with open(file_path, 'w', encoding='utf-8') as file:
-        json.dump(words, file, ensure_ascii=False, indent=4)
+        json.dump(data, file, ensure_ascii=False, indent=4)

@@ -1,5 +1,6 @@
 import tkinter as tk
-from DZ.file_operations import save_words
+
+from DZ.file_operations import save_json
 from DZ.utils import speak, mark_known, add_to_retry, copy_to_clipboard, show_notification
 from DZ.gui_components import clear_window
 
@@ -89,6 +90,6 @@ def learn_new_words_gui(root, words, file_path, main_menu):
 
     create_action_button(main_frame, "Kelimeyi Sesli Oku", lambda: speak(current_word), 5, 1)
 
-    tk.Button(main_frame, text="Ana Menüye Dön", command=lambda: [save_words(file_path, words), main_menu(root)], font=("Arial", 14, "bold"), bg="#333333", fg="white", activebackground="#555555", activeforeground="white", relief="flat").grid(row=6, column=0, columnspan=2, pady=20)
+    tk.Button(main_frame, text="Ana Menüye Dön", command=lambda: [save_json(file_path, words), main_menu(root)], font=("Arial", 14, "bold"), bg="#333333", fg="white", activebackground="#555555", activeforeground="white", relief="flat").grid(row=6, column=0, columnspan=2, pady=20)
 
     update_word_labels()
