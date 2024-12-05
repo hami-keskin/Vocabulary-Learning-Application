@@ -41,11 +41,11 @@ def review_words_gui(root, words, file_path, main_menu):
     current_index = 0
     current_word, current_data = word_list[current_index]
 
-    def check_answer(selected, correct_translation, btn):
+    def check_answer(selected, correct_word, btn):
         nonlocal current_index
         current_word, current_data = word_list[current_index]
 
-        if selected == correct_translation:
+        if selected == correct_word:
             words[current_word]["correct_streak"] += 1
             streak = words[current_word]["correct_streak"]
 
@@ -61,9 +61,9 @@ def review_words_gui(root, words, file_path, main_menu):
             next_word()
         else:
             words[current_word]["correct_streak"] = 0
-            # Correct button highlighted in green
+            # Doğru butonu yeşil olarak vurgula
             for button in choice_buttons:
-                if button.cget("text") == correct_translation:
+                if button.cget("text") == correct_word:
                     button.config(fg="green")
 
             show_notification(root, "Yanlış! Doğru cevap gösteriliyor.")
@@ -79,26 +79,25 @@ def review_words_gui(root, words, file_path, main_menu):
             return
 
         current_word, current_data = word_list[current_index]
-        word_label.config(text=current_word)  # Update word label
+        word_label.config(text=current_data["translation"])  # Update word label with Turkish translation
         root.after(500, lambda: speak(current_word))  # Speak after updating the word
-        update_choices(current_data["translation"])
+        update_choices(current_word)
 
-    def update_choices(correct_translation):
-        # Update choices: only include words with retry=True and not the correct translation
-        retry_translations = [data["translation"] for word, data in retry_words.items()]
-        wrong_choices = list(set(retry_translations) - {correct_translation})
-        choices = random.sample(wrong_choices, min(3, len(wrong_choices))) + [correct_translation]
+    def update_choices(correct_word):
+        # Yanlış İngilizce şıklar oluştur
+        retry_words_list = list(retry_words.keys())
+        wrong_choices = list(set(retry_words_list) - {correct_word})
+        choices = random.sample(wrong_choices, min(3, len(wrong_choices))) + [correct_word]
         random.shuffle(choices)
 
         for btn in choice_buttons:
             btn.destroy()
         choice_buttons.clear()
 
-        # Button creation inside loop and pass reference to btn
+        # Butonları oluştur ve şıkları güncelle
         for idx, choice in enumerate(choices):
-            btn = create_choice_button(main_frame, choice, lambda c=choice: check_answer(c, correct_translation, btn),
-                                       idx + 1)
-            choice_buttons.append(btn)  # Add button to choice_buttons list
+            btn = create_choice_button(main_frame, choice, lambda c=choice: check_answer(c, correct_word, btn), idx + 1)
+            choice_buttons.append(btn)
 
     clear_window(root)
     main_frame = tk.Frame(root, bg="#1e1e1e", padx=20, pady=20)
@@ -107,12 +106,13 @@ def review_words_gui(root, words, file_path, main_menu):
     bottom_frame = tk.Frame(root, bg="#1e1e1e", pady=10)
     bottom_frame.place(relx=0.5, rely=0.7, anchor="center")
 
-    word_label = tk.Label(main_frame, text=current_word, font=("Arial", 24), bg="#1e1e1e", fg="white", wraplength=300)
+    # Kelimenin Türkçe karşılığı başlıkta gösterilecek
+    word_label = tk.Label(main_frame, text=current_data["translation"], font=("Arial", 24), bg="#1e1e1e", fg="white", wraplength=300)
     word_label.grid(row=0, column=0, pady=20)
     root.after(100, lambda: speak(current_word))
 
     choice_buttons = []
-    update_choices(current_data["translation"])
+    update_choices(current_word)
 
     tk.Button(bottom_frame, text="Sonraki Kelime", command=next_word, bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
     tk.Button(bottom_frame, text="Kelimeyi Tekrar Oku", command=lambda: speak(current_word), bg="#333333", fg="white").pack(side="left", padx=10, pady=5)
